@@ -1,45 +1,48 @@
 {
-    "name": "warm",
-    "version": "0.0.1",
-    "description": "lots of useful components for react",
-    "main": "dist/warm.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/maestro-tech/warm.git"
-    },
-    "keywords": [
-        "bootstrap",
-        "compenents",
-        "react",
-        "maestro-tech",
-        "jsx"
-    ],
-    "author": "montytorr <monty.torr@gmail.com>",
-    "license": {
-        "type": "MIT",
-        "url": "https://github.com/maestro-tech/warm/blob/master/LICENSE"
-    },
-    "bugs": {
-        "url": "https://github.com/maestro-tech/warm/issues"
-    },
-    "homepage": "https://github.com/maestro-tech/warm#readme",
-    "dependencies" : {
-        "react": "^0.13.3"
-    },
-    "devDependencies": {
-        "babel": "^5.6.4",
-        "vinyl-source-stream": "^1.1.0",
-        "babel-core": "^5.1.11",
-        "babel-loader": "^5.0.0",
-        "bulk-require" : "^0.2.1",
-        "browserify": "^11.0.1 ",
-        "gulp": "^3.8.0",
-        "require-dir": "^0.3.0",
-        "gulp-browserify": "0.5.1",
-        "gulp-rename": "1.2.2",
-        "gulp-uglify" : "1.4.1"
-    }
+  "name": "warm",
+  "version": "0.0.1",
+  "description": "lots of useful components for react",
+  "main": "dist/warm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maestro-tech/warm.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "compenents",
+    "react",
+    "maestro-tech",
+    "jsx"
+  ],
+  "author": "montytorr <monty.torr@gmail.com>",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/maestro-tech/warm/blob/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/maestro-tech/warm/issues"
+  },
+  "homepage": "https://github.com/maestro-tech/warm#readme",
+  "dependencies": {
+    "browserify": "^11.2.0",
+    "react": "^0.13.3",
+    "reactify": "^1.1.1",
+    "source": "0.0.3"
+  },
+  "devDependencies": {
+    "babel": "^5.6.4",
+    "vinyl-source-stream": "^1.1.0",
+    "babel-core": "^5.1.11",
+    "babel-loader": "^5.0.0",
+    "bulk-require": "^0.2.1",
+    "browserify": "^11.0.1 ",
+    "gulp": "^3.8.0",
+    "require-dir": "^0.3.0",
+    "gulp-browserify": "0.5.1",
+    "gulp-rename": "1.2.2",
+    "gulp-uglify": "1.4.1"
+  }
 }
