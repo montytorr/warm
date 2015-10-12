@@ -1,7 +1,7 @@
 var valid = function(composants, index) {
     var composant = composants[index];
-    var invalidClass = "m-"+composant.kind+index+" m-invalid";
-    var validClass = "m-"+composant.kind+index+" m-valid";
+    var invalidClass = "warm-input "+composant.kind+index+" invalid";
+    var validClass = "warm-input "+composant.kind+index+" valid";
     if (composant.required == true && composant.value == "") {
         return {result: false, value: "required", target: invalidClass};
     }

@@ -7,15 +7,17 @@ var formComponentsConfig = {[
     {
         "kind" : "input",
         "type" : "text",
-        "name" : "Mail input",
-        "placeholder" : "Mail",
+        "name" : "emailLogin",
+        "validation" : "message",
+        "placeholder" : "Email",
         "conditions" : ["mail"],
         "required" : true
     },
     {
         "kind" : "input",
         "type" : "password",
-        "name" : "Password input",
+        "name" : "passwordLogin",
+        "validation" : "message",
         "placeholder" : "Password",
         "required" : true
     },
@@ -30,83 +32,57 @@ var formComponentsConfig = {[
 * Retrieve the current appActiveView, search & dashboard from the stores
 * @return {object} search
 */
-function getLoginState() {
+function getState() {
     return {
-        //TODO this should be in the form
-        canSubmit: false,
-        errorTile: {state: false, content: null},
-        isActive: false
+        isTileActive: false,
+        error: {
+            isVisible: false, 
+            message: null
+        }
     };
 }
 
 var LoginTile = React.createClass({
+    propTypes: {
+        loginRequestMethod: React.PropTypes.func,
+        title: React.PropTypes.string,
+    },
+    getDefaultProps: function() {
+        return {
+            loginRequestMethod: function(){},
+            title : 'Login'
+        };
+    },
     getInitialState: function() {
-        return getLoginState();
+        return getState();
     },
-    showForm: function () {
+    toggleFormVisible: function () {
         this.setState({
-            isActive: !this.state.isActive || false
+            isTileActive: !this.state.isTileActive || false
         });
-       
-
-    },
-    onValidField: function (ret) {
-        var error = {state: false, content: null};
-        this.setState({
-            errorTile: error
-        });
-    },
-    onInvalidField: function (ret) {
-        var error = {state: true, content: "Le champ est incorrect"};
-        this.setState({
-            errorTile: error
-        });
-    },
-    onValidForm: function (ret) {
-    },
-    onInvalidForm: function (ret) {
     },
     onFormSubmit: function (data) {
         var that = this;
-        this.props.loginRequestMethod = this.props.loginRequestMethod || function(){};
-        //TODO : we should be using ref to get the data from the form
-        this.props.loginRequestMethod({
-            'email': data[0].value,
-            'password': data[1].value
-        }, function (res) {
-            if (res.err == true) {
+        this.props.loginRequestMethod(data.formData, function (response) {
+            if (response.error == true) {
                 that.setState({
-                    errorTile: {isVisible: true, message: res.val}
+                    error: {isVisible: true, message: response.value}
                 });
             }
         });
     },
     render: function() {
-
         return (
             <div className="warm-component warm-surface-component warm-login">
-                <div className={(this.state.isActive == false) ? "login-tile-container":"login-tile-container active"}>
-                    <h2>
-                        {this.props.title}
-                    </h2>
-                    <
-                    <div
-                        onClick={this.showForm}
-                        className={(this.state.isActive == false) ?  : activeRoundButtonClass}>
-                    </div>
+                <div className={(this.state.isTileActive == false) ? "login-face in-active":"login-face active"}>
+                    <h2>{this.props.title}/h2>
+                    <RoundButton onClickMethod={this.toggleFormVisible}/>
                 </div>
-                <div className={(this.state.isActive == false) ? "login-form":"login-form active"}>
+                <div className={(this.state.isTileActive == false) ? "warm-form in-active":"warm-form active"}>
                     <h2>Connexion</h2>
-                    <WarmForm
-                        onSubmit = {this.onFormSubmit}
-                        onValid = {this.onValidForm}
-                        onInvalid = {this.onInvalidForm}
-                        onValidField = {this.onValidField}
-                        onInvalidField = {this.onInvalidField}
-                        formComponents = {formComponentsConfig}/>
+                    <WarmForm onFormSubmit={this.onFormSubmit} formComponents={formComponentsConfig} error={this.state.error}/>
                 </div>
             </div>
-
         );
     }
 });

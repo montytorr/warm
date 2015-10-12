@@ -5,18 +5,30 @@ var SmallErrorTile = require('../components/tiles/error-tiles/simple');
 
 //TODO require some props here
 var Form = React.createClass({
-	getInitialState: function () {
+    propTypes: {
+        onFormSubmit: React.PropTypes.func,
+        formComponents: React.PropTypes.array,
+        error: React.PropTypes.object,
+    },
+    getDefaultProps: function() {
         return {
-            formComposants: formater.format(this.props.formComposants),
-            canSubmit : false,
+            onFormSubmit: function(){},
+            formComponents : [],
             error: {
                 isVisible: false, 
                 message: null
             }
         };
     },
-    onSubmit: function () {
-
+	getInitialState: function () {
+        return {
+            formComposants: formater.format(this.props.formComposants),
+            canSubmit : false,
+            error: {
+                isVisible: this.props.error.isVisible || false, 
+                message: this.props.error.message || null
+            }
+        };
     },
     handleChanges: function (index, evt){
         var validationResults = null;
@@ -25,38 +37,39 @@ var Form = React.createClass({
             formComposants: this.state.formComposants
         });
         validationResults = validator.valid(this.state.formComposants, index);
-        if (validationResults.result == true && this.state.formComposants[index].onValid != "") {
+        if (validationResults.result == true && this.state.formComposants[index].validation == "message") {
             this.state.formComposants[index].state = "valid";
-            this.state.formComposants[index].onValid(validationResults);
+            this.setState({
+                error: {isVisible: false, message: null}
+            });
         }
-        else if (validationResults.result == false && this.state.formComposants[index].onInvalid != ""){
+        else if (validationResults.result == false && this.state.formComposants[index].validation == "message"){
             this.state.formComposants[index].state = "invalid";
-            this.state.formComposants[index].onInvalid(validationResults);
+            this.setState({
+                error: {isVisible: true, message: "Le champ est incorrect"}
+            });
         }
     },
     render: function () {
         return (
-            <form
-                onSubmit={this.onSubmit}
-                className={this.className}
-                >
+            <form onSubmit={this.props.onFormSubmit}>
                 {this.state.formComposants.map(function(formComponent, i) {
                     return (
                         <div>
                             <formComponent.kind
                                 key={i}
                                 className={
-                                    (formComponent.state == "valid") ? ("m-"+formComponent.kind+i+" m-valid") : (
-                                        (formComponent.state == "invalid") ? ("m-"+formComponent.kind+i+" m-invalid") : ("m-"+formComponent.kind+i)
+                                    (formComponent.isValid) ? ("warm-input-"+formComponent.kind+i+" valid") : (
+                                        (!formComponent.isValid) ? ("warm-input-"+formComponent.kind+i+" invalid") : ("warm-input-"+formComponent.kind+i)
                                     )}
-                                type={formComponent.type}
-                                name={formComponent.name}
-                                placeholder={formComponent.placeholder}
-                                style={formComponent.style}
-                                value={this.state.formComposants[i].value}
+                                type={formComponent.type || 'text'}
+                                name={formComponent.name || 'warmInput'}
+                                placeholder={formComponent.placeholder || ''}
+                                style={formComponent.style || ''}
+                                value={this.state.formComposants[i].value || null}
                                 onChange={this.handleChanges.bind(this, i)}
                                 >
-                                {formComponent.inlineText}
+                                {formComponent.inlineText || ''}
                             </formComponent.kind>
                             <SmallErrorTile isVisible={this.state.error.isVisible} message={this.state.error.message}/>
                         </div>
