@@ -1,2 +1,2 @@
-# wabb
-Bootstrapping with react/flux
+# warm
+lots of useful components for react
