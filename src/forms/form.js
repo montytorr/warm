@@ -37,16 +37,10 @@ var Form = React.createClass({
             formComposants: this.state.formComposants
         });
         validationResults = validator.valid(this.state.formComposants, index);
-        if (validationResults.result == true && this.state.formComposants[index].validation == "message") {
-            this.state.formComposants[index].state = "valid";
+        if (this.state.formComposants[index].validation == "message") {
+            this.state.formComposants[index].isValid = validationResults.result;
             this.setState({
-                error: {isVisible: false, message: null}
-            });
-        }
-        else if (validationResults.result == false && this.state.formComposants[index].validation == "message"){
-            this.state.formComposants[index].state = "invalid";
-            this.setState({
-                error: {isVisible: true, message: "Le champ est incorrect"}
+                error: {isVisible: false, message: validationResults.result ? null : "Le champ est incorrect"}
             });
         }
     },
@@ -65,7 +59,6 @@ var Form = React.createClass({
                                 type={formComponent.type || 'text'}
                                 name={formComponent.name || 'warmInput'}
                                 placeholder={formComponent.placeholder || ''}
-                                style={formComponent.style || ''}
                                 value={this.state.formComposants[i].value || null}
                                 onChange={this.handleChanges.bind(this, i)}
                                 >

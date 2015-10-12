@@ -1,15 +1,7 @@
 var React = global.React || require('react');
-var DefaultComponent = require('./components/default.js');
+var bulk = require('bulk-require');
 
-var Warm = {
-    tiles : [
-        login : require('./components/tiles/login.js') || DefaultComponent
-    ],
-    headers : [
-        simple : require('./components/headers/simple.js') || DefaultComponent
-    ]
-};
-
+var Warm = bulk(__dirname, ['forms/*.js', 'components/**/*.js'])
 
 if (!global.exports && !global.module && (!global.define || !global.define.amd)) {
   global.Warm = Warm;
