@@ -1,11 +1,7 @@
 var React = global.React || require('react');
+var requireDir = require('require-dir');
 
-var Warm = require('require-all')({
-  dirname     :  __dirname + '/forms',
-  filter      :  /(.+)\.js$/,
-  excludeDirs :  /^\.(git|svn)$/
-});
-
+var Warm = requireDir('./forms', {recurse: true});
 if (!global.exports && !global.module && (!global.define || !global.define.amd)) {
   global.Warm = Warm;
 }
