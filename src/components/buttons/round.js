@@ -1,10 +1,9 @@
 var React = require('react');
-var ReactPropTypes = React.PropTypes;
 
 var RoundButton = React.createClass({
 	propTypes: {
-        onClickMethod: ReactPropTypes.Function.isRequired,
-        text: ReactPropTypes.String.isRequired
+        onClickMethod: React.PropTypes.func.isRequired,
+        text: React.PropTypes.string.isRequired
     },
     render: function() {
         return (
