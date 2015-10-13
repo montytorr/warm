@@ -3,31 +3,27 @@ var React = require('react');
 var WarmForm = require('../../forms/form');
 var RoundButton = require('./buttons/round');
 
-var formComponentsConfig = {[
-    {
-        "kind" : "input",
-        "type" : "text",
-        "name" : "emailLogin",
-        "validation" : "message",
-        "placeholder" : "Email",
-        "conditions" : ["mail"],
-        "required" : true
-    },
-    {
-        "kind" : "input",
-        "type" : "password",
-        "name" : "passwordLogin",
-        "validation" : "message",
-        "placeholder" : "Password",
-        "required" : true
-    },
-    {
-        "kind" : "button",
-        "name" : "Submit button",
-        "type" : "submit",
-        "inlineText": "Se connecter"
-    }
-]}
+var formComponentsConfig = [{
+    "kind": "input",
+    "type": "text",
+    "name": "emailLogin",
+    "validation": "message",
+    "placeholder": "Email",
+    "conditions": ["mail"],
+    "required": true
+}, {
+    "kind": "input",
+    "type": "password",
+    "name": "passwordLogin",
+    "validation": "message",
+    "placeholder": "Password",
+    "required": true
+}, {
+    "kind": "button",
+    "name": "Submit button",
+    "type": "submit",
+    "inlineText": "Se connecter"
+}]
 /**
 * Retrieve the current appActiveView, search & dashboard from the stores
 * @return {object} search
@@ -75,7 +71,7 @@ var LoginTile = React.createClass({
         return (
             <div className="warm-component warm-surface-component warm-login">
                 <div className={(this.state.isTileActive == false) ? "login-face in-active":"login-face active"}>
-                    <h2>{this.props.title}/h2>
+                    <h2>{this.props.title}</h2>
                     <RoundButton onClickMethod={this.toggleFormVisible}/>
                 </div>
                 <div className={(this.state.isTileActive == false) ? "warm-form in-active":"warm-form active"}>

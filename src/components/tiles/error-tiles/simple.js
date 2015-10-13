@@ -1,7 +1,7 @@
 var React = require('react');
 
 var SimpleError = React.createClass({
-	propTypes: {
+    propTypes: {
         isVisible: React.PropTypes.bool,
         message: React.PropTypes.string,
     },
@@ -10,11 +10,11 @@ var SimpleError = React.createClass({
           isVisible: false,
           message : ''
         };
-      }
+    },
     render: function() {
         return (
             <p className={(this.props.isVisible== true) ? "warm-error-tile" : "warm-error-tile hidden"}>
-	                {this.props.message || ''}
+                    {this.props.message || ''}
             </p>
         );
     }
