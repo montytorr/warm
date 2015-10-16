@@ -6,12 +6,14 @@ var FullScreenLoader = React.createClass({
         isLoading: React.PropTypes.bool,
         boldText: React.PropTypes.string,
         lightText: React.PropTypes.string,
+        minWaitTime: React.PropTypes.number,
     },
     getDefaultProps: function() {
         return {
           boldText: 'Warm ',
           lightText: 'loader',
-          isLoading: true
+          isLoading: true,
+          minWaitTime: 1000,
         };
     },
     /**
@@ -23,18 +25,21 @@ var FullScreenLoader = React.createClass({
     componentDidUpdate: function(prevProps, prevState){
         //did app go from loading to not loading
         if(prevProps.isLoading && !this.props.isLoading){
-            var container = document.getElementById( 'app-content' );
-            var WarmLoader = container.querySelector('.warm-loader');
-            var WarmLoadedContent = container.querySelector('.warm-loaded-content');
-            NProgress.set(0.9);
-            classie.remove( WarmLoader, 'show' );
-            classie.add( WarmLoader, 'hide' );
-            classie.remove( WarmLoadedContent, 'hide' );
-            classie.add( WarmLoadedContent, 'show' );
             setTimeout(function(){
-                 NProgress.done();
-                classie.add( WarmLoader, 'no-display' );
-            },100)
+                var container = document.getElementById( 'app-content' );
+                var WarmLoader = container.querySelector('.warm-loader');
+                var WarmLoadedContent = container.querySelector('.warm-loaded-content');
+                NProgress.set(0.9);
+                classie.remove( WarmLoader, 'show' );
+                classie.add( WarmLoader, 'hide' );
+                classie.remove( WarmLoadedContent, 'hide' );
+                classie.add( WarmLoadedContent, 'show' );
+                setTimeout(function(){
+                     NProgress.done();
+                    classie.add( WarmLoader, 'no-display' );
+                },100)
+            }, this.props.minWaitTime)
+            
         }
     },
     render: function() {
