@@ -27,18 +27,19 @@ var FullScreenLoader = React.createClass({
             var WarmLoader = container.querySelector('.warm-loader');
             var WarmLoadedContent = container.querySelector('.warm-loaded-content');
             NProgress.set(0.9);
+            classie.remove( WarmLoader, 'show' );
             classie.add( WarmLoader, 'hide' );
             classie.remove( WarmLoadedContent, 'hide' );
             classie.add( WarmLoadedContent, 'show' );
             setTimeout(function(){
                  NProgress.done();
                 classie.add( WarmLoader, 'no-display' );
-            }, 250)
+            },100)
         }
     },
     render: function() {
         return (
-            <div className="warm-loader warm-fade-transition shox">
+            <div className="warm-loader warm-fade-transition show">
                 <h1 className="warm-loader-title">{this.props.boldText}<i>{this.props.lightText}</i></h1>
             </div>
         );
