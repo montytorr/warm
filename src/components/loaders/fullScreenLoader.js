@@ -1,6 +1,7 @@
-var React = require('react');
-var classie = require('classie');
-var NProgress = require('nprogress');
+var React = global.React || require('react');
+var classie = global.classie ||require('classie');
+var NProgress = global.NProgress || require('nprogress');
+
 var FullScreenLoader = React.createClass({
     propTypes: {
         isLoading: React.PropTypes.bool,
