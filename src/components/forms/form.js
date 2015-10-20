@@ -1,7 +1,7 @@
 var React = global.React || require('react');
 var formater = require('./format.js');
 var validator = require('./validation.js');
-var SmallErrorTile = require('../tiles/errors/simpleErrorTile.js');
+var SmallErrorTile = require('../errors/simpleErrorTile.js');
 
 //TODO require some props here
 var Form = React.createClass({
