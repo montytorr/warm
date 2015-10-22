@@ -18,7 +18,7 @@ var handleError = function(error) {
     );
 };
 
-var checkConstructors = function(composant) {
+var checkConstructors = function(component) {
     var propsList = {
         "kind" : String,
         "type" : String,
@@ -35,38 +35,39 @@ var checkConstructors = function(composant) {
         "blacklist" : Array,
         "whitelist" : Array
     };
-    for (var composantProp in composant) {
-        if (propsList[composantProp] !== composant[composantProp].constructor) {
-            return ({'value' : false, 'results' : handleError("'" + composant[composantProp] + "' is not from proper constructor")});
+    for (var componentProp in component) {
+        if (propsList[componentProp] !== component[componentProp].constructor) {
+          console.dir("formComponents[i]", formComponents[i]);
+            return ({'value' : false, 'results' : handleError("'" + component[componentProp] + "' is not from proper constructor")});
         }
     }
     for (var prop in propsList) {
-        if (composant[prop] == undefined) {
+        if (component[prop] === undefined) {
             switch (propsList[prop]) {
                 case String:
-                composant[prop] = "";
+                component[prop] = "";
                 break;
                 case Array:
-                composant[prop] = [];
+                component[prop] = [];
                 break;
                 case Function:
-                composant[prop] = "";
+                component[prop] = "";
                 break;
                 case RegExp:
-                composant[prop] = "";
+                component[prop] = "";
                 break;
                 case Boolean:
-                composant[prop] = false;
+                component[prop] = false;
                 break;
                 default:
-                composant[prop] = "";
+                component[prop] = "";
             }
         }
     }
-    return ({'value' : true, 'results' : composant});
+    return ({'value' : true, 'results' : component});
 };
 
-var input = function(composant) {
+var input = function(component) {
     var inputTypes = [
         'text', 'password', 'email', 'number', 'month', 'date', 'search', 'tel', 'time', 'url', 'week', 'checkbox', 'color', 'radio', 'files', 'image', 'hidden'
     ];
@@ -74,62 +75,62 @@ var input = function(composant) {
     var conditions = [
         'mail', 'isAlpha', 'isNum', 'isAlphaNum', 'isLowCase', 'regExp', 'atLeastOne'
     ];
-    var checkResults = checkConstructors(composant);
+    var checkResults = checkConstructors(component);
 
     // 1 - Check the constructors and set default values for undefined ones
-    if (checkResults.value == false) {
+    if (checkResults.value === false) {
         return (checkResults.results);
     }
     else {
-        composant = checkResults.results;
+        component = checkResults.results;
     }
 
     // 2 - Check the input type.
-    if (inputTypes.indexOf(composant.type) == -1) {
-        return handleError("'" + composant.type + "' is not a proper type prop.")
+    if (inputTypes.indexOf(component.type) == -1) {
+        return handleError("'" + component.type + "' is not a proper type prop.");
     }
 
     // 3 - Check the conditions array.
-    for (var i = 0; i < composant.conditions.length; i++) {
-        if (conditions.indexOf(composant.conditions[i]) == -1) {
-            return handleError("'" + composant.conditions[i] + "' is not a proper condition.")
+    for (var i = 0; i < component.conditions.length; i++) {
+        if (conditions.indexOf(component.conditions[i]) == -1) {
+            return handleError("'" + component.conditions[i] + "' is not a proper condition.");
         }
     }
 
     // 3 - Check logical props declaration.
-    if ((composant.onValid == "" || composant.onValid == "") && composant.conditions.length != 0) {
-        return handleError("Missing validation target for " + composant.kind);
+    if ((component.onValid === "" || component.onValid === "") && component.conditions.length !== 0) {
+        return handleError("Missing validation target for " + component.kind);
     }
-    if (composant.conditions.indexOf("regExp") != -1 && composant.regExp == "") {
-        return handleError("Missing RegExp for " + composant.kind);
+    if (component.conditions.indexOf("regExp") != -1 && component.regExp === "") {
+        return handleError("Missing RegExp for " + component.kind);
     }
-    return composant;
+    return component;
 };
 
-var button = function(composant) {
+var button = function(component) {
     var buttonTypes = [
         'submit', 'action', 'reset'
     ];
-    var checkResults = checkConstructors(composant);
+    var checkResults = checkConstructors(component);
 
     // 1 - Check the constructors
-    if (checkResults.value == false) {
+    if (checkResults.value === false) {
         return (checkResults.results);
     }
     else {
-        composant = checkResults.results;
+        component = checkResults.results;
     }
 
     // 2 - Check the button type.
-    if (buttonTypes.indexOf(composant.type) == -1) {
-        return (handleError("'" + composant.type + "' is not a proper type prop."))
+    if (buttonTypes.indexOf(component.type) == -1) {
+        return (handleError("'" + component.type + "' is not a proper type prop."));
     }
 
     // 3 - Check logical props declaration.
-    if (composant.kind == "action" && composant.Action == "") {
-        return handleError("Missing Action for " + composant.kind);
+    if (component.kind == "action" && component.Action === "") {
+        return handleError("Missing Action for " + component.kind);
     }
-    return composant;
+    return component;
 };
 
 var format = function(formComponents) {
@@ -139,7 +140,7 @@ var format = function(formComponents) {
     };
 
     for (var i = 0; i < formComponents.length; i++) {
-        if (existingKinds[formComponents[i].kind] != undefined) {
+        if (existingKinds[formComponents[i].kind] !== undefined) {
             formComponents[i] = existingKinds[formComponents[i].kind](formComponents[i]);
         }
         else {

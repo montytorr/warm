@@ -27,7 +27,7 @@ var formComponentsConfig = [
         "type" : "submit",
         "inlineText": "Se connecter"
     }
-]
+];
 /**
 * Retrieve the current appActiveView, search & dashboard from the stores
 * @return {object} search
@@ -36,7 +36,7 @@ function getState() {
     return {
         isTileActive: false,
         error: {
-            isVisible: false, 
+            isVisible: false,
             message: null
         }
     };
@@ -64,7 +64,7 @@ var LoginTile = React.createClass({
     onFormSubmit: function (data) {
         var that = this;
         this.props.loginRequestMethod(data.formData, function (response) {
-            if (response.error == true) {
+            if (response.error === true) {
                 that.setState({
                     error: {isVisible: true, message: response.value}
                 });
