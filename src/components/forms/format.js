@@ -38,8 +38,6 @@ var checkConstructors = function(component) {
     for (var componentProp in component) {
         if (propsList[componentProp] !== component[componentProp].constructor) {
             return ({'value' : false, 'results' : handleError("'" + component[componentProp] + "' is not from proper constructor")});
-
-            return false;
         }
     }
     for (var prop in propsList) {

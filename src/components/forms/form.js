@@ -37,17 +37,13 @@ var Form = React.createClass({
             formComponents: this.state.formComponents
         });
         validationResults = validator.valid(this.state.formComponents, index);
-        if (this.state.formComponents[index].validation == "message") {
             this.state.formComponents[index].isValid = validationResults.result;
             this.setState({
                 error: {
                     isVisible: false,
-                    message: validationResults.result
-                        ? null
-                        : "Le champ est incorrect"
+                    message: validationResults.result ? null: "Le champ est incorrect"
                 }
             });
-        }
     },
     render: function() {
         return (
@@ -57,30 +53,26 @@ var Form = React.createClass({
                     .formComponents
                     .map(function (formComponent, i) {
                         return (
-                            <div>
+                            <div key={i}>
                                 <formComponent.kind
                                     key={i}
-                                    className={(formComponent.isValid)
-                                        ? ("warm-input-" + formComponent.kind + i + " valid")
-                                        :((!formComponent.isValid)
-                                        ? ("warm-input-" + formComponent.kind + i + " invalid")
-                                        :( "warm-input-" + formComponent.kind + i))}
-                                        type={formComponent.type || 'text'}
-                                        name={formComponent.name || 'warmInput'}
-                                        placeholder={formComponent.placeholder || ''}
-                                        value={this.state.formComponents[i].value || null}
-                                        onChange={this
-                                            .handleChanges
-                                            .bind(this, i)}>
-                                            {formComponent.inlineText || ''}
-                                        </formComponent.kind>
-                                    </div>
-                                );
-                            }, this)}
-                            <SmallErrorTile
-                                isVisible={this.state.error.isVisible}
-                                message={this.state.error.message}/>
-                        </form>
+                                    className={(formComponent.isValid) ? ("warm-input-" + formComponent.kind + i + " valid") :((!formComponent.isValid) ? ("warm-input-" + formComponent.kind + i + " invalid") :( "warm-input-" + formComponent.kind + i))}
+                                    type={formComponent.type || 'text'}
+                                    name={formComponent.name || 'warmInput'}
+                                    placeholder={formComponent.placeholder || ''}
+                                    value={this.state.formComponents[i].value || null}
+                                    onChange={this
+                                        .handleChanges
+                                        .bind(this, i)}>
+                                        {formComponent.inlineText || null}
+                                    </formComponent.kind>
+                                </div>
+                            );
+                        }, this)}
+                        <SmallErrorTile
+                            isVisible={this.state.error.isVisible}
+                            message={this.state.error.message}/>
+                    </form>
         );
     }
 });
