@@ -37,7 +37,9 @@ var FullScreenLoader = React.createClass({
                 classie.add(WarmLoadedContent, 'show');
                 setTimeout(function() {
                     NProgress.done();
-                    classie.add(WarmLoader, 'no-display');
+                    setTimeout(function() {
+                        classie.add(WarmLoader, 'no-display');
+                    }, 100);
                 }, 100);
             }, this.props.minWaitTime);
 

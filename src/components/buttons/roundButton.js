@@ -4,16 +4,19 @@ var RoundButton = React.createClass({
     getDefaultProps: function() {
         return {
             onClickMethod: function(){},
-            text : ''
+            text : '',
+            customClass : ''
         };
     },
     propTypes: {
         onClickMethod: React.PropTypes.func,
-        text: React.PropTypes.string
+        text: React.PropTypes.string,
+        customClass : React.PropTypes.string
     },
     render: function() {
+        var className = "warm-button round "+this.props.customClass
         return (
-            <button onClick={this.props.onClickMethod} className="warm-button round">
+            <button onClick={this.props.onClickMethod} className={className}>
                 {this.props.text}
             </button>
         );

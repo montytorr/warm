@@ -21,11 +21,13 @@ var LoginTile = React.createClass({
     propTypes: {
         loginRequestMethod: React.PropTypes.func,
         title: React.PropTypes.string,
+        customClasses: React.PropTypes.string,
     },
     getDefaultProps: function() {
         return {
             loginRequestMethod: function(){},
-            title : 'Login'
+            title : 'Login',
+            customClasses : ""
         };
     },
     onValidField: function (ret) {
@@ -86,13 +88,16 @@ var LoginTile = React.createClass({
               "inlineText": "Se connecter"
           }
       ];
+      var className = "warm-component warm-surface-component warm-login "+this.props.customClasses;
+      var descriptionBlock = (this.props.description) ? <p>{this.props.description}</p>:""
         return (
-            <div className="warm-component warm-surface-component warm-login">
-                <div className={(this.state.isTileActive == false) ? "login-face in-active":"login-face active"}>
+            <div className={className}>
+                <div className={(this.state.isTileActive == false) ? "login-face active":"login-face"}>
                     <h2>{this.props.title}</h2>
-                    <RoundButton onClickMethod={this.toggleFormVisible}/>
-                </div>
-                <div className={(this.state.isTileActive == false) ? "warm-form in-active":"warm-form active"}>
+                    <RoundButton onClickMethod={this.toggleFormVisible} customClass="astrologo-bg"/>
+                    {descriptionBlock}
+            </div>
+                <div className={(this.state.isTileActive == false) ? "login-form":"login-form active"}>
                     <h2>Connexion</h2>
                     <WarmForm onFormSubmit={this.onFormSubmit} formComponents={formComponentsConfig} error={this.state.error}/>
                 </div>
