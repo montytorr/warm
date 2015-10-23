@@ -1,21 +1,24 @@
 var React = global.React || require('react');
 
-var RoundButton = React.createClass({
+var SimpleErrorTile = React.createClass({
      getDefaultProps: function() {
         return {
-            text : 'This is an error'
+            isVisible : false,
+            message : 'This is an error'
         };
     },
     propTypes: {
-        text: React.PropTypes.string,
+        isVisible: React.PropTypes.bool,
+        message: React.PropTypes.string,
     },
     render: function() {
+        var dynamicClassName = this.props.isVisible ? "visible" : "hidden";
         return (
-            <div>
-            {this.props.text}
+            <div className='"warm-error-tile '+dynamicClassName+'"'>
+              {this.props.message}
             </div>
         );
     }
 });
 
-module.exports = RoundButton;
+module.exports = SimpleErrorTile;

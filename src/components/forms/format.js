@@ -37,8 +37,9 @@ var checkConstructors = function(component) {
     };
     for (var componentProp in component) {
         if (propsList[componentProp] !== component[componentProp].constructor) {
-          console.dir("formComponents[i]", formComponents[i]);
             return ({'value' : false, 'results' : handleError("'" + component[componentProp] + "' is not from proper constructor")});
+
+            return false;
         }
     }
     for (var prop in propsList) {
@@ -134,12 +135,14 @@ var button = function(component) {
 };
 
 var format = function(formComponents) {
+
     var existingKinds = {
         "input": input,
         "button": button
     };
 
     for (var i = 0; i < formComponents.length; i++) {
+
         if (existingKinds[formComponents[i].kind] !== undefined) {
             formComponents[i] = existingKinds[formComponents[i].kind](formComponents[i]);
         }

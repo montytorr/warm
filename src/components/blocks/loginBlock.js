@@ -3,31 +3,6 @@ var React = global.React || require('react');
 var WarmForm = require('../forms/form');
 var RoundButton = require('../buttons/roundButton');
 
-var formComponentsConfig = [
-    {
-        "kind" : "input",
-        "type" : "text",
-        "name" : "emailLogin",
-        "validation" : "message",
-        "placeholder" : "Email",
-        "conditions" : ["mail"],
-        "required" : true
-    },
-    {
-        "kind" : "input",
-        "type" : "password",
-        "name" : "passwordLogin",
-        "validation" : "message",
-        "placeholder" : "Password",
-        "required" : true
-    },
-    {
-        "kind" : "button",
-        "name" : "Submit button",
-        "type" : "submit",
-        "inlineText": "Se connecter"
-    }
-];
 /**
 * Retrieve the current appActiveView, search & dashboard from the stores
 * @return {object} search
@@ -53,6 +28,18 @@ var LoginTile = React.createClass({
             title : 'Login'
         };
     },
+    onValidField: function (ret) {
+        var error = {isVisible: false, content: null};
+        this.setState({
+            error: error
+        });
+    },
+    onInvalidField: function (ret) {
+        var error = {isVisible: true, content: "Le champ est incorrect"};
+        this.setState({
+            error: error
+        });
+    },
     getInitialState: function() {
         return getState();
     },
@@ -72,6 +59,34 @@ var LoginTile = React.createClass({
         });
     },
     render: function() {
+      console.log("formComponentsConfig", formComponentsConfig);
+      var formComponentsConfig = [
+          {
+              "kind" : "input",
+              "type" : "text",
+              "name" : "emailLogin",
+              "onValid" : this.onValidField,
+              "onInvalid" : this.onInvalidField,
+              "placeholder" : "Email",
+              "conditions" : ["mail"],
+              "required" : true
+          },
+          {
+              "kind" : "input",
+              "type" : "password",
+              "name" : "passwordLogin",
+              "onValid" : this.onValidField,
+              "onInvalid" : this.onInvalidField,
+              "placeholder" : "Password",
+              "required" : true
+          },
+          {
+              "kind" : "button",
+              "name" : "Submit button",
+              "type" : "submit",
+              "inlineText": "Se connecter"
+          }
+      ];
         return (
             <div className="warm-component warm-surface-component warm-login">
                 <div className={(this.state.isTileActive == false) ? "login-face in-active":"login-face active"}>
