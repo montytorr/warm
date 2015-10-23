@@ -20,13 +20,15 @@ function getState() {
 var LoginTile = React.createClass({
     propTypes: {
         loginRequestMethod: React.PropTypes.func,
-        title: React.PropTypes.string,
+        boldTitle: React.PropTypes.string,
+        lightTitle: React.PropTypes.string,
         customClasses: React.PropTypes.string,
     },
     getDefaultProps: function() {
         return {
             loginRequestMethod: function(){},
-            title : 'Login',
+            boldTitle: "Warm ",
+            lightTitle: "login",
             customClasses : ""
         };
     },
@@ -93,7 +95,7 @@ var LoginTile = React.createClass({
         return (
             <div className={className}>
                 <div className={(this.state.isTileActive == false) ? "login-face active":"login-face"}>
-                    <h2>{this.props.title}</h2>
+                    <h2 className="warm-title">{this.props.boldTitle}<i>{this.props.lightTitle}</i></h2>
                     <RoundButton onClickMethod={this.toggleFormVisible} customClass="astrologo-bg"/>
                     {descriptionBlock}
             </div>
