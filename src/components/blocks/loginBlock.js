@@ -59,7 +59,6 @@ var LoginTile = React.createClass({
         });
     },
     render: function() {
-      console.log("formComponentsConfig", formComponentsConfig);
       var formComponentsConfig = [
           {
               "kind" : "input",
