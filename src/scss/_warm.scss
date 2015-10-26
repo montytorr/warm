@@ -1,0 +1,149 @@
+/* Make clicks pass-through */
+#nprogress {
+    pointer-events: none;
+}
+#nprogress .bar {
+    background: $main-theme-color;
+    position: fixed;
+    z-index: 1031;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    box-shadow: 0 0 10px #29d, 0 0 5px $main-theme-color;
+    opacity: 1.0;
+    -webkit-transform: rotate(3deg) translate(0px, -4px);
+    -ms-transform: rotate(3deg) translate(0px, -4px);
+    transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner {
+    display: block;
+    position: fixed;
+    z-index: 1031;
+    top: 15px;
+    right: 15px;
+}
+#nprogress .spinner-icon {
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+    border: solid 2px transparent;
+    border-top-color: $main-theme-color;
+    border-left-color: $main-theme-color;
+    border-radius: 50%;
+    -webkit-animation: nprogress-spinner 400ms linear infinite;
+    animation: nprogress-spinner 400ms linear infinite;
+}
+.nprogress-custom-parent {
+    overflow: hidden;
+    position: relative;
+}
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+    position: absolute;
+}
+@-webkit-keyframes nprogress-spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes nprogress-spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.warm-loaded-content {
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+}
+.warm-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    display: inline-flex;
+}
+.warm-title,
+.warm-loader-title {
+    font-size: 45px;
+    text-align: center;
+    font-weight: 200;
+    line-height: 1.3;
+    color: #333;
+}
+.warm-title i,
+.warm-loader-title i {
+    color: $main-white-color;
+    font-style: normal;
+}
+.warm-loader-title i {
+    color: $main-theme-color;
+}
+.warm-loader-title {
+    opacity: 0;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    padding-top: 110px;
+    -webkit-animation: animLoadedLogo 0.3s linear forwards;
+    animation: animLoadedLogo 0.3s linear forwards;
+}
+.warm-fade-transition.show {
+    opacity: 1;
+}
+.warm-fade-transition.hide {
+    opacity: 0;
+}
+.warm-fade-transition {
+    transition: opacity .3s linear;
+    -moz-transition: opacity .3s linear;
+    -webkit-transition: opacity .3s linear;
+}
+@media (min-width: 480px) {
+    .warm-loader {
+        font-size: 25px;
+    }
+}
+@-webkit-keyframes animLoadedLogo {
+    to {
+        opacity: 1;
+    }
+}
+@keyframes animLoadedLogo {
+    to {
+        opacity: 1;
+    }
+}
+.warm-component {
+
+}
+.warm-surface-component {
+
+}
+.warm-button {
+    outline: none;
+    border: none;
+    &.round {
+        height: 130px;
+        width: 130px;
+        border-radius: 50%;
+    }
+}

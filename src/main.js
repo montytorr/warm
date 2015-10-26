@@ -19,7 +19,7 @@ Warm.buttons.readme = "https://github.com/maestro-tech/warm/blob/master/src/comp
 //blocks
 Warm.blocks = {};
 Warm.blocks.Login = require('./components/blocks/loginBlock.js');
-
+Warm.blocks.Login = "https://github.com/maestro-tech/warm/blob/master/src/components/blocks/readme.md";
 //lists
 Warm.lists = {};
 
