@@ -84,6 +84,20 @@ var LoginTile = React.createClass({
               "required" : true
           },
           {
+              "kind" : "input",
+              "type" : "checkbox",
+              "name" : "rememberMeLogin",
+              "id" : "rememberMeLogin",
+              "hasAuxilary" : true,
+              "checked" : true,
+              "auxilaryComponent" : {
+                  "kind" : 'label',
+                  "for" : "rememberMeLogin",
+                  "content" : "Se souvenir de mon mot de passe",
+                  "className" : 'warm-radio-login'
+              }
+          },
+          {
               "kind" : "button",
               "name" : "Submit button",
               "type" : "submit",

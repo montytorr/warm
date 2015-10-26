@@ -14,12 +14,12 @@ Warm.buttons = {};
 Warm.buttons.Round = require('./components/buttons/roundButton.js');
 Warm.buttons.Mock1 = require('./components/buttons/mock1Button.js');
 Warm.buttons.Mock2 = require('./components/buttons/mock2Button.js');
-Warm.buttons.readme = "https://github.com/maestro-tech/warm/blob/master/src/components/buttons/readme.md";
+Warm.buttons.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/buttons/readme.md";
 
 //blocks
 Warm.blocks = {};
 Warm.blocks.Login = require('./components/blocks/loginBlock.js');
-Warm.blocks.Login = "https://github.com/maestro-tech/warm/blob/master/src/components/blocks/readme.md";
+Warm.blocks.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/blocks/readme.md";
 //lists
 Warm.lists = {};
 

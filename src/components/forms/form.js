@@ -3,7 +3,6 @@ var formater = require('./format.js');
 var validator = require('./validation.js');
 var SmallErrorTile = require('../errors/simpleErrorTile.js');
 
-//TODO require some props here
 var Form = React.createClass({
     propTypes: {
         onFormSubmit: React.PropTypes.func,
@@ -40,14 +39,23 @@ var Form = React.createClass({
             this.state.formComponents[index].isValid = validationResults.result;
             this.setState({
                 error: {
-                    isVisible: false,
+                    isVisible: validationResults.result ? false: true,
                     message: validationResults.result ? null: "Le champ est incorrect"
                 }
             });
     },
+    handleCheckbox: function(index, evt) {
+        var validationResults = null;
+        this.state.formComponents[index].checked = !this.state.formComponents[index].checked;
+        this.setState({
+            formComponents: this.state.formComponents
+        });
+        this.state.formComponents[index].isValid = true
+
+    },
     render: function() {
         return (
-            <form onSubmit={this.props.onFormSubmit}>
+            <form className="warm-form" onSubmit={this.props.onFormSubmit}>
                 {this
                     .state
                     .formComponents
@@ -56,16 +64,21 @@ var Form = React.createClass({
                             <div key={i}>
                                 <formComponent.kind
                                     key={i}
-                                    className={(formComponent.isValid) ? ("warm-input-" + formComponent.kind + i + " valid") :((!formComponent.isValid) ? ("warm-input-" + formComponent.kind + i + " invalid") :( "warm-input-" + formComponent.kind + i))}
+                                    className={(formComponent.isValid) ? ("warm-input-"+formComponent.type+" warm-input-" + formComponent.kind + i + " valid") :((!formComponent.isValid) ? ("warm-input-"+formComponent.type+" warm-input-" + formComponent.kind + i + " invalid") :("warm-input-"+formComponent.type+" warm-input-" + formComponent.kind + i))}
                                     type={formComponent.type || 'text'}
                                     name={formComponent.name || 'warmInput'}
                                     placeholder={formComponent.placeholder || ''}
                                     value={this.state.formComponents[i].value || null}
+                                    id={this.state.formComponents[i].id || ""}
+                                    checked={this.state.formComponents[i].checked}
+                                    onClick={(formComponent.type === "checkbox") ? (this.handleCheckbox.bind(this, i)) : function(){}}
                                     onChange={this
                                         .handleChanges
                                         .bind(this, i)}>
                                         {formComponent.inlineText || null}
                                     </formComponent.kind>
+                                    {(formComponent.hasAuxilary) ? (<formComponent.auxilaryComponent.kind className={formComponent.auxilaryComponent.className} htmlFor={formComponent.auxilaryComponent.for}>{formComponent.auxilaryComponent.content}</formComponent.auxilaryComponent.kind>) : ''}
+
                                 </div>
                             );
                         }, this)}
