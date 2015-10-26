@@ -12,7 +12,8 @@ function getState() {
         isTileActive: false,
         error: {
             isVisible: false,
-            message: null
+            message: null,
+            isSuccess: false
         }
     };
 }
@@ -52,18 +53,21 @@ var LoginTile = React.createClass({
             isTileActive: !this.state.isTileActive || false
         });
     },
-    onFormSubmit: function () {
+    onFormSubmit: function (formData) {
         var that = this;
-        return function(e, options){
-            e.preventDefault();
-            that.props.loginRequestMethod(options.formData, function (response) {
-                if (response.error !== null) {
-                    that.setState({
-                        error: {isVisible: true, message: response.error}
-                    });
-                }
-            });
-        }
+        that.props.loginRequestMethod(formData, function (response) {
+            if (response.error !== null) {
+                that.setState({
+                    error: {isVisible: true, message: response.error}
+                });
+            }
+            else{
+                that.setState({
+                    error: {isVisible: true, message: 'Login successful', isSuccess: true}
+                });
+            }
+        });
+
     },
     render: function() {
       var formComponentsConfig = [
@@ -102,7 +106,7 @@ var LoginTile = React.createClass({
           },
           {
               "kind" : "button",
-              "name" : "Submit button",
+              "name" : "SubmitLogin",
               "type" : "submit",
               "inlineText": "Se connecter"
           }

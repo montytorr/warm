@@ -15,7 +15,8 @@ var Form = React.createClass({
             formComponents: [],
             error: {
                 isVisible: false,
-                message: null
+                message: null,
+                isSuccess : false
             }
         };
     },
@@ -25,7 +26,8 @@ var Form = React.createClass({
             canSubmit: false,
             error: {
                 isVisible: this.props.error.isVisible || false,
-                message: this.props.error.message || null
+                message: this.props.error.message || null,
+                isSuccess : this.props.error.isSuccess || false
             }
         };
     },
@@ -55,12 +57,27 @@ var Form = React.createClass({
         this.setState({
             formComponents: this.state.formComponents
         });
-        this.state.formComponents[index].isValid = true
-
+        this.state.formComponents[index].isValid = true;
+    },
+    submitWarmForm : function(e){
+        e.preventDefault();
+        var that = this;
+		var i = 1;
+        var formComponents={};
+        this.state.formComponents.map(function (formComponent, i) {
+            formComponents[formComponent.name] = {
+                "className" : formComponent.className  || "default",
+                "name" : formComponent.name  || "default",
+                "value" : formComponent.value || "default",
+                "id" : formComponent.id  || "default",
+                "checked" : formComponent.checked  || null
+            };
+        });
+		that.props.onFormSubmit(formComponents);
     },
     render: function() {
         return (
-            <form className="warm-form" onSubmit={this.props.onFormSubmit(event, {"toto": 'toto'})}>
+            <form className="warm-form" onSubmit={this.submitWarmForm}>
                 {this
                     .state
                     .formComponents
@@ -69,13 +86,13 @@ var Form = React.createClass({
                             <div key={i}>
                                 <formComponent.kind
                                     key={i}
-                                    className={(formComponent.isValid) ? ("warm-input-"+formComponent.type+" warm-input-" + formComponent.kind + i + " valid") :((!formComponent.isValid) ? ("warm-input-"+formComponent.type+" warm-input-" + formComponent.kind + i + " invalid") :("warm-input-"+formComponent.type+" warm-input-" + formComponent.kind + i))}
+                                    className={(formComponent.isValid) ? ("warm-input-"+formComponent.type + " valid") :((!formComponent.isValid) ? ("warm-input-"+formComponent.type+ " invalid") :("warm-input-"+formComponent.type))}
                                     type={formComponent.type || 'text'}
                                     name={formComponent.name || 'warmInput'}
                                     placeholder={formComponent.placeholder || ''}
-                                    value={this.state.formComponents[i].value || null}
-                                    id={this.state.formComponents[i].id || ""}
-                                    checked={this.state.formComponents[i].checked}
+                                    value={formComponent.value || null}
+                                    id={formComponent.id || ""}
+                                    checked={formComponent.checked}
                                     onClick={(formComponent.type === "checkbox") ? (this.handleCheckbox.bind(this, i)) : function(){}}
                                     onChange={this
                                         .handleChanges
@@ -87,9 +104,7 @@ var Form = React.createClass({
                                 </div>
                             );
                         }, this)}
-                        <SmallErrorTile
-                            isVisible={this.state.error.isVisible}
-                            message={this.state.error.message}/>
+                        <SmallErrorTile {...this.state.error}/>
                     </form>
         );
     }

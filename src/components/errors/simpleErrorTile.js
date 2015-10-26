@@ -4,16 +4,18 @@ var SimpleErrorTile = React.createClass({
      getDefaultProps: function() {
         return {
             isVisible : false,
-            message : 'This is an error'
+            message : 'This is an error',
+            isSuccess : false
         };
     },
     propTypes: {
         isVisible: React.PropTypes.bool,
         message: React.PropTypes.string,
+        isSuccess : React.PropTypes.bool
     },
     render: function() {
         var dynamicClassName = this.props.isVisible ? "visible" : "hidden";
-        dynamicClassName += ' warm-error-tile';
+        dynamicClassName += ' warm-error-tile ' + (this.props.isSuccess ? "isSuccess" : "");
         return (
             <p className={dynamicClassName}>
               {this.props.message}

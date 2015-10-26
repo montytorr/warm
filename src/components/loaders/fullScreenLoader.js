@@ -8,7 +8,10 @@ var FullScreenLoader = React.createClass({
         boldText: React.PropTypes.string,
         lightText: React.PropTypes.string,
         minWaitTime: React.PropTypes.number,
-        rootContainer : React.PropTypes.string
+        rootContainer : React.PropTypes.string,
+        afterLoadAction : React.PropTypes.func,
+        afterLoadData : React.PropTypes.object,
+        endSignal : React.PropTypes.func
     },
     getDefaultProps: function() {
         return {
@@ -16,7 +19,10 @@ var FullScreenLoader = React.createClass({
             lightText: 'loader',
             isLoading: true,
             minWaitTime: 1000,
-            rootContainer : 'app-content'
+            rootContainer : 'app-content',
+            afterLoadAction : function(){},
+            afterLoadData : {},
+            endSignal : function(){},
         };
     },
     /**
@@ -27,12 +33,11 @@ var FullScreenLoader = React.createClass({
     },
     componentDidUpdate: function(prevProps, prevState) {
         var that = this;
-        //did app go from loading to not loading
+        var container = document.getElementById(that.props.rootContainer);
+        var WarmLoader = container.querySelector('.warm-loader');
+        var WarmLoadedContent = container.querySelector('.warm-loaded-content');
         if (prevProps.isLoading && !this.props.isLoading) {
             setTimeout(function() {
-                var container = document.getElementById(that.props.rootContainer);
-                var WarmLoader = container.querySelector('.warm-loader');
-                var WarmLoadedContent = container.querySelector('.warm-loaded-content');
                 NProgress.set(0.9);
                 classie.remove(WarmLoader, 'show');
                 classie.add(WarmLoader, 'hide');
@@ -45,7 +50,17 @@ var FullScreenLoader = React.createClass({
                     }, 100);
                 }, 100);
             }, this.props.minWaitTime);
-
+        }
+        if (!prevProps.isLoading && this.props.isLoading) {
+            classie.remove(WarmLoader, 'no-display');
+            classie.add(WarmLoader, 'show');
+            classie.remove(WarmLoader, 'hide');
+            classie.add(WarmLoadedContent, 'hide');
+            classie.remove(WarmLoadedContent, 'show');
+            setTimeout(function() {
+                NProgress.start();
+                _fireAfterLoadAction(that.props);
+            }, 50);
         }
     },
     render: function() {
@@ -61,6 +76,26 @@ var FullScreenLoader = React.createClass({
         );
     }
 });
+
+/**
+* fires an action from AppStore.afterLoadAction and deletes if afterwards
+*/
+var _fireAfterLoadAction = function(props){
+    console.log('hey hey ', props, typeof props.afterLoadAction)
+    if(typeof props.afterLoadAction === 'function'){
+        try {
+            console.log('calling adfter load', props)
+            props.afterLoadAction(props.afterLoadData, function(){
+                props.endSignal();
+                console.log('endSignal', props.endSignal)
+            })
+        } catch (e) {
+            if (e instanceof SyntaxError) {
+                console.log(e.message);
+            }
+        }
+    }
+};
 
 if (!global.exports && !global.module && (!global.define || !global.define.amd)) {
     global.FullScreenLoader = FullScreenLoader;
