@@ -55,7 +55,7 @@ var Form = React.createClass({
     },
     render: function() {
         return (
-            <form className="warm-form" onSubmit={this.props.onFormSubmit}>
+            <form className="warm-form" onSubmit={this.props.onFormSubmit(event, {"toto": 'toto'})}>
                 {this
                     .state
                     .formComponents

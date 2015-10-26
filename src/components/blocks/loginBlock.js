@@ -52,12 +52,13 @@ var LoginTile = React.createClass({
             isTileActive: !this.state.isTileActive || false
         });
     },
-    onFormSubmit: function (data) {
+    onFormSubmit: function (e, options) {
+        e.preventDefault();
         var that = this;
-        this.props.loginRequestMethod(data.formData, function (response) {
-            if (response.error === true) {
+        this.props.loginRequestMethod(options.formData, function (response) {
+            if (response.error !== null) {
                 that.setState({
-                    error: {isVisible: true, message: response.value}
+                    error: {isVisible: true, message: response.error}
                 });
             }
         });
