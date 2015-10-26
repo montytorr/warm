@@ -152,6 +152,7 @@ var format = function(formComponents) {
         else {
             formComponents[i] = handleError("'" + formComponents[i].kind+ "' is not a form Composant kind.");
         }
+        formComponents[i].isValid = true;
     }
     return formComponents;
 };

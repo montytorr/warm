@@ -12,7 +12,6 @@ var SimpleErrorTile = React.createClass({
         message: React.PropTypes.string,
     },
     render: function() {
-        console.log('props', this.props)
         var dynamicClassName = this.props.isVisible ? "visible" : "hidden";
         dynamicClassName += ' warm-error-tile';
         return (

@@ -29,6 +29,11 @@ var Form = React.createClass({
             }
         };
     },
+    componentWillReceiveProps: function(nextProps) {
+      this.setState({
+        error: nextProps.error
+      });
+  },
     handleChanges: function(index, evt) {
         var validationResults = null;
         this.state.formComponents[index].value = evt.target.value;
@@ -36,13 +41,13 @@ var Form = React.createClass({
             formComponents: this.state.formComponents
         });
         validationResults = validator.valid(this.state.formComponents, index);
-            this.state.formComponents[index].isValid = validationResults.result;
-            this.setState({
-                error: {
-                    isVisible: validationResults.result ? false: true,
-                    message: validationResults.result ? null: "Le champ est incorrect"
-                }
-            });
+        this.state.formComponents[index].isValid = validationResults.result;
+        this.setState({
+            error: {
+                isVisible: validationResults.result ? false: true,
+                message: validationResults.result ? null: "Le champ est incorrect"
+            }
+        });
     },
     handleCheckbox: function(index, evt) {
         var validationResults = null;
