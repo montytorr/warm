@@ -1,7 +1,7 @@
 .warm-form {
     & .warm-input-text,
     & .warm-input-password {
-        background-color: $w-color-background-grey;
+        background-color: $w-color-background-inputs;
         line-height: 35px;
         width: 100%;
         &.invalid {
@@ -19,7 +19,7 @@
             line-height: 55px;
             transition: all 0.2s;
             font-size: 12px;
-            color: $w-color-grey-text;
+            color: $w-color-text-inputs;
             &:hover {
                 cursor: pointer;
             }
@@ -31,8 +31,8 @@
             top: 15px;
             width: 25px;
             height: 25px;
-            border: 1px solid $w-color-main-theme;
-            background: $w-color-background-grey;
+            border: 1px solid $w-color-main;
+            background-color: $w-color-background-inputs;
             border-radius: 3px;
         }
         &:checked + label:after {
@@ -42,7 +42,7 @@
             left: 13px;
             font-size: 25px;
             line-height: 0.8;
-            color: $w-color-main-theme;
+            color: $w-color-main;
         }
     }
     & input {
@@ -53,22 +53,22 @@
         margin-bottom: 10px;
         box-shadow: 0 0 1px 1px #A1A1A1;
         &:focus {
-            box-shadow: 0 0 1px 1px $w-color-main-theme;
+            box-shadow: 0 0 1px 1px $w-color-main;
         }
     }
     & button {
-        background-color: $w-color-main-theme;
+        background-color: $w-color-main;
         outline: none;
         border: none;
         border-radius: 5px;
-        color: $w-color-main-white;
+        color: $w-color-main-text;
         width: 100%;
         height: 45px;
         font-size: 17px;
         margin: 0 auto;
         margin-top: 10px;
         &:hover {
-            box-shadow: 0 0 1px 1px $w-color-main-theme;
+            box-shadow: 0 0 1px 1px $w-color-main;
             cursor: pointer;
         }
     }

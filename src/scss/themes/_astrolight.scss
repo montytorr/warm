@@ -1,12 +1,13 @@
 /*----------------------  COLORS  ---------------------------------------------*/
-$w-color-clear-blue : #59a7f0;
-$w-color-dark-blue : #356590;
-$w-color-main-theme : #EB573B;
-$w-color-main-white : #FDFEFE;
-$w-color-background-grey : #E5E5E5;
-$w-color-grey-text : #A1A1A1;
+$w-color-main : #EB573B;
+$w-color-main-text : #FDFEFE;
+
+$w-color-background-login : #FDFEFE;
+$w-color-background-inputs : #E5E5E5;
 $w-color-background-error : #881820;
 $w-color-background-success : #80C684;
+
+$w-color-text-inputs : #A1A1A1;
 
 /*----------------------  FONTS  ----------------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200);

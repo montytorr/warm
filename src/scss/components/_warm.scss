@@ -3,7 +3,7 @@
     pointer-events: none;
 }
 #nprogress .bar {
-    background: $w-color-main-theme;
+    background: $w-color-main;
     position: fixed;
     z-index: 1031;
     top: 0;
@@ -19,7 +19,7 @@
     right: 0;
     width: 100px;
     height: 100%;
-    box-shadow: 0 0 10px #29d, 0 0 5px $w-color-main-theme;
+    box-shadow: 0 0 10px #29d, 0 0 5px $w-color-main;
     opacity: 1.0;
     -webkit-transform: rotate(3deg) translate(0px, -4px);
     -ms-transform: rotate(3deg) translate(0px, -4px);
@@ -39,8 +39,8 @@
     height: 18px;
     box-sizing: border-box;
     border: solid 2px transparent;
-    border-top-color: $w-color-main-theme;
-    border-left-color: $w-color-main-theme;
+    border-top-color: $w-color-main;
+    border-left-color: $w-color-main;
     border-radius: 50%;
     -webkit-animation: nprogress-spinner 400ms linear infinite;
     animation: nprogress-spinner 400ms linear infinite;
@@ -91,11 +91,11 @@
 }
 .warm-title i,
 .warm-loader-title i {
-    color: $w-color-main-white;
+    color: $w-color-main-text;
     font-style: normal;
 }
 .warm-loader-title i {
-    color: $w-color-main-theme;
+    color: $w-color-main;
 }
 .warm-loader-title {
     opacity: 0;

@@ -1,6 +1,6 @@
 .warm-error-tile{
     background :$w-color-background-error;
-    color:$w-color-main-white;
+    color:$w-color-main-text;
     border-radius: 5px;
     padding: 10px;
     box-sizing: border-box;
@@ -25,7 +25,7 @@
         top: 50%;
         width: 25px;
         height: 25px;
-        background: $w-color-background-grey;
+        background-color: $w-color-background-inputs;
         border-radius: 50%;
         margin-top:-12px;
     }
