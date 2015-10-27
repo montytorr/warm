@@ -1,0 +1,32 @@
+.warm-error-tile{
+    background :$error-background;
+    color:$main-white-color;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 25px;
+    position:relative;
+    padding-left: 55px;
+    font-size: 13px;
+    min-height: 35px;
+    opacity: 1;
+    -webkit-transition: opacity 0.5s cubic-bezier(.7, 0, .3, 1);
+    transition: opacity 0.5s cubic-bezier(.7, 0, .3, 1);
+    &.isSuccess{
+        background :$success-background;
+    }
+    &.hidden{
+        opacity: 0;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        width: 25px;
+        height: 25px;
+        background: $grey-background;
+        border-radius: 50%;
+        margin-top:-12px;
+    }
+}
