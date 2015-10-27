@@ -6,7 +6,7 @@ body {
     background: #F7F7F7;
     height: 100%;
     width: 100%;
-    font-family: $default-font;
+    font-family: $w-font-default;
 }
 
 /*******************************************************************************
@@ -17,23 +17,13 @@ body {
     width: 100%;
 }
 
-#app-content.astrolight-background{
-    background: url("../img/astrolight-background.jpg") no-repeat center center fixed;
+#app-content.app-background{
+    background: $w-background-app;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-
-.warm-login .warm-button.round{
-    background: url("../img/astrolight-profile.png") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-
 
 /*******************************************************************************
  						        composants
@@ -41,7 +31,7 @@ body {
 .red-blob{
 	height: 500px;
     width: 250px;
-    background-color: $dark-blue;
+    background-color: $w-color-dark-blue;
     margin: 0 auto;
 }
 

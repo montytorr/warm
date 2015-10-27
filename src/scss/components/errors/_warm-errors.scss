@@ -1,6 +1,6 @@
 .warm-error-tile{
-    background :$error-background;
-    color:$main-white-color;
+    background :$w-color-background-error;
+    color:$w-color-main-white;
     border-radius: 5px;
     padding: 10px;
     box-sizing: border-box;
@@ -13,7 +13,7 @@
     -webkit-transition: opacity 0.5s cubic-bezier(.7, 0, .3, 1);
     transition: opacity 0.5s cubic-bezier(.7, 0, .3, 1);
     &.isSuccess{
-        background :$success-background;
+        background :$w-color-background-success;
     }
     &.hidden{
         opacity: 0;
@@ -25,7 +25,7 @@
         top: 50%;
         width: 25px;
         height: 25px;
-        background: $grey-background;
+        background: $w-color-background-grey;
         border-radius: 50%;
         margin-top:-12px;
     }

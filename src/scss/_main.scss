@@ -1,7 +1,7 @@
 /*----------------------  THEMES  ----------------------------------------------*/
 // ** UNCOMENT TO APPLY THEME **
-@import "themes/default";
-// @import "themes/astrolight";
+// @import "themes/default";
+@import "themes/astrolight";
 // @import "themes/hecules";
 // @import "themes/bluesky";;
 // @import "themes/redneck";
@@ -10,8 +10,9 @@
 
 
 /*----------------------  COMPONENTS  -----------------------------------------*/
-@import "components/global";
 @import "components/warm";
-@import "components/warm-forms";
-@import "components/warm-loginBlock";
-@import "components/warm-errors";
+@import "components/global";
+@import "components/blocks/warm-loginBlock";
+@import "components/buttons/buttons";
+@import "components/errors/warm-errors";
+@import "components/forms/warm-forms";

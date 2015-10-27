@@ -1,7 +1,7 @@
 .warm-login {
     height: 400px;
     width: 400px;
-    background-color: $main-theme-color;
+    background-color: $w-color-main-theme;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -22,7 +22,7 @@
     }
     & .login-face {
         width: 20%;
-        background-color: $main-theme-color;
+        background-color: $w-color-main-theme;
         text-align: center;
         & .warm-button.round {
             margin-bottom: 55px;
@@ -44,7 +44,7 @@
             color: rgba(0, 0, 0, 0.5);
         }
         & p {
-            color: $main-white-color;
+            color: $w-color-main-white;
         }
         & h2,
         & p {
@@ -67,10 +67,10 @@
         }
     }
     & .login-form {
-        background-color: $main-white-color;
+        background-color: $w-color-main-white;
         width: 0;
         overflow: hidden;
-        color: $main-theme-color;
+        color: $w-color-main-theme;
         & .warm-form {
             width: 280px;
             margin: 0 auto;
