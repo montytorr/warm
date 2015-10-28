@@ -53,12 +53,13 @@ var FullScreenLoader = React.createClass({
             classie.remove(WarmLoader, 'no-display');
             classie.add(WarmLoader, 'show');
             classie.remove(WarmLoader, 'hide');
-            classie.add(WarmLoadedContent, 'hide');
-            classie.remove(WarmLoadedContent, 'show');
+
             setTimeout(function() {
+                classie.add(WarmLoadedContent, 'hide');
+                classie.remove(WarmLoadedContent, 'show');
                 NProgress.start();
                 _fireAfterLoadAction(that.props);
-            }, 50);
+            }, 10000);
         }
     },
     render: function() {
