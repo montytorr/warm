@@ -51,15 +51,15 @@ var FullScreenLoader = React.createClass({
         }
         if (!prevProps.isLoading && this.props.isLoading) {
             classie.remove(WarmLoader, 'no-display');
-            classie.add(WarmLoader, 'show');
-            classie.remove(WarmLoader, 'hide');
 
+            classie.add(WarmLoadedContent, 'hide');
+            classie.remove(WarmLoadedContent, 'show');
             setTimeout(function() {
-                classie.add(WarmLoadedContent, 'hide');
-                classie.remove(WarmLoadedContent, 'show');
+                classie.add(WarmLoader, 'show');
+                classie.remove(WarmLoader, 'hide');
                 NProgress.start();
                 _fireAfterLoadAction(that.props);
-            }, 10000);
+            }, 200);
         }
     },
     render: function() {
@@ -83,7 +83,8 @@ var _fireAfterLoadAction = function(props){
     if(typeof props.afterLoad.afterLoadAction === 'function'){
         try {
             props.afterLoad.afterLoadAction(props.afterLoad.afterLoadData, function(){
-                props.endSignal()
+                process.nextTick(props.endSignal)
+
             })
         } catch (e) {
             if (e instanceof SyntaxError) {
