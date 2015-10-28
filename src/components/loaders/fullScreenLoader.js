@@ -9,8 +9,7 @@ var FullScreenLoader = React.createClass({
         lightText: React.PropTypes.string,
         minWaitTime: React.PropTypes.number,
         rootContainer : React.PropTypes.string,
-        afterLoadAction : React.PropTypes.func,
-        afterLoadData : React.PropTypes.object,
+        afterLoad : React.PropTypes.object,
         endSignal : React.PropTypes.func
     },
     getDefaultProps: function() {
@@ -20,9 +19,8 @@ var FullScreenLoader = React.createClass({
             isLoading: true,
             minWaitTime: 1000,
             rootContainer : 'app-content',
-            afterLoadAction : function(){},
-            afterLoadData : {},
-            endSignal : function(){},
+            afterLoad : {},
+            endSignal : function(){}
         };
     },
     /**
@@ -81,13 +79,10 @@ var FullScreenLoader = React.createClass({
 * fires an action from AppStore.afterLoadAction and deletes if afterwards
 */
 var _fireAfterLoadAction = function(props){
-    console.log('hey hey ', props, typeof props.afterLoadAction)
-    if(typeof props.afterLoadAction === 'function'){
+    if(typeof props.afterLoad.afterLoadAction === 'function'){
         try {
-            console.log('calling adfter load', props)
-            props.afterLoadAction(props.afterLoadData, function(){
-                props.endSignal();
-                console.log('endSignal', props.endSignal)
+            props.afterLoad.afterLoadAction(props.afterLoad.afterLoadData, function(){
+                props.endSignal()
             })
         } catch (e) {
             if (e instanceof SyntaxError) {

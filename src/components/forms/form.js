@@ -98,10 +98,9 @@ var Form = React.createClass({
                                         .handleChanges
                                         .bind(this, i)}>
                                         {formComponent.inlineText || null}
-                                    </formComponent.kind>
-                                    {(formComponent.hasAuxilary) ? (<formComponent.auxilaryComponent.kind className={formComponent.auxilaryComponent.className} htmlFor={formComponent.auxilaryComponent.for}>{formComponent.auxilaryComponent.content}</formComponent.auxilaryComponent.kind>) : ''}
-
-                                </div>
+                                </formComponent.kind>
+                                {(formComponent.hasAuxilary) ? (<formComponent.auxilaryComponent.kind className={formComponent.auxilaryComponent.className} htmlFor={formComponent.auxilaryComponent.for}>{formComponent.auxilaryComponent.content}</formComponent.auxilaryComponent.kind>) : ''}
+                            </div>
                             );
                         }, this)}
                         <SmallErrorTile {...this.state.error}/>
