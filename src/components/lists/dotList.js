@@ -1,4 +1,5 @@
 var React = global.React || require('react');
+var DotButton = require('../buttons/dotButton.js');
 
 var DotList = React.createClass({
     getInitialState: function() {
@@ -39,7 +40,7 @@ var DotList = React.createClass({
                                     <h2>{elem.subTitle}</h2>
                                 </div>
                                 <div className="dot-container">
-                                    <ButtonDot></ButtonDot>
+                                    <DotButton></DotButton>
                                 </div>
                             </li>
                         );
