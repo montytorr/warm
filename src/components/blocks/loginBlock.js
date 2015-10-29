@@ -78,7 +78,6 @@ var LoginBlock = React.createClass({
               "onValid" : this.onValidField,
               "onInvalid" : this.onInvalidField,
               "placeholder" : "Email",
-              "value" : "callum@neventy.fr",
               "conditions" : ["mail"],
               "required" : true
           },
@@ -88,7 +87,6 @@ var LoginBlock = React.createClass({
               "name" : "passwordLogin",
               "onValid" : this.onValidField,
               "onInvalid" : this.onInvalidField,
-              "value" : "jeremie",
               "placeholder" : "Password",
               "required" : true
           },
