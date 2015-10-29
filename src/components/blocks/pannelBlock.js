@@ -19,12 +19,18 @@ var mockParams = React.createClass({
 
 var PannelBlock = React.createClass({
     getInitialState: function() {
-        if (this.props.menu == undefined || this.props.menu.length == 0) {
-            this.props.menu = [{name: 'Infos', target: mockInfo, img: ""}, {name: 'Params', target: mockParams, img:""}];
+        var def = [{name: 'Infos', target: mockInfo, img: ""}, {name: 'Params', target: mockParams, img:""}];
+        if (this.props.menu == undefined) {
+            return ({
+                menu: def,
+                body: def[0].target
+            });
+        } else {
+            return ({
+                menu: this.props.menu,
+                body: this.props.menu[0].target
+            });
         }
-        return ({
-            body: this.props.menu[0].target
-        });
     },
     changeBody: function (target, index) {
         var targetedList = document.getElementsByClassName('panel-targeted');
@@ -47,10 +53,10 @@ var PannelBlock = React.createClass({
                 <div className="pannel-menu">
                     <ul>
                         {
-                            that.props.menu.map(function(elem) {
+                            that.state.menu.map(function(elem) {
                                 var boundedClick = that.changeBody.bind(that, elem.target, i);
                                 var style = {
-                                    width: 300 / that.props.menu.length
+                                    width: 300 / that.state.menu.length
                                 }
                                 if (elem.img == '') {
                                     return <li className={(i == 0) ? 'panel-targeted' : ''} style={style} ref={i} key={i++} onClick={boundedClick}>{elem.name}</li>
