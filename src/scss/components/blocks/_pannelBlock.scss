@@ -1,0 +1,59 @@
+.pannel-container {
+    font-family: $light-font ;
+    height: 100%;
+    width: 300px;
+    transition: 1s;
+    overflow:hidden;
+    &.hide {
+        width: 0px;
+        .pannel-head {
+            margin-left: -300px;
+        }
+        .pannel-menu {
+            margin-left: -300px;
+        }
+        .pannel-body {
+            margin-left: -300px;
+        }
+    }
+    .pannel-head {
+        height: 300px;
+        background-color: $green;
+        transition: 1s;
+    }
+    .pannel-menu {
+        height: 80px;
+        transition: 1s;
+        li {
+            display: inline-block;
+            height: 80px;
+            line-height: 70px;
+            width: 80px;
+            background-color: #fff;
+            box-sizing: border-box;
+            border-left: 1px solid $grey;
+            border-right: 1px solid $grey;
+            border-top: 2px solid $grey;
+            border-bottom: 2px solid $grey;
+            transition: 0.2s;
+            img {
+                display: inline-block;
+                vertical-align: middle;
+                margin: auto;
+            }
+            &.panel-targeted {
+                border-bottom: 5px solid $green;
+            }
+            &:hover {
+                cursor: pointer;
+                border-bottom: 5px solid $green;
+            }
+        }
+    }
+    .pannel-body {
+        padding: 10px;
+        height: 100%;
+        transition: 1s;
+        background-color: #fff;
+    }
+}

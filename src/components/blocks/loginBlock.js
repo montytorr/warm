@@ -18,7 +18,7 @@ function getState() {
     };
 }
 
-var LoginTile = React.createClass({
+var LoginBlock = React.createClass({
     propTypes: {
         loginRequestMethod: React.PropTypes.func,
         boldTitle: React.PropTypes.string,
@@ -131,4 +131,4 @@ var LoginTile = React.createClass({
     }
 });
 
-module.exports = LoginTile;
+module.exports = LoginBlock;
