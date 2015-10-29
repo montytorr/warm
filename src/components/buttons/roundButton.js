@@ -14,7 +14,7 @@ var RoundButton = React.createClass({
         customClass : React.PropTypes.string
     },
     render: function() {
-        var className = "warm-button round "+this.props.customClass
+        var className = "warm-component button-round "+this.props.customClass
         return (
             <button onClick={this.props.onClickMethod} className={className}>
                 {this.props.text}

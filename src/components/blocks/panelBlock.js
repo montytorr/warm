@@ -17,7 +17,7 @@ var mockParams = React.createClass({
     }
 });
 
-var PannelBlock = React.createClass({
+var PanelBlock = React.createClass({
     getInitialState: function() {
         var def = [{name: 'Infos', target: mockInfo, img: ""}, {name: 'Params', target: mockParams, img:""}];
         if (this.props.menu == undefined) {
@@ -46,11 +46,11 @@ var PannelBlock = React.createClass({
         var that = this;
         var i = 0;
         return (
-            <div className="warm-component pannel-container">
-                <div className="pannel-head">
+            <div className="warm-component panel-container">
+                <div className="panel-head">
 
                 </div>
-                <div className="pannel-menu">
+                <div className="panel-menu">
                     <ul>
                         {
                             that.state.menu.map(function(elem) {
@@ -68,7 +68,7 @@ var PannelBlock = React.createClass({
                         }
                     </ul>
                 </div>
-                <div className="pannel-body">
+                <div className="panel-body">
                     <this.state.body />
                 </div>
             </div>
@@ -76,4 +76,4 @@ var PannelBlock = React.createClass({
     }
 });
 
-module.exports = PannelBlock;
+module.exports = PanelBlock;

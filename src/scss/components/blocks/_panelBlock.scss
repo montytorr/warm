@@ -1,27 +1,27 @@
-.pannel-container {
-    font-family: $light-font ;
+.panel-container {
+    font-family: $w-font-default;
     height: 100%;
     width: 300px;
     transition: 1s;
     overflow:hidden;
     &.hide {
         width: 0px;
-        .pannel-head {
+        .panel-head {
             margin-left: -300px;
         }
-        .pannel-menu {
+        .panel-menu {
             margin-left: -300px;
         }
-        .pannel-body {
+        .panel-body {
             margin-left: -300px;
         }
     }
-    .pannel-head {
+    .panel-head {
         height: 300px;
-        background-color: $green;
+        background-color: $w-color-main;
         transition: 1s;
     }
-    .pannel-menu {
+    .panel-menu {
         height: 80px;
         transition: 1s;
         li {
@@ -31,10 +31,10 @@
             width: 80px;
             background-color: #fff;
             box-sizing: border-box;
-            border-left: 1px solid $grey;
-            border-right: 1px solid $grey;
-            border-top: 2px solid $grey;
-            border-bottom: 2px solid $grey;
+            border-left: 1px solid $w-color-main-border;
+            border-right: 1px solid $w-color-main-border;
+            border-top: 2px solid $w-color-main-border;
+            border-bottom: 2px solid $w-color-main-border;
             transition: 0.2s;
             img {
                 display: inline-block;
@@ -42,15 +42,15 @@
                 margin: auto;
             }
             &.panel-targeted {
-                border-bottom: 5px solid $green;
+                border-bottom: 5px solid $w-color-main;
             }
             &:hover {
                 cursor: pointer;
-                border-bottom: 5px solid $green;
+                border-bottom: 5px solid $w-color-main;
             }
         }
     }
-    .pannel-body {
+    .panel-body {
         padding: 10px;
         height: 100%;
         min-height: 200px;

@@ -1,19 +1,52 @@
-HEY alors je t'explique si tu veux des buttons t'as trois choix:
+#Buttons!
+> A button is just... a button... here is our gallery of avaliables models.
 
-1/ Le round button
 
-!!!$Warm.buttons.Round!!!
+!!£round!!
+##The Round Button
+###Demo
+!!$Warm.buttons.Round!!
+###How to use it?
+- First :
+```
+var Warm = require('Warm');
+```
 
-la on peut parler un peu des props et des chsoes comme ca...
+- And then just simply call:
+```
+<Warm.buttons.Round />;
+```
 
-1/ Le mock1 button
+###What props can I use?
+####Example
+```
+<Warm.buttons.Round
+/>
+```
+####List of props
+- None?
 
-!!!$Warm.buttons.Mock1!!!
+!!£dot!!
+##The Dot button
+###Demo
+!!$Warm.buttons.Dot!!
+###How to use it?
+- First :
+```
+var Warm = require('Warm');
+```
 
-la on peut parler un peu des props et des chsoes comme ca...
+- And then just simply call:
+```
+<Warm.buttons.Dot />;
+```
 
-1/ Le mock2 button
-
-!!!$Warm.buttons.Mock2!!!
-
-la on peut parler un peu des props et des chsoes comme ca...
+###What props can I use?
+####Example
+```
+<Warm.buttons.Dot
+    onClick={function () { alert("Dot button clicked!") }}
+/>
+```
+####List of props
+- onClick : specify a function to be called when button is clicked.

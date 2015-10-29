@@ -1,6 +1,5 @@
 #Blocks!
-> A block is a complex component blablablablabla
-> Blablablabla blabla blablablablabla
+> A block is a complex component that contain other warm components or just simples react classes, and make interactions easier between these components.
 
 
 !!£login!!
@@ -36,10 +35,10 @@ var Warm = require('Warm');
 - Ipsum
 - Tamer
 
-!!£pannel!!
-##The Pannel block
+!!£panel!!
+##The Panel block
 ###Demo
-!!$Warm.blocks.Pannel!!
+!!$Warm.blocks.Panel!!
 ###How to use it?
 - First :
 ```
@@ -48,23 +47,26 @@ var Warm = require('Warm');
 
 - And then just simply call:
 ```
-<Warm.blocks.Pannel />;
+<Warm.blocks.Panel />;
 ```
 
 ###What props can I use?
 ####Example
 ```
-<Warm.blocks.Pannel
-	oidjoizjdzjdlz
-	zefzefezfezf
-	zfz
-	fzfzfezeefezefzf
-	zefzfezfzefezfezf
-	zfezfezf
-	ezfzefzefezfzefz
+<Warm.blocks.Panel
+	menu=[
+        {
+            name: 'Infos',
+            target: mockInfo,
+            img: "/myPic.png"
+        },
+        {
+            name: 'Params',
+            target: mockParams,
+            img:""
+        }
+    ]
 />
 ```
 ####List of props
-- Lorepsum
-- Ipsum
-- Tamer
+- menu : its a simple array of objects containing informations for the dynamic panel menu. You can specify an image to be displayed, or simply set img to "" so that the name will be use as menu element. The targed is a react class or another warm component to be displayed on click.

@@ -1,0 +1,29 @@
+.warm-component.main-dot {
+    display: inline-flex;
+    background-color: $w-color-button-dot2;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    border: 2px solid $w-color-button-dot3;
+    transition: 0.1s;
+    .small-dot {
+        margin: auto;
+        width: 22px;
+        height: 22px;
+        border-radius: 22px;
+        background-color: $w-color-button-dot1;
+        transition: 0.1s;
+        transition-delay: 0.1s;
+    }
+    &:hover {
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
+        .small-dot {
+            width: 18px;
+            height: 18px;
+            border-radius: 18px;
+        }
+    }
+}
