@@ -22,7 +22,7 @@ Warm.blocks.Panel = require('./components/blocks/panelBlock.js');
 Warm.blocks.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/blocks/readme.md";
 //lists
 Warm.lists = {};
-Warm.lists.Dot = require('./components/blocks/dotList.js');
+Warm.lists.Dot = require('./components/lists/dotList.js');
 Warm.blocks.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/lists/readme.md";
 
 //toasts
