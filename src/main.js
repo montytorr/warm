@@ -23,7 +23,7 @@ Warm.blocks.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master
 //lists
 Warm.lists = {};
 Warm.lists.Dot = require('./components/lists/dotList.js');
-Warm.blocks.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/lists/readme.md";
+Warm.lists.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/lists/readme.md";
 
 //toasts
 Warm.toasts = {};
