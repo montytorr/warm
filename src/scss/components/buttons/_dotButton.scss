@@ -13,7 +13,6 @@
         border-radius: 22px;
         background-color: $w-color-button-dot1;
         transition: 0.1s;
-        transition-delay: 0.1s;
     }
     &:hover {
         cursor: pointer;
@@ -21,9 +20,9 @@
         height: 25px;
         border-radius: 25px;
         .small-dot {
-            width: 18px;
-            height: 18px;
-            border-radius: 18px;
+            width: 17px;
+            height: 17px;
+            border-radius: 17px;
         }
     }
 }
