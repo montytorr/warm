@@ -1,5 +1,7 @@
 /*----------------------  THEMES  ----------------------------------------------*/
 // ** UNCOMENT TO APPLY THEME **
+
+
 // @import "themes/default";
 // @import "themes/astrolight";
 // @import "themes/hecules";
@@ -12,10 +14,10 @@
 /*----------------------  COMPONENTS  -----------------------------------------*/
 @import "components/warm";
 @import "components/global";
-@import "components/blocks/loginBlock";
-@import "components/blocks/panelBlock";
-@import "components/buttons/dotButton";
-@import "components/buttons/roundButton";
-@import "components/lists/dotList";
+@import "components/blocks/login";
+@import "components/blocks/panel";
+@import "components/buttons/dot";
+@import "components/buttons/round";
+@import "components/lists/dot";
 @import "components/errors/errors";
 @import "components/forms/forms";
