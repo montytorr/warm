@@ -17,7 +17,7 @@ body {
     width: 100%;
 }
 
-#app-content.app-background{
+#appContainer {
     background: $w-img-background-app;
     -webkit-background-size: cover;
     -moz-background-size: cover;
