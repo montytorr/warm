@@ -1,7 +1,7 @@
 var React = global.React || require('react');
 
 var WarmForm = require('../forms/form');
-var RoundButton = require('../buttons/roundButton');
+var RoundButton = require('../buttons/round');
 
 /**
 * Retrieve the current appActiveView, search & dashboard from the stores
