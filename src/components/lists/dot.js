@@ -1,5 +1,5 @@
 var React = global.React || require('react');
-var DotButton = require('../buttons/dotButton.js');
+var DotButton = require('../buttons/dot.js');
 
 var DotList = React.createClass({
     getInitialState: function() {
