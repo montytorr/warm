@@ -15,7 +15,7 @@ var RoundButton = React.createClass({
         };
     },
     handleClick: function() {
-        if (this.state.active == true) {
+        if (this.state.active === true) {
             classie.remove(this.refs.roundButton, 'round-active');
             this.setState({
                 active: false
@@ -34,7 +34,7 @@ var RoundButton = React.createClass({
         customClass : React.PropTypes.string
     },
     render: function() {
-        var className = "warm-component button-round "+this.props.customClass
+        var className = "warm-component warm-button round "+this.props.customClass;
         return (
             <button onClick={this.handleClick} ref="roundButton" className={className}>
                 {this.props.text}

@@ -24,11 +24,8 @@
         width: 20%;
         background-color: $w-color-main;
         text-align: center;
-        & .warm-button.round {
-            margin-bottom: 55px;
-            -webkit-transition: all 0.5s cubic-bezier(.7, 0, .3, 1);
-            transition: all 0.5s cubic-bezier(.7, 0, .3, 1);
-            margin-top: 0;
+        & .warm-button.round{
+            margin-bottom: 35px;
         }
         &.active {
             width: 100%;
@@ -58,7 +55,7 @@
             & .warm-button.round {
                 width: 74px;
                 height: 74px;
-                margin-top: -5px;
+                margin-top: 25px;
             }
             & h2,
             & p {

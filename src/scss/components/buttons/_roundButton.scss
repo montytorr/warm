@@ -1,21 +1,17 @@
-.warm-component.button-round {
+.warm-button.round {
     outline: none;
     border: none;
-    margin-top: 0px;
     height: 130px;
     width: 130px;
     border-radius: 50%;
-    background-color: $w-color-button-round !important;
-    background: $w-img-background-button;
+    background: $w-img-background-button $w-color-button-round;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     transition: 0.2s;
     transition-delay: 0.3s;
-    margin-bottom: 35px;
-    &.round-active {
-        margin-top: 30px;
+    &.condensed{
         height: 75px;
         width: 75px;
         border-radius: 50%;
