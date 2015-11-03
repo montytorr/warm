@@ -1,4 +1,5 @@
 .warm-form {
+    & .warm-input-email,
     & .warm-input-text,
     & .warm-input-password {
         background-color: $w-color-background-inputs;
