@@ -73,7 +73,7 @@ var LoginBlock = React.createClass({
       var formComponentsConfig = [
           {
               "kind" : "input",
-              "type" : "text",
+              "type" : "email",
               "name" : "emailLogin",
               "onValid" : this.onValidField,
               "onInvalid" : this.onInvalidField,
