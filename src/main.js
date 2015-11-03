@@ -7,22 +7,22 @@ Warm.headers= {};
 
 //loaders
 Warm.loaders = {};
-Warm.loaders.FullScreen = require('./components/loaders/fullScreenLoader.js');
+Warm.loaders.FullScreen = require('./components/loaders/fullScreen.js');
 
 //buttons
 Warm.buttons = {};
-Warm.buttons.Round = require('./components/buttons/roundButton.js');
-Warm.buttons.Dot = require('./components/buttons/DotButton.js');
+Warm.buttons.Round = require('./components/buttons/round.js');
+Warm.buttons.Dot = require('./components/buttons/Dot.js');
 Warm.buttons.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/buttons/readme.md";
 
 //blocks
 Warm.blocks = {};
-Warm.blocks.Login = require('./components/blocks/loginBlock.js');
-Warm.blocks.Panel = require('./components/blocks/panelBlock.js');
+Warm.blocks.Login = require('./components/blocks/login.js');
+Warm.blocks.Panel = require('./components/blocks/panel.js');
 Warm.blocks.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/blocks/readme.md";
 //lists
 Warm.lists = {};
-Warm.lists.Dot = require('./components/lists/dotList.js');
+Warm.lists.Dot = require('./components/lists/dot.js');
 Warm.lists.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/lists/readme.md";
 
 //toasts
