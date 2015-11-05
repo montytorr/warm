@@ -5,7 +5,6 @@
 !!£login!!
 ##The login block
 ###Demo
-!!$Warm.blocks.Login!!
 ###How to use it?
 - First :
 ```
@@ -38,7 +37,6 @@ var Warm = require('Warm');
 !!£panel!!
 ##The Panel block
 ###Demo
-!!$Warm.blocks.Panel!!
 ###How to use it?
 - First :
 ```
