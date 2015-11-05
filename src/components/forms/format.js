@@ -22,7 +22,6 @@ var checkConstructors = function(component) {
     var propsList = {
         "kind" : String,
         "type" : String,
-        "value" : String,
         "name" : String,
         "id" : String,
         "auxilaryComponent" : Object,

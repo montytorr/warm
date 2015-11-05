@@ -23,19 +23,14 @@ var LoginBlock = React.createClass({
         loginRequestMethod: React.PropTypes.func,
         boldTitle: React.PropTypes.string,
         lightTitle: React.PropTypes.string,
-        customClasses: React.PropTypes.string,
-        formData: React.PropTypes.object
+        customClasses: React.PropTypes.string
     },
     getDefaultProps: function() {
         return {
             loginRequestMethod: function(){},
             boldTitle: "Warm ",
             lightTitle: "login",
-            customClasses : "",
-            formData : {
-                "email" : "",
-                "login" : ""
-            },
+            customClasses : ""
         };
     },
     onValidField: function (ret) {
@@ -75,7 +70,6 @@ var LoginBlock = React.createClass({
 
     },
     render: function() {
-        console.log("this.props.formData", this.props.formData)
       var formComponentsConfig = [
           {
               "kind" : "input",
@@ -85,8 +79,7 @@ var LoginBlock = React.createClass({
               "onInvalid" : this.onInvalidField,
               "placeholder" : "Email",
               "conditions" : ["mail"],
-              "required" : true,
-              "value" : this.props.formData.email
+              "required" : true
           },
           {
               "kind" : "input",
@@ -95,8 +88,7 @@ var LoginBlock = React.createClass({
               "onValid" : this.onValidField,
               "onInvalid" : this.onInvalidField,
               "placeholder" : "Password",
-              "required" : true,
-              "value" : this.props.formData.password
+              "required" : true
           },
           {
               "kind" : "input",
