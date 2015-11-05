@@ -1,65 +1,87 @@
-#Blocks!
+# Blocks
 > A block is a complex component that contain other warm components or just simples react classes, and make interactions easier between these components.
 
-
 !!£login!!
-##The login block
-!!$Warm.blocks.Login!!
 
-###Props
--	loginRequestMethod: React.PropTypes.func,
-- 	boldTitle: React.PropTypes.string,
-- 	lightTitle: React.PropTypes.string,
-- 	customClasses: React.PropTypes.string
+##Warm.blocks.Login !!$Warm.blocks.Login!!
+
+## Props
+- loginRequestMethod: React.PropTypes.func
+
+  > methodf hat sdfsdfsd
+
+- boldTitle: React.PropTypes.string
+
+  > methodf hat sdfsdfsd
+
+- lightTitle: React.PropTypes.string
+
+  > methodf hat sdfsdfsd
+
+- customClasses: React.PropTypes.string
+
+  > methodf hat sdfsdfsd
 
 ###How to use it?
 - First :
-```
-var Warm = require('Warm');
-```
+
+  ```
+  var Warm = require('Warm');
+  ```
 
 - And then just simply call:
-```
-<Warm.blocks.Login />;
-```
+
+  ```
+  <Warm.blocks.Login />;
+  ```
 
 ###What props can I use?
+
 ####Example
+
 ```
 <Warm.blocks.Login
-	oidjoizjdzjdlz
-	zefzefezfezf
-	zfz
-	fzfzfezeefezefzf
-	zefzfezfzefezfezf
-	zfezfezf
-	ezfzefzefezfzefz
+    oidjoizjdzjdlz
+    zefzefezfezf
+    zfz
+    fzfzfezeefezefzf
+    zefzfezfzefezfezf
+    zfezfezf
+    ezfzefzefezfzefz
 />
 ```
+
 ####List of props
 - Lorepsum
 - Ipsum
 - Tamer
 
 !!£panel!!
+
 ##The Panel block
+
 ###Demo
+
 ###How to use it?
 - First :
-```
-var Warm = require('Warm');
-```
+
+  ```
+  var Warm = require('Warm');
+  ```
 
 - And then just simply call:
-```
-<Warm.blocks.Panel />;
-```
+
+  ```
+  <Warm.blocks.Panel />;
+  ```
 
 ###What props can I use?
+
 ####Example
+
 ```
 <Warm.blocks.Panel
-	menu=[
+    menu=[
         {
             name: 'Infos',
             target: mockInfo,
@@ -73,5 +95,6 @@ var Warm = require('Warm');
     ]
 />
 ```
+
 ####List of props
 - menu : its a simple array of objects containing informations for the dynamic panel menu. You can specify an image to be displayed, or simply set img to "" so that the name will be use as menu element. The targed is a react class or another warm component to be displayed on click.
