@@ -51,8 +51,7 @@ var PanelBlock = React.createClass({
 
                 </div>
                 <div className="panel-menu">
-                    <ul>
-                        {
+                    <ul>{
                             that.state.menu.map(function(elem) {
                                 var boundedClick = that.changeBody.bind(that, elem.target, i);
                                 var style = {
@@ -65,8 +64,7 @@ var PanelBlock = React.createClass({
                                     return <li className={(i == 0) ? 'panel-targeted' : ''} style={style} ref={i} key={i++} onClick={boundedClick}><img src={elem.img} alt={elem.name} height="42" width="42"/></li>
                                 }
                             })
-                        }
-                    </ul>
+                        }</ul>
                 </div>
                 <div className="panel-body">
                     <this.state.body />
