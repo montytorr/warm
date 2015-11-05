@@ -5,6 +5,13 @@
 !!£login!!
 ##The login block
 !!$Warm.blocks.Login!!
+
+###Props
+-	loginRequestMethod: React.PropTypes.func,
+- 	boldTitle: React.PropTypes.string,
+- 	lightTitle: React.PropTypes.string,
+- 	customClasses: React.PropTypes.string
+
 ###How to use it?
 - First :
 ```
