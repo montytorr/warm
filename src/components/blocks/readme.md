@@ -4,7 +4,6 @@
 
 !!£login!!
 ##The login block
-###Demo
 !!$Warm.blocks.Login!!
 ###How to use it?
 - First :
