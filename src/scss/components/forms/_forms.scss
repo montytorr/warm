@@ -37,7 +37,7 @@
             border-radius: 3px;
         }
         &:checked + label:after {
-            content: '✔';
+            content: '&#10004;';
             position: absolute;
             top: 18px;
             left: 13px;
