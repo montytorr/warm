@@ -5,56 +5,53 @@
 
 ##Warm.blocks.Login !!$Warm.blocks.Login!!
 
-###Props
+###Props (optional)
 - loginRequestMethod: React.PropTypes.func
 
-  > methodf hat sdfsdfsd
+  > A method that this component will call if the form returns no errors. see example for details
 
 - boldTitle: React.PropTypes.string
 
-  > methodf hat sdfsdfsd
+  > The bold part of the title (ex : "R")
 
 - lightTitle: React.PropTypes.string
 
-  > methodf hat sdfsdfsd
+  > The light part of the title (ex : "eact")
 
 - customClasses: React.PropTypes.string
 
-  > methodf hat sdfsdfsd
+  > A string of classes you want to apply (ex : "toto foo bar")
 
-###How to use it?
-- First :
+- description: React.PropTypes.string
 
-  ```
-  var Warm = require('Warm');
-  ```
+  > Adds a little description underneath the photo
 
-- And then just simply call:
-
-  ```
-  <Warm.blocks.Login />;
-  ```
-
-###What props can I use?
-
-####Example
+###Example
 
 ```
+var Warm = require('warm');
+
+var loginRequestMethod = function(formData, cb){
+    userAPI.signIn({
+        "emailLogin" : formData.emailLogin.value,
+        "passwordLogin" : formData.passwordLogin.value,
+        "rememberMeLogin" : formData.rememberMeLogin.value
+    }, function(response) {
+        if (response.error === null && response.user !== null) {
+            UserActions.userVerified();
+        } else {
+            cb({error: response.error});
+        }
+    });
+};
+
 <Warm.blocks.Login
-    oidjoizjdzjdlz
-    zefzefezfezf
-    zfz
-    fzfzfezeefezefzf
-    zefzfezfzefezfezf
-    zfezfezf
-    ezfzefzefezfzefz
-/>
+    loginRequestMethod={loginRequestMethod}
+    customClasses="centered"
+    boldTitle="Warm"
+    lightTitle="login"
+    description="Here you can put a little description."/>
 ```
-
-####List of props
-- Lorepsum
-- Ipsum
-- Tamer
 
 !!£panel!!
 
