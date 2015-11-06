@@ -12,7 +12,7 @@ Warm.loaders.FullScreen = require('./components/loaders/fullScreen.js');
 //buttons
 Warm.buttons = {};
 Warm.buttons.Round = require('./components/buttons/round.js');
-Warm.buttons.Dot = require('./components/buttons/Dot.js');
+Warm.buttons.Dot = require('./components/buttons/dot.js');
 Warm.buttons.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/buttons/readme.md";
 
 //blocks
