@@ -5,10 +5,12 @@
 
 ##Warm.blocks.Login !!$Warm.blocks.Login!!
 
+>  A block is a complex component that contain other warm components or just simples react classes, and make interactions easier between these components.
+
 ###Props (optional)
 - loginRequestMethod: React.PropTypes.func
 
-  > A method that this component will call if the form returns no errors. see example for details
+> A method that this component will call if the form returns no errors. see example for details
 
 - boldTitle: React.PropTypes.string
 
