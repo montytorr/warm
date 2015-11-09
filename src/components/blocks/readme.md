@@ -6,23 +6,23 @@
 ##Warm.blocks.Login !!$Warm.blocks.Login!!
 
 ###Props (optional)
-- loginRequestMethod: Function
+- $ loginRequestMethod: Function
 
 > A method that this component will call if the form returns no errors. see example for details
 
-- boldTitle: String
+- $ boldTitle: String
 
   > The bold part of the title (ex : "Warm")
 
-- lightTitle: String
+- $ lightTitle: String
 
   > The light part of the title (ex : "Login")
 
-- customClasses: String
+- $ customClasses: String
 
   > A string of classes you want to apply (ex : "toto foo bar")
 
-- description: String
+- $ description: String
 
   > Adds a little description underneath the photo
 
@@ -58,23 +58,23 @@ var loginRequestMethod = function(formData, cb){
 ##Warm.blocks.Modal !!$Warm.blocks.Modal!!
 
 ###Props (optional)
-- + isActive: Boolean
+- $ isActive: Boolean
 
 > A value to change when trigger or not the Modal (true: shown, false: hidden).
 
-- + showTrigger: Boolean
+- $ showTrigger: Boolean
 
   > When you have a button or whatever to trigger the Modal, you can set the value to false (default is true and set a default clickable trigger module)
 
-- + width: String
+- $ width: String
 
   > Set the modal container width.
 
-- + height: String
+- $ height: String
 
   > Set the modal container height.
 
-- + content: ReactClass
+- $ content: ReactClass
 
   > The react class witch is contained in the modal.
 
@@ -107,7 +107,7 @@ var HelloWorld = React.createClass({
 ##Warm.blocks.Panel !!$Warm.blocks.Panel!!
 
 ###Props (optional)
-- + menu: Array
+- $ menu: Array
 
 > The array containing your menu elements (see below the construction of a menu element).
 
