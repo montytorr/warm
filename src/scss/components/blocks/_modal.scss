@@ -25,6 +25,13 @@
     transition-delay: 0.2s;
 }
 
+.modal-trigger {
+    color: #fff;
+    width: 100px;
+    height: 50px;
+    background-color: $w-color-main;
+}
+
 .warm-component.modal.active {
     visibility: visible;
     opacity:1;
