@@ -55,6 +55,61 @@ var loginRequestMethod = function(formData, cb){
     description="Here you can put a little description."/>
 ```
 
+!!£modal!!
+
+##Warm.blocks.Modal !!$Warm.blocks.Modal!!
+
+>  A block is a complex component that contain other warm components or just simples react classes, and make interactions easier between these components.
+
+###Props (optional)
+- loginRequestMethod: React.PropTypes.func
+
+> A method that this component will call if the form returns no errors. see example for details
+
+- boldTitle: React.PropTypes.string
+
+  > The bold part of the title (ex : "R")
+
+- lightTitle: React.PropTypes.string
+
+  > The light part of the title (ex : "eact")
+
+- customClasses: React.PropTypes.string
+
+  > A string of classes you want to apply (ex : "toto foo bar")
+
+- description: React.PropTypes.string
+
+  > Adds a little description underneath the photo
+
+###Example
+
+```
+var Warm = require('warm');
+
+var loginRequestMethod = function(formData, cb){
+    userAPI.signIn({
+        "emailLogin" : formData.emailLogin.value,
+        "passwordLogin" : formData.passwordLogin.value,
+        "rememberMeLogin" : formData.rememberMeLogin.value
+    }, function(response) {
+        if (response.error === null && response.user !== null) {
+            UserActions.userVerified();
+        } else {
+            cb({error: response.error});
+        }
+    });
+};
+
+<Warm.blocks.Login
+    loginRequestMethod={loginRequestMethod}
+    customClasses="centered"
+    boldTitle="Warm"
+    lightTitle="login"
+    description="Here you can put a little description."/>
+```
+
+
 !!£panel!!
 
 ##The Panel block

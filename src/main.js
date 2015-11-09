@@ -18,6 +18,7 @@ Warm.buttons.readme = "https://raw.githubusercontent.com/maestro-tech/warm/maste
 //blocks
 Warm.blocks = {};
 Warm.blocks.Login = require('./components/blocks/login.js');
+Warm.blocks.Modal = require('./components/blocks/modal.js');
 Warm.blocks.Panel = require('./components/blocks/panel.js');
 Warm.blocks.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/blocks/readme.md";
 //lists
