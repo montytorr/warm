@@ -14,6 +14,13 @@
     cursor: pointer;
 }
 
+div#modal-trigger.penis {
+    color: #fff;
+    width: 100px;
+    height: 50px;
+    background-color: #fff;
+}
+
 .modal-container {
     padding: 50px;
     margin: auto;
@@ -23,13 +30,6 @@
     opacity: 0;
     transition: opacity 0.4s ease-in;
     transition-delay: 0.2s;
-}
-
-.modal-trigger {
-    color: #fff;
-    width: 100px;
-    height: 50px;
-    background-color: $w-color-main;
 }
 
 .warm-component.modal.active {

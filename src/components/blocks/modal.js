@@ -34,7 +34,6 @@ var Modal = React.createClass({
         return true;
     },
     triggerModal: function (e) {
-        console.log(e);
         if(e.target.id == 'modal-trigger' || e.target.parentElement.id == 'modal-trigger') {
             if (this.state.triggerState == true) {
                 this.setState({
@@ -57,14 +56,15 @@ var Modal = React.createClass({
         content : React.PropTypes.func
     },
     render: function () {
-        console.log(this.state.content);
         if (this.state.trigger == true) {
             return (
                 <div>
-                    <div id="modal-trigger" className="modal-trigger" onClick={this.triggerModal}></div>
-                    <div className={this.state.className}>
-                        <div className="modal-container" style={this.state.style}>
-                            {this.state.content()}
+                    <div id="modal-trigger" className="penis" onClick={this.triggerModal}>
+                        <h3>Click Me</h3>
+                        <div className={this.state.className}>
+                            <div className="modal-container" style={this.state.style}>
+                                {this.state.content()}
+                            </div>
                         </div>
                     </div>
                 </div>
