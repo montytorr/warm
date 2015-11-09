@@ -5,26 +5,24 @@
 
 ##Warm.blocks.Login !!$Warm.blocks.Login!!
 
->  A block is a complex component that contain other warm components or just simples react classes, and make interactions easier between these components.
-
 ###Props (optional)
-- loginRequestMethod: React.PropTypes.func
+- loginRequestMethod: Function
 
 > A method that this component will call if the form returns no errors. see example for details
 
-- boldTitle: React.PropTypes.string
+- boldTitle: String
 
-  > The bold part of the title (ex : "R")
+  > The bold part of the title (ex : "Warm")
 
-- lightTitle: React.PropTypes.string
+- lightTitle: String
 
-  > The light part of the title (ex : "eact")
+  > The light part of the title (ex : "Login")
 
-- customClasses: React.PropTypes.string
+- customClasses: String
 
   > A string of classes you want to apply (ex : "toto foo bar")
 
-- description: React.PropTypes.string
+- description: String
 
   > Adds a little description underneath the photo
 
@@ -59,96 +57,78 @@ var loginRequestMethod = function(formData, cb){
 
 ##Warm.blocks.Modal !!$Warm.blocks.Modal!!
 
->  A block is a complex component that contain other warm components or just simples react classes, and make interactions easier between these components.
-
 ###Props (optional)
-- loginRequestMethod: React.PropTypes.func
+- + isActive: Boolean
 
-> A method that this component will call if the form returns no errors. see example for details
+> A value to change when trigger or not the Modal (true: shown, false: hidden).
 
-- boldTitle: React.PropTypes.string
+- + showTrigger: Boolean
 
-  > The bold part of the title (ex : "R")
+  > When you have a button or whatever to trigger the Modal, you can set the value to false (default is true and set a default clickable trigger module)
 
-- lightTitle: React.PropTypes.string
+- + width: String
 
-  > The light part of the title (ex : "eact")
+  > Set the modal container width.
 
-- customClasses: React.PropTypes.string
+- + height: String
 
-  > A string of classes you want to apply (ex : "toto foo bar")
+  > Set the modal container height.
 
-- description: React.PropTypes.string
+- + content: ReactClass
 
-  > Adds a little description underneath the photo
+  > The react class witch is contained in the modal.
 
 ###Example
 
 ```
 var Warm = require('warm');
 
-var loginRequestMethod = function(formData, cb){
-    userAPI.signIn({
-        "emailLogin" : formData.emailLogin.value,
-        "passwordLogin" : formData.passwordLogin.value,
-        "rememberMeLogin" : formData.rememberMeLogin.value
-    }, function(response) {
-        if (response.error === null && response.user !== null) {
-            UserActions.userVerified();
-        } else {
-            cb({error: response.error});
-        }
-    });
-};
+var HelloWorld = React.createClass({
+    render: function () {
+        return (
+            <div>
+                <h1>Hello Warm!</h1>
+            </div>
+        );
+    }
+});
 
 <Warm.blocks.Login
-    loginRequestMethod={loginRequestMethod}
-    customClasses="centered"
-    boldTitle="Warm"
-    lightTitle="login"
-    description="Here you can put a little description."/>
+    isActive=true
+    showTrigger=false
+    width="800px"
+    height="100px"
+    content={HelloWorld}/>
 ```
 
 
 !!£panel!!
 
-##The Panel block
+##Warm.blocks.Panel !!$Warm.blocks.Panel!!
 
-###Demo
+###Props (optional)
+- + menu: Array
 
-###How to use it?
-- First :
-
-  ```
-  var Warm = require('Warm');
-  ```
-
-- And then just simply call:
-
-  ```
-  <Warm.blocks.Panel />;
-  ```
-
-###What props can I use?
+> The array containing your menu elements (see below the construction of a menu element).
 
 ####Example
 
 ```
-<Warm.blocks.Panel
-    menu=[
-        {
-            name: 'Infos',
-            target: mockInfo,
-            img: "/myPic.png"
-        },
-        {
-            name: 'Params',
-            target: mockParams,
-            img:""
-        }
-    ]
-/>
-```
+var Warm = require('warm');
 
-####List of props
-- menu : its a simple array of objects containing informations for the dynamic panel menu. You can specify an image to be displayed, or simply set img to "" so that the name will be use as menu element. The targed is a react class or another warm component to be displayed on click.
+var myMenu = [
+    {
+        name: 'Infos',
+        target: mockInfo,
+        img: "/img/myExample.png"
+    },
+    {
+        name: 'Params',
+        target: mockParams,
+        img:""
+    }
+];
+
+<Warm.blocks.Login
+    menu={myMenu}/>
+```

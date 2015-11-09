@@ -42,6 +42,9 @@ var PanelBlock = React.createClass({
             body: target
         })
     },
+    propTypes: {
+        menu: React.PropTypes.array
+    },
     render: function() {
         var that = this;
         var i = 0;
