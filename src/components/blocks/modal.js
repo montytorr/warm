@@ -1,9 +1,15 @@
 var React = global.React || require('react');
 
+var Default = React.createClass({
+    render: function () {
+        return (<div></div>);
+    }
+});
+
 var Modal = React.createClass({
     getInitialState: function() {
         var style = {};
-        var content = (this.props.content != undefined) ? React.createFactory(this.props.content) : <div></div>;
+        var content = (this.props.content != undefined) ? React.createFactory(this.props.content) : React.createFactory(Default);
         style.width = (this.props.width != undefined) ? this.props.width : "";
         style.height = (this.props.height != undefined) ? this.props.height : "";
         return ({
