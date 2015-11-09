@@ -60,20 +60,20 @@ var Modal = React.createClass({
         console.log(this.state.content);
         if (this.state.trigger == true) {
             return (
-                <div className={this.state.className}>
-                    <div className="modal-container" style={this.state.style}>
-                        {this.state.content()}
-                    </div>
-                </div>
-            )
-        } else {
-            return (
                 <div>
                     <div id="modal-trigger" className="modal-trigger" onClick={this.triggerModal}></div>
                     <div className={this.state.className}>
                         <div className="modal-container" style={this.state.style}>
                             {this.state.content()}
                         </div>
+                    </div>
+                </div>
+            )
+        } else {
+            return (
+                <div className={this.state.className}>
+                    <div className="modal-container" style={this.state.style}>
+                        {this.state.content()}
                     </div>
                 </div>
             )
