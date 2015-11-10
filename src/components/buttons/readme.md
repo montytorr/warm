@@ -1,7 +1,7 @@
 # Buttons
 > A button is just... a button... here is our gallery of avaliables models.
 
-!!£round!!
+!!£dot!!
 ##Warm.buttons.Dot !!$Warm.buttons.Dot!!
 
 ###Props (optional)
