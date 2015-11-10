@@ -1,23 +1,14 @@
-#Lists!
+# Lists
 > A list is used to orderly display elements: here are different ways to do this.
 
-
 !!£dot!!
-##The Dot List
-###Demo
-!!$Warm.lists.Dot!!
-###How to use it?
-- First :
-```
-var Warm = require('Warm');
-```
+##Warm.lists.Dot !!$Warm.lists.Dot!!
 
-- And then just simply call:
-```
-<Warm.lists.Dot />;
-```
+###Props (optional)
+- list: Function
 
-###What props can I use?
+> Nn array that contain the list main informations and also the informations to be displayed when the dot is clicked.
+
 ####Example
 ```
 <Warm.lists.Dot
@@ -38,5 +29,3 @@ var Warm = require('Warm');
     ]
 />
 ```
-####List of props
-- list : an array that contain the list main informations and also the informations to be displayed when the dot is clicked.

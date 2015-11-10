@@ -9,7 +9,7 @@ var RoundButton = React.createClass({
     },
     getDefaultProps: function() {
         return {
-            onClickMethod: function(){},
+            onClick: function(){},
             text : '',
             customClass : ''
         };
@@ -26,10 +26,10 @@ var RoundButton = React.createClass({
                 active: true
             });
         }
-        this.props.onClickMethod();
+        this.props.onClick();
     },
     propTypes: {
-        onClickMethod: React.PropTypes.func,
+        onClick: React.PropTypes.func,
         text: React.PropTypes.string,
         customClass : React.PropTypes.string
     },

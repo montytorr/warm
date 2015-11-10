@@ -8,6 +8,9 @@ var DotButton = React.createClass({
             this.props.onClick();
         }
     },
+    propTypes: {
+        onClick: React.PropTypes.func
+    },
     render: function() {
         var that = this;
         return (
