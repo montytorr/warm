@@ -31,7 +31,7 @@ Warm.toasts = {};
 
 //errors
 Warm.errors = {};
-Warm.errors.Siple = require('./components/errors/simple.js');
+Warm.errors.Simple = require('./components/errors/simple.js');
 Warm.errors.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/errors/readme.md";
 
 //forms
