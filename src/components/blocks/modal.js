@@ -59,7 +59,7 @@ var Modal = React.createClass({
         if (this.state.trigger == true) {
             return (
                 <div>
-                    <div id="modal-trigger" className="penis" onClick={this.triggerModal}>
+                    <div id="modal-trigger" className="modal-trigger" onClick={this.triggerModal}>
                         <h3>Click Me</h3>
                         <div className={this.state.className}>
                             <div className="modal-container" style={this.state.style}>
