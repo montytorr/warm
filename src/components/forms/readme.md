@@ -1,86 +1,32 @@
 # Forms
-> Forms desc...
+> A form is a group of inputs or buttons used to collect data from the user.
 
 !!£forms!!
 ##Warm.forms.Form !!$Warm.forms.Form!!
 
 ###Props (optional)
-- onClick: Function
+- onFormSubmit: Function
 
-> A function to trigger onClick event.
+> A function trigged when Form is submitted.
 
-###Example
+- formComponents: Array
 
-```
-var Warm = require('warm');
+> An array containing a list of components (inputs or buttons) to be used in the form.
 
-var handleClick = function(){
-    alert("Hello Warm!")
-};
+- error: Object
 
-<Warm.buttons.Dot
-    onClick={handleClick}/>
-```
+> The error object.
 
+- autocomplete: Boolean
 
-!!£format!!
-##Warm.forms.Format !!$Warm.forms.Format!!
-
-###Props (optional)
-- onClick: Function
-
-> A function to trigger onClick event.
-
-- text: String
-
-> A simple text to be displayed in the button.
-
-- customClass: String
-
-> A string containing classes to be applied.
+> I don't know...
 
 ###Example
 
 ```
 var Warm = require('warm');
 
-var handleClick = function(){
-    alert("Hello Warm!")
-};
 
-<Warm.buttons.Round
-    onClick={handleClick}
-    test="Click Me"
-    customClasses="my-button blue"/>
-```
-
-!!£validation!!
-##Warm.forms.Validation !!$Warm.forms.Validation!!
-
-###Props (optional)
-- onClick: Function
-
-> A function to trigger onClick event.
-
-- text: String
-
-> A simple text to be displayed in the button.
-
-- customClass: String
-
-> A string containing classes to be applied.
-
-###Example
-
-```
-var Warm = require('warm');
-
-var handleClick = function(){
-    alert("Hello Warm!")
-};
-
-<Warm.buttons.Round
-    onClick={handleClick}
-    test="Click Me"
-    customClasses="my-button blue"/>
+<Warm.forms.Form
+    />
 ```

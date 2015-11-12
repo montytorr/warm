@@ -16,12 +16,12 @@ var RoundButton = React.createClass({
     },
     handleClick: function() {
         if (this.state.active === true) {
-            classie.remove(this.refs.roundButton, 'round-active');
+            classie.remove(this.refs.roundButton, 'condensed');
             this.setState({
                 active: false
             });
         } else {
-            classie.add(this.refs.roundButton, 'round-active');
+            classie.add(this.refs.roundButton, 'condensed');
             this.setState({
                 active: true
             });
