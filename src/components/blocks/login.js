@@ -1,6 +1,6 @@
 var React = global.React || require('react');
 
-var WarmForm = require('../forms/form');
+var WarmForm = require('../forms/standard/form');
 var RoundButton = require('../buttons/round');
 
 /**
