@@ -16,9 +16,13 @@
 
 .modal-trigger {
     color: #fff;
-    width: 100px;
+    width: 150px;
     height: 50px;
     background-color: $w-color-main;
+    line-height: 45px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .modal-container {
