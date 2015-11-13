@@ -13,7 +13,47 @@ var Form = React.createClass({
     getDefaultProps: function() {
         return {
             onFormSubmit: function() {},
-            formComponents: [],
+            formComponents: [
+                {
+                    "kind" : "input",
+                    "type" : "email",
+                    "name" : "emailLogin",
+                    "onValid" : function (){},
+                    "onInvalid" : function (){},
+                    "placeholder" : "Email",
+                    "conditions" : ["mail"],
+                    "required" : true
+                },
+                {
+                    "kind" : "input",
+                    "type" : "password",
+                    "name" : "passwordLogin",
+                    "onValid" : function (){},
+                    "onInvalid" : function (){},
+                    "placeholder" : "Password",
+                    "required" : true
+                },
+                {
+                    "kind" : "input",
+                    "type" : "checkbox",
+                    "name" : "rememberMeLogin",
+                    "id" : "rememberMeLogin",
+                    "hasAuxilary" : true,
+                    "checked" : true,
+                    "auxilaryComponent" : {
+                        "kind" : 'label',
+                        "for" : "rememberMeLogin",
+                        "content" : "Se souvenir de mon mot de passe",
+                        "className" : 'warm-radio-login'
+                    }
+                },
+                {
+                    "kind" : "button",
+                    "name" : "SubmitLogin",
+                    "type" : "submit",
+                    "inlineText": "Se connecter"
+                }
+            ],
             error: {
                 isVisible: false,
                 message: null,

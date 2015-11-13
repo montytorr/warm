@@ -3,7 +3,7 @@ var React = global.React || require('react');
 var SimpleErrorTile = React.createClass({
      getDefaultProps: function() {
         return {
-            isVisible : false,
+            isVisible : true,
             message : 'This is an error',
             isSuccess : false
         };

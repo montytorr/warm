@@ -117,7 +117,7 @@ var LoginBlock = React.createClass({
             <div className={className}>
                 <div className={(this.state.isTileActive == false) ? "login-face active":"login-face"}>
                     <h2 className="warm-title">{this.props.boldTitle}<i>{this.props.lightTitle}</i></h2>
-                    <RoundButton onClickMethod={this.toggleFormVisible} customClass="astrologo-bg"/>
+                    <RoundButton onClick={this.toggleFormVisible} customClass="astrologo-bg"/>
                     {descriptionBlock}
             </div>
                 <div className={(this.state.isTileActive == false) ? "login-form":"login-form active"}>
