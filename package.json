@@ -1,6 +1,6 @@
 {
   "name": "warm-react",
-  "version": "v0.1.0",
+  "version": "v0.1.1",
   "description": "Lots of useful components for react",
   "main": "src/main.js",
   "scripts": {
