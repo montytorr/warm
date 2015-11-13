@@ -1,7 +1,7 @@
 {
   "name": "warm",
-  "version": "0.0.3",
-  "description": "lots of useful components for react",
+  "version": "0.1",
+  "description": "Lots of useful components for react",
   "main": "src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +17,7 @@
     "maestro-tech",
     "jsx"
   ],
-  "author": "montytorr <monty.torr@gmail.com>",
+  "author": "Maestro-Tech <maestroticketdev@gmail.com>",
   "license": {
     "type": "MIT",
     "url": "https://github.com/maestro-tech/warm/blob/master/LICENSE"
