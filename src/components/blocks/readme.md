@@ -132,3 +132,21 @@ var myMenu = [
 <Warm.blocks.Login
     menu={myMenu}/>
 ```
+
+!!£surfacecomponent!!
+
+##Warm.blocks.SurfaceComponent !!$Warm.blocks.SurfaceComponent!!
+
+###Props (optional)
+- :
+
+> ...
+
+####Example
+
+```
+var Warm = require('warm');
+
+<Warm.blocks.SurfaceComponent
+    />
+```

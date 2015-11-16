@@ -1,0 +1,42 @@
+.warm-componant .surface-composant
+{
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    height: auto;
+    margin-top: 5px;
+    -webkit-transition: opacity 2.25s ease-in-out;
+       -moz-transition: opacity 2.25s ease-in-out;
+            transition: opacity 2.25s ease-in-out;
+    vertical-align: top;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,.2);
+    .title
+    {
+        font-size: 14px;
+        font-weight: bolder;
+        line-height: 30px;
+        min-height: 30px;
+        padding-left: 20px;
+        text-align: left;
+        color: $clear-blue;
+        border-left: 5px solid $clear-blue;
+        box-shadow: 0 1px 0 rgba(0,0,0,.1);
+    }
+    .content
+    {
+        min-height: 120px;
+    }
+}
+.surface-composant.only-anim
+{
+    margin-top: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+.surface-composant.in-grid
+{
+    overflow: hidden;
+    height: 100%;
+    margin-top: 0;
+}
