@@ -1,4 +1,4 @@
-.warm-componant .surface-composant
+.warm-componant .surface
 {
     position: relative;
     overflow: hidden;
@@ -19,8 +19,8 @@
         min-height: 30px;
         padding-left: 20px;
         text-align: left;
-        color: $clear-blue;
-        border-left: 5px solid $clear-blue;
+        color: $w-color-main;
+        border-left: 5px solid $w-color-main;
         box-shadow: 0 1px 0 rgba(0,0,0,.1);
     }
     .content
@@ -28,13 +28,13 @@
         min-height: 120px;
     }
 }
-.surface-composant.only-anim
+.surface.only-anim
 {
     margin-top: 0;
     background-color: transparent;
     box-shadow: none;
 }
-.surface-composant.in-grid
+.surface.in-grid
 {
     overflow: hidden;
     height: 100%;
