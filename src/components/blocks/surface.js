@@ -1,6 +1,6 @@
 var React = global.React || require('react');
 
-var SurfaceComponent = React.createClass({
+var Surface = React.createClass({
     propTypes: {
         title: React.PropTypes.string,
         titleLoading: React.PropTypes.bool,
@@ -63,7 +63,7 @@ var SurfaceComponent = React.createClass({
             );
         }
         return (
-            <div className="warm-component surface-component">
+            <div className="warm-component surface">
                 {title}
                 {body}
             </div>
@@ -71,4 +71,4 @@ var SurfaceComponent = React.createClass({
     }
 });
 
-module.exports = SurfaceComponent;
+module.exports = Surface;

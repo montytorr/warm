@@ -133,9 +133,9 @@ var myMenu = [
     menu={myMenu}/>
 ```
 
-!!£surfacecomponent!!
+!!£surface!!
 
-##Warm.blocks.SurfaceComponent !!$Warm.blocks.SurfaceComponent!!
+##Warm.blocks.Surface !!$Warm.blocks.Surface!!
 
 ###Props (optional)
 - :
@@ -147,6 +147,6 @@ var myMenu = [
 ```
 var Warm = require('warm');
 
-<Warm.blocks.SurfaceComponent
+<Warm.blocks.Surface
     />
 ```

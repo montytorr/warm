@@ -7,7 +7,7 @@ var DotList = React.createClass({
     },
     getDefaultProps: function() {
         return {
-            list : list: [
+            list : [
                 {
                     title : "First list element",
                     subTitle: "Some details about it"
