@@ -1,15 +1,16 @@
 var React = global.React || require('react');
 
 var DotButton = React.createClass({
-    handleClick: function() {
-        if (this.props.onClick == undefined) {
-            alert("Dot button clicked!");
-        } else {
-            this.props.onClick();
-        }
-    },
     propTypes: {
         onClick: React.PropTypes.func
+    },
+    getDefaultProps: function() {
+        return {
+            onClick: function() {alert("Dot button clicked!");}
+        }
+    },
+    handleClick: function() {
+        this.props.onClick();
     },
     render: function() {
         var that = this;

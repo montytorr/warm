@@ -18,19 +18,19 @@ var mockParams = React.createClass({
 });
 
 var PanelBlock = React.createClass({
+    propTypes: {
+        menu: React.PropTypes.array
+    },
+    getDefaultProps: function() {
+        return {
+            menu: [{name: 'Infos', target: mockInfo, img: ""}, {name: 'Params', target: mockParams, img:""}]
+        };
+    },
     getInitialState: function() {
-        var def = [{name: 'Infos', target: mockInfo, img: ""}, {name: 'Params', target: mockParams, img:""}];
-        if (this.props.menu == undefined) {
-            return ({
-                menu: def,
-                body: def[0].target
-            });
-        } else {
-            return ({
-                menu: this.props.menu,
-                body: this.props.menu[0].target
-            });
-        }
+        return ({
+            menu: this.props.menu,
+            body: this.props.menu[0].target
+        });
     },
     changeBody: function (target, index) {
         var targetedList = document.getElementsByClassName('panel-targeted');
@@ -41,9 +41,6 @@ var PanelBlock = React.createClass({
         this.setState({
             body: target
         })
-    },
-    propTypes: {
-        menu: React.PropTypes.array
     },
     render: function() {
         var that = this;
@@ -68,13 +65,13 @@ var PanelBlock = React.createClass({
                                 }
                             })
                         }</ul>
+                    </div>
+                    <div className="panel-body">
+                        <this.state.body />
+                    </div>
                 </div>
-                <div className="panel-body">
-                    <this.state.body />
-                </div>
-            </div>
-        );
-    }
-});
+            );
+        }
+    });
 
-module.exports = PanelBlock;
+    module.exports = PanelBlock;

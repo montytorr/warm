@@ -7,17 +7,31 @@ var Default = React.createClass({
 });
 
 var Modal = React.createClass({
+    propTypes: {
+        isActive: React.PropTypes.bool,
+        showTrigger: React.PropTypes.bool,
+        width: React.PropTypes.string,
+        height : React.PropTypes.string,
+        content : React.PropTypes.func
+    },
+    getDefaultProps: function() {
+        return {
+            isActive: false,
+            showTrigger: true,
+            width: "",
+            height : "",
+            content : Default
+        };
+    },
     getInitialState: function() {
         var style = {};
-        var content = (this.props.content != undefined) ? React.createFactory(this.props.content) : React.createFactory(Default);
-        var trigger = (this.props.showTrigger != undefined) ? this.props.showTrigger : true;
-        style.width = (this.props.width != undefined) ? this.props.width : "";
-        style.height = (this.props.height != undefined) ? this.props.height : "";
+        style.width = this.props.width;
+        style.height = this.props.height;
         return ({
             className: "warm-component modal",
             style: style,
-            content: content,
-            trigger: trigger,
+            content: React.createFactory(this.props.content),
+            trigger: this.props.showTrigger,
             triggerState: false
         });
     },
@@ -47,13 +61,6 @@ var Modal = React.createClass({
                 });
             }
         }
-    },
-    propTypes: {
-        isActive: React.PropTypes.bool,
-        showTrigger: React.PropTypes.bool,
-        width: React.PropTypes.string,
-        height : React.PropTypes.string,
-        content : React.PropTypes.func
     },
     render: function () {
         if (this.state.trigger == true) {

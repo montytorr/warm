@@ -1,14 +1,12 @@
 var React = global.React || require('react');
 
 var SurfaceComponent = React.createClass({
-    getInitialState: function() {
-        return ({
-            title: this.props.title,
-            titleLoading: this.props.isLoading,
-            bodyLoading: this.props.isLoading,
-            details: React.createFactory(this.props.details),
-            content: React.createFactory(this.props.content)
-        });
+    propTypes: {
+        title: React.PropTypes.string,
+        titleLoading: React.PropTypes.bool,
+        bodyLoading: React.PropTypes.bool,
+        details: React.PropTypes.func,
+        content: React.PropTypes.func
     },
     getDefaultProps: function() {
         return {
@@ -19,12 +17,14 @@ var SurfaceComponent = React.createClass({
             content: React.createClass({render: function() {return (<div></div>);}})
         }
     },
-    propTypes: {
-        title: React.PropTypes.string,
-        titleLoading: React.PropTypes.bool,
-        bodyLoading: React.PropTypes.bool,
-        details: React.PropTypes.func,
-        content: React.PropTypes.func
+    getInitialState: function() {
+        return ({
+            title: this.props.title,
+            titleLoading: this.props.isLoading,
+            bodyLoading: this.props.isLoading,
+            details: React.createFactory(this.props.details),
+            content: React.createFactory(this.props.content)
+        });
     },
     render: function() {
         var title = null;

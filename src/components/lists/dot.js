@@ -2,29 +2,31 @@ var React = global.React || require('react');
 var DotButton = require('../buttons/dot.js');
 
 var DotList = React.createClass({
+    propTypes: {
+        list: React.PropTypes.array
+    },
+    getDefaultProps: function() {
+        return {
+            list : list: [
+                {
+                    title : "First list element",
+                    subTitle: "Some details about it"
+                },
+                {
+                    title : "Another element",
+                    subTitle: "More details?"
+                },
+                {
+                    title : "Last element",
+                    subTitle: "Ok that was the last"
+                }
+            ]
+        };
+    },
     getInitialState: function() {
-        if (this.props.list == undefined) {
-            return ({
-                list: [
-                    {
-                        title : "First list element",
-                        subTitle: "Some details about it"
-                    },
-                    {
-                        title : "Another element",
-                        subTitle: "More details?"
-                    },
-                    {
-                        title : "Last element",
-                        subTitle: "Ok that was the last"
-                    }
-                ]
-            });
-        } else {
-            return ({
-                list: this.props.list
-            });
-        }
+        return ({
+            list: this.props.list
+        });
     },
     render: function() {
         var that = this;

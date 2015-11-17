@@ -2,10 +2,10 @@ var React = global.React || require('react');
 var classie = require('classie');
 
 var RoundButton = React.createClass({
-    getInitialState: function() {
-        return ({
-            active: false
-        });
+    propTypes: {
+        onClick: React.PropTypes.func,
+        text: React.PropTypes.string,
+        customClass : React.PropTypes.string
     },
     getDefaultProps: function() {
         return {
@@ -13,6 +13,11 @@ var RoundButton = React.createClass({
             text : '',
             customClass : ''
         };
+    },
+    getInitialState: function() {
+        return ({
+            active: false
+        });
     },
     handleClick: function() {
         if (this.state.active === true) {
@@ -27,11 +32,6 @@ var RoundButton = React.createClass({
             });
         }
         this.props.onClick();
-    },
-    propTypes: {
-        onClick: React.PropTypes.func,
-        text: React.PropTypes.string,
-        customClass : React.PropTypes.string
     },
     render: function() {
         var className = "warm-component warm-button round "+this.props.customClass;
