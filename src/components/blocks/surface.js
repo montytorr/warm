@@ -6,7 +6,8 @@ var Surface = React.createClass({
         titleLoading: React.PropTypes.bool,
         bodyLoading: React.PropTypes.bool,
         details: React.PropTypes.func,
-        content: React.PropTypes.func
+        content: React.PropTypes.func,
+        customClasses: React.PropTypes.string
     },
     getDefaultProps: function() {
         return {
@@ -14,7 +15,8 @@ var Surface = React.createClass({
             titleLoading: false,
             bodyLoading: false,
             details: React.createClass({render: function() {return (<div></div>);}}),
-            content: React.createClass({render: function() {return (<div></div>);}})
+            content: React.createClass({render: function() {return (<div></div>);}}),
+            customClasses: ""
         }
     },
     getInitialState: function() {
@@ -23,7 +25,8 @@ var Surface = React.createClass({
             titleLoading: this.props.isLoading,
             bodyLoading: this.props.isLoading,
             details: React.createFactory(this.props.details),
-            content: React.createFactory(this.props.content)
+            content: React.createFactory(this.props.content),
+            customClasses: "warm-component surface "+this.props.customClasses
         });
     },
     render: function() {
@@ -63,7 +66,7 @@ var Surface = React.createClass({
             );
         }
         return (
-            <div className="warm-component surface">
+            <div className={this.state.customClasses}>
                 {title}
                 {body}
             </div>
