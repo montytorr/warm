@@ -31,9 +31,9 @@ var LoginBlock = React.createClass({
             error: {
                 isVisible: false,
                 message: null,
-                isSuccess: false,
-                className : "warm-component w-block w-login "+this.props.customClasses
-            }
+                isSuccess: false
+            },
+            className : "warm-component w-block w-login "+this.props.customClasses
         };
     },
     onValidField: function (ret) {
