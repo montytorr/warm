@@ -8,7 +8,8 @@ var Form = React.createClass({
         onFormSubmit: React.PropTypes.func,
         formComponents: React.PropTypes.array,
         error: React.PropTypes.object,
-        autocomplete:React.PropTypes.bool
+        autocomplete:React.PropTypes.bool,
+        customClasses : React.PropTypes.string
     },
     getDefaultProps: function() {
         return {
@@ -59,7 +60,8 @@ var Form = React.createClass({
                 message: null,
                 isSuccess : false
             },
-            autocomplete:true
+            autocomplete:true,
+            customClasses : ''
         };
     },
     getInitialState: function() {
@@ -71,7 +73,8 @@ var Form = React.createClass({
                 message: this.props.error.message,
                 isSuccess : this.props.error.isSuccess
             },
-            autocomplete : this.props.error.autocomplete
+            autocomplete : this.props.error.autocomplete,
+            className : "warm-component w-form w-standard "+this.props.customClasses
         };
     },
     componentWillReceiveProps: function(nextProps) {
@@ -120,7 +123,7 @@ var Form = React.createClass({
     },
     render: function() {
         return (
-            <form className="warm-form" autocomplete={this.state.autocomplete} onSubmit={this.submitWarmForm}>
+            <form className={this.state.className} autocomplete={this.state.autocomplete} onSubmit={this.submitWarmForm}>
                 {this
                     .state
                     .formComponents

@@ -12,7 +12,8 @@ var Modal = React.createClass({
         showTrigger: React.PropTypes.bool,
         width: React.PropTypes.string,
         height : React.PropTypes.string,
-        content : React.PropTypes.func
+        content : React.PropTypes.func,
+        customClasses : React.PropTypes.string
     },
     getDefaultProps: function() {
         return {
@@ -20,7 +21,8 @@ var Modal = React.createClass({
             showTrigger: true,
             width: "",
             height : "",
-            content : Default
+            content : Default,
+            customClasses : ""
         };
     },
     getInitialState: function() {
@@ -28,21 +30,21 @@ var Modal = React.createClass({
         style.width = this.props.width;
         style.height = this.props.height;
         return ({
-            className: "warm-component modal",
             style: style,
             content: React.createFactory(this.props.content),
             trigger: this.props.showTrigger,
-            triggerState: false
+            triggerState: false,
+            className: "warm-component w-block w-modal "+this.props.customClasses
         });
     },
     componentWillReceiveProps: function (nextProps) {
         if (nextProps.isActive == true){
             this.setState({
-                className: "warm-component modal active"
+                className: "warm-component w-block w-modal active "+this.props.customClasses
             })
         } else {
             this.setState({
-                className: "warm-component modal"
+                className: "warm-component w-block w-modal "+this.props.customClasses
             })
         }
         return true;
@@ -51,12 +53,12 @@ var Modal = React.createClass({
         if(e.target.id == 'modal-trigger' || e.target.parentElement.id == 'modal-trigger') {
             if (this.state.triggerState == true) {
                 this.setState({
-                    className: "warm-component modal",
+                    className: "warm-component w-block w-modal "+this.props.customClasses,
                     triggerState: false
                 });
             } else {
                 this.setState({
-                    className: "warm-component modal active",
+                    className: "warm-component w-block w-modal active "+this.props.customClasses,
                     triggerState: true
                 });
             }

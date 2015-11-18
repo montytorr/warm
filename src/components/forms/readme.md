@@ -21,12 +21,31 @@
 
 > I don't know...
 
+- customClasses: String
+
+> A string of classes you want to apply (ex : "toto foo bar")
+
 ###Example
 
 ```
 var Warm = require('warm');
 
+var handleSubmit = function(){
+    alert("Hello Warm!")
+};
+
+var formComponentsConfig = [
+    {
+        "kind" : "input",
+        "type" : "search",
+        "name" : "searchBar",
+        "placeholder" : "Search on Youtube or Soundcloud",
+        "required" : false
+    }
+];
 
 <Warm.forms.Form
-    />
+    onFormSubmit={handleSubmit}
+    formComponents={formComponentsConfig}
+    custromClasses={toto foo bar}/>
 ```

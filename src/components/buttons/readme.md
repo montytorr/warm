@@ -9,6 +9,10 @@
 
 > A function to trigger onClick event.
 
+- customClasses: String
+
+> A string of classes you want to apply (ex : "toto foo bar")
+
 ###Example
 
 ```
@@ -19,7 +23,8 @@ var handleClick = function(){
 };
 
 <Warm.buttons.Dot
-    onClick={handleClick}/>
+    onClick={handleClick}
+    customClasses="toto foo bar"/>
 ```
 
 
@@ -35,9 +40,9 @@ var handleClick = function(){
 
 > A simple text to be displayed in the button.
 
-- customClass: String
+- customClasses: String
 
-> A string containing classes to be applied.
+> A string of classes you want to apply (ex : "toto foo bar")
 
 ###Example
 
@@ -51,5 +56,5 @@ var handleClick = function(){
 <Warm.buttons.Round
     onClick={handleClick}
     test="Click Me"
-    customClasses="my-button blue"/>
+    customClasses="toto foo bar"/>
 ```

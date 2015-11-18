@@ -26,7 +26,7 @@ var Surface = React.createClass({
             bodyLoading: this.props.isLoading,
             details: React.createFactory(this.props.details),
             content: React.createFactory(this.props.content),
-            customClasses: "warm-component surface "+this.props.customClasses
+            customClasses: "warm-component w-block w-surface "+this.props.customClasses
         });
     },
     render: function() {
