@@ -15,14 +15,10 @@ var SimpleErrorTile = React.createClass({
             customClasses : ''
         };
     },
-    getInitialState: function() {
-        return ({
-            className : "warm-component w-error w-simple "+(this.props.isVisible ? "visible " : "hidden ")+(this.props.isSuccess ? "isSuccess " : "")+this.props.customClasses
-        });
-    },
     render: function() {
+        var classNameString = "warm-component w-error w-simple "+(this.props.isVisible ? "visible " : "hidden ")+(this.props.isSuccess ? "isSuccess " : "")+this.props.customClasses
         return (
-            <p className={this.state.className}>
+            <p className={classNameString}>
               {this.props.message}
           </p>
         );
