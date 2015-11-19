@@ -69,13 +69,13 @@
         width: 0;
         overflow: hidden;
         color: $w-color-main;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
         & .warm-form {
             width: 280px;
             margin: 0 auto;
             opacity: 0;
-            padding-left: 20px;
-            padding-right: 20px;
-            box-sizing: border-box;
             -webkit-transition: opacity 0.5s ease-in-out;
             transition: opacity 0.5s ease-in-out;
         }

@@ -159,9 +159,35 @@ var myMenu = [
 ##Warm.blocks.Surface !!$Warm.blocks.Surface!!
 
 ###Props (optional)
-- :
+- title: String
 
-> ...
+> Set a title to your surface.
+> Default is "".
+
+- titleLoading: Boolean
+
+  > If sat to true, replace the title by a loader.
+  > Default is false.
+
+- bodyLoading: Boolean
+
+> If sat to true, replace the body by a loader.
+> Default is false.
+
+- details: ReactClass
+
+> The react class to be displayed on top right of the surface.
+> Default is an empty div returned by a ReactClass.
+
+- content: ReactClass
+
+> The react class to be displayed in the surface's body.
+> Default is an empty div returned by a ReactClass.
+
+- customClasses: String
+
+  > A string of classes you want to apply (ex : "toto foo bar")
+  > Default is "".
 
 ####Example
 
@@ -169,5 +195,6 @@ var myMenu = [
 var Warm = require('warm');
 
 <Warm.blocks.Surface
-    />
+    title="Hello Warm"
+    customClasses="toto foo bar"/>
 ```
