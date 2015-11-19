@@ -1,0 +1,39 @@
+.warm-component.w-button.w-colored {
+    width: 150px;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+    color: #AAA;
+    .background {
+        position: absolute;
+        width: 150px;
+        height: 40px;
+        margin-top: 35px;
+        background-color: $w-color-main;
+        transition: 0.2s
+    }
+    &.active {
+        color: #fff;
+        .background {
+            margin-top: 0px;
+        }
+    }
+    .head {
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        position: absolute;
+    }
+    &:hover {
+        cursor: pointer;
+        .background {
+            margin-top: 33px;
+        }
+        &.active {
+            .background {
+                margin-top: 0px;
+            }
+        }
+    }
+}

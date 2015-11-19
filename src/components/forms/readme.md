@@ -8,22 +8,27 @@
 - onFormSubmit: Function
 
 > A function trigged when Form is submitted.
+> Default value is an empty function.
 
 - formComponents: Array
 
 > An array containing a list of components (inputs or buttons) to be used in the form.
+> Default value is a components array like formComponentsConfig below in the example.
 
 - error: Object
 
 > The error object.
+> Default value is an empty object.
 
 - autocomplete: Boolean
 
 > I don't know...
+> Default value is .
 
 - customClasses: String
 
 > A string of classes you want to apply (ex : "toto foo bar")
+> Default value is "".
 
 ###Example
 
