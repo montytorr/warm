@@ -4,6 +4,7 @@
     width: 300px;
     transition: 1s;
     overflow:hidden;
+    margin: auto;
     &.hide {
         width: 0px;
         .panel-head {
