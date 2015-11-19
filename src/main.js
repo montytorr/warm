@@ -4,6 +4,7 @@ var Warm = {};
 
 //buttons
 Warm.buttons = {};
+Warm.buttons.Colored = require('./components/buttons/colored.js');
 Warm.buttons.Dot = require('./components/buttons/dot.js');
 Warm.buttons.Round = require('./components/buttons/round.js');
 Warm.buttons.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/buttons/readme.md";

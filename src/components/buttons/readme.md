@@ -1,6 +1,53 @@
 # Buttons
 > A button is just... a button... here is our gallery of avaliables models.
 
+!!£colored!!
+##Warm.buttons.Colored !!$Warm.buttons.Colored!!
+
+###Props (optional)
+- onClick: Function
+
+> A function to trigger onClick event.
+> Default value is an empty function.
+
+- content: String
+
+> A string containing the title of your button.
+> Default value is "".
+
+- isActive: Boolean
+
+> Defines the state of the button : true is active.
+> Default value is false.
+
+- color: String
+
+> A string containing the color of the button in HEX (ex : #444).
+> Default value is the default warm theme color.
+
+- customClasses: String
+
+> A string of classes you want to apply (ex : "toto foo bar").
+> Default value is "".
+
+###Example
+
+```
+var Warm = require('warm');
+
+var handleClick = function(){
+    alert("Hello Warm!")
+};
+
+<Warm.buttons.Colored
+    key={i++}
+    content={elem}
+    color="#444"
+    onClick={handleClick}
+    customClasses="list-button"/>
+```
+
+
 !!£dot!!
 ##Warm.buttons.Dot !!$Warm.buttons.Dot!!
 
@@ -8,10 +55,12 @@
 - onClick: Function
 
 > A function to trigger onClick event.
+> Default value is an Hello Warm function.
 
 - customClasses: String
 
 > A string of classes you want to apply (ex : "toto foo bar")
+> Default value is "".
 
 ###Example
 
@@ -35,14 +84,17 @@ var handleClick = function(){
 - onClick: Function
 
 > A function to trigger onClick event.
+> Default value is an Hello Warm function.
 
 - text: String
 
 > A simple text to be displayed in the button.
+> Default value is "".
 
 - customClasses: String
 
 > A string of classes you want to apply (ex : "toto foo bar")
+> Default value is "".
 
 ###Example
 
