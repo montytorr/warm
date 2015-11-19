@@ -1,4 +1,4 @@
-.warm-component.list-dot {
+.warm-component.w-list.w-dot {
     width: 100%;
     background-color: #fff;
     li {
@@ -33,6 +33,7 @@
             height: 50px;
             line-height: 50px;
             text-align: center;
+            padding-top: 5px;
         }
     }
 }

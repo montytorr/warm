@@ -1,11 +1,11 @@
-.warm-error-tile{
+.warm-component.w-error.w-simple {
     background :$w-color-background-error;
     color:$w-color-main-text;
     border-radius: 5px;
     padding: 10px;
     box-sizing: border-box;
     margin-top: 25px;
-    position:relative;
+    position: absolute;
     padding-left: 55px;
     font-size: 13px;
     min-height: 35px;

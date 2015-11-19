@@ -3,7 +3,8 @@ var DotButton = require('../buttons/dot.js');
 
 var DotList = React.createClass({
     propTypes: {
-        list: React.PropTypes.array
+        list: React.PropTypes.array,
+        customClasses : React.PropTypes.string
     },
     getDefaultProps: function() {
         return {
@@ -20,19 +21,21 @@ var DotList = React.createClass({
                     title : "Last element",
                     subTitle: "Ok that was the last"
                 }
-            ]
+            ],
+            customClasses : ''
         };
     },
     getInitialState: function() {
         return ({
-            list: this.props.list
+            list: this.props.list,
+            className : "warm-component w-list w-dot "+this.props.customClasses
         });
     },
     render: function() {
         var that = this;
         var i = 0;
         return (
-            <div className="warm-component list-dot">
+            <div className={this.state.className}>
                 {
                     that.state.list.map(function (elem) {
                         return (

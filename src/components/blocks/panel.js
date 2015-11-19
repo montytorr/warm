@@ -19,17 +19,20 @@ var mockParams = React.createClass({
 
 var PanelBlock = React.createClass({
     propTypes: {
-        menu: React.PropTypes.array
+        menu: React.PropTypes.array,
+        customClasses : React.PropTypes.string
     },
     getDefaultProps: function() {
         return {
-            menu: [{name: 'Infos', target: mockInfo, img: ""}, {name: 'Params', target: mockParams, img:""}]
+            menu: [{name: 'Infos', target: mockInfo, img: ""}, {name: 'Params', target: mockParams, img:""}],
+            customClasses: ""
         };
     },
     getInitialState: function() {
         return ({
             menu: this.props.menu,
-            body: this.props.menu[0].target
+            body: this.props.menu[0].target,
+            className: "warm-component w-block w-panel "+this.props.customClasses
         });
     },
     changeBody: function (target, index) {
@@ -46,7 +49,7 @@ var PanelBlock = React.createClass({
         var that = this;
         var i = 0;
         return (
-            <div className="warm-component panel-container">
+            <div className={this.state.className}>
                 <div className="panel-head">
 
                 </div>

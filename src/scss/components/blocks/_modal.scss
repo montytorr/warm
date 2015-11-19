@@ -1,4 +1,4 @@
-.warm-component.modal {
+.warm-component.w-block.w-modal {
     visibility: hidden;
     display: inline-flex;
     position: fixed;
@@ -15,6 +15,7 @@
 }
 
 .modal-trigger {
+    margin: auto;
     color: #fff;
     width: 150px;
     height: 50px;

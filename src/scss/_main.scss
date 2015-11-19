@@ -12,8 +12,6 @@
 
 
 /*----------------------  COMPONENTS  -----------------------------------------*/
-@import "components/warm";
-@import "components/global";
 @import "components/blocks/login";
 @import "components/blocks/modal";
 @import "components/blocks/panel";
@@ -23,3 +21,4 @@
 @import "components/lists/dot";
 @import "components/errors/errors";
 @import "components/forms/forms";
+@import "components/loaders/fullScreen";
