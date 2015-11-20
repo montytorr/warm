@@ -1,5 +1,5 @@
 var React = global.React || require('react');
-var Search = require('../buttons/search');
+var Search = require('../blocks/modal');
 
 var Search = React.createClass({
     propTypes: {
