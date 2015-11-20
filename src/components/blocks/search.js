@@ -1,5 +1,6 @@
 var React = global.React || require('react');
-var Search = require('../blocks/modal');
+
+var SearchButton = require('../buttons/dot');
 
 var Search = React.createClass({
     propTypes: {
@@ -36,7 +37,8 @@ var Search = React.createClass({
                 </div>
                 <div className="w-search-form">
                     <input className="w-search-field" type="search" placeholder={this.props.placeholder} value={this.state.value} onChange={this.handleChange}></input>
-                    <Search />
+                    <SearchButton
+                        onClick={this.onSubmit} />
                 </div>
             </div>
         );
