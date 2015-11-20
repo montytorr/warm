@@ -1,7 +1,7 @@
 var React = global.React || require('react');
 
 var WarmForm = require('../forms/standard/form');
-var Search = require('../buttons/search');
+var Search = require('../buttons/dot');
 
 var Search = React.createClass({
     propTypes: {
