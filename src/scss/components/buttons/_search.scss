@@ -1,0 +1,35 @@
+.warm-component.w-button.w-search {
+    display: inline-block;
+    width: 50px;
+    .w-search-icon
+    {
+        font-size: 3em; /* This controls the size. */
+        display: inline-block;
+        width: 0.4em;
+        height: 0.4em;
+        border: 0.1em solid $w-color-main;
+        position: relative;
+        border-radius: 0.35em;
+        margin-top: 7px;
+        margin-left: 6px;
+        &:hover {
+            cursor: pointer;
+        }
+        &::before
+        {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            right: -0.25em;
+            bottom: -0.1em;
+            border-width: 0;
+            background: $w-color-main;
+            width: 0.35em;
+            height: 0.08em;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+        }
+    }
+}

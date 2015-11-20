@@ -8,7 +8,7 @@ var RoundButton = require('../buttons/round');
 * @return {object} search
 */
 
-var LoginBlock = React.createClass({
+var Login = React.createClass({
     propTypes: {
         loginRequestMethod: React.PropTypes.func,
         boldTitle: React.PropTypes.string,
@@ -127,4 +127,4 @@ var LoginBlock = React.createClass({
     }
 });
 
-module.exports = LoginBlock;
+module.exports = Login;

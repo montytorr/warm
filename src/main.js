@@ -2,20 +2,22 @@ var React = global.React || require('react');
 
 var Warm = {};
 
-//buttons
-Warm.buttons = {};
-Warm.buttons.Colored = require('./components/buttons/colored.js');
-Warm.buttons.Dot = require('./components/buttons/dot.js');
-Warm.buttons.Round = require('./components/buttons/round.js');
-Warm.buttons.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/buttons/readme.md";
-
 //blocks
 Warm.blocks = {};
 Warm.blocks.Login = require('./components/blocks/login.js');
 Warm.blocks.Modal = require('./components/blocks/modal.js');
 Warm.blocks.Panel = require('./components/blocks/panel.js');
+Warm.blocks.Search = require('./components/blocks/search.js');
 Warm.blocks.Surface = require('./components/blocks/surface.js');
 Warm.blocks.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/blocks/readme.md";
+
+//buttons
+Warm.buttons = {};
+Warm.buttons.Colored = require('./components/buttons/colored.js');
+Warm.buttons.Dot = require('./components/buttons/dot.js');
+Warm.buttons.Round = require('./components/buttons/round.js');
+Warm.buttons.Search = require('./components/buttons/search.js');
+Warm.buttons.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/buttons/readme.md";
 
 //errors
 Warm.errors = {};

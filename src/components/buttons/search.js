@@ -1,19 +1,19 @@
 var React = global.React || require('react');
 
-var Dot = React.createClass({
+var Search = React.createClass({
     propTypes: {
         onClick: React.PropTypes.func,
         customClasses : React.PropTypes.string
     },
     getDefaultProps: function() {
         return {
-            onClick: function() {alert("Dot button clicked!");},
+            onClick: function() {},
             customClasses : ''
         }
     },
     getInitialState: function() {
         return ({
-            className : "warm-component w-button w-dot "+this.props.customClasses
+            className : "warm-component w-button w-search "+this.props.customClasses
         });
     },
     handleClick: function() {
@@ -22,12 +22,10 @@ var Dot = React.createClass({
     render: function() {
         return (
             <div onClick={this.handleClick} className={this.state.className}>
-                <div className="main-dot">
-                    <div className="small-dot"></div>
-                </div>
+                <span className="w-search-icon" onClick={this.handleClick}></span>
             </div>
         );
     }
 });
 
-module.exports = Dot;
+module.exports = Search;
