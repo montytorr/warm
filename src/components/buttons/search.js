@@ -21,9 +21,7 @@ var Search = React.createClass({
     },
     render: function() {
         return (
-            <div onClick={this.handleClick} className={this.state.className}>
-                <span className="w-search-icon" onClick={this.handleClick}></span>
-            </div>
+            <div></div>
         );
     }
 });
