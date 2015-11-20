@@ -1,7 +1,5 @@
 var React = global.React || require('react');
-
-var WarmForm = require('../forms/standard/form');
-var Search = require('../buttons/dot');
+var Search = require('../buttons/search');
 
 var Search = React.createClass({
     propTypes: {
@@ -38,7 +36,7 @@ var Search = React.createClass({
                 </div>
                 <div className="w-search-form">
                     <input className="w-search-field" type="search" placeholder={this.props.placeholder} value={this.state.value} onChange={this.handleChange}></input>
-                    
+                    <Search />
                 </div>
             </div>
         );
