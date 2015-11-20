@@ -38,8 +38,7 @@ var Search = React.createClass({
                 </div>
                 <div className="w-search-form">
                     <input className="w-search-field" type="search" placeholder={this.props.placeholder} value={this.state.value} onChange={this.handleChange}></input>
-                    <Search
-                        onClick={this.onSubmit} />
+                    
                 </div>
             </div>
         );
