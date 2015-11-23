@@ -20,9 +20,9 @@ var Colored = React.createClass({
     getInitialState: function() {
         return {
             color: {
-                "background-color":this.props.color
+                "backgroundColor":this.props.color
             },
-            className : "warm-component w-button w-colored "+(this.props.customClasses ? "" : "active ")+this.props.customClasses
+            className : "warm-component w-button w-colored "+(this.props.isActive ? "active " : "")+this.props.customClasses
         };
     },
     handleClick: function (data, err) {
