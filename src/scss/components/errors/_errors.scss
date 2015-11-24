@@ -1,6 +1,6 @@
 .warm-component.w-error.w-simple {
     background :$w-color-background-error;
-    color:$w-color-main-text;
+    color:$w-color-main-text-inverted;
     border-radius: 5px;
     padding: 10px;
     box-sizing: border-box;
@@ -23,10 +23,10 @@
         position: absolute;
         left: 10px;
         top: 50%;
-        width: 25px;
-        height: 25px;
-        background-color: $w-color-background-inputs;
+        width: 20px;
+        height: 20px;
+        background-color: $w-color-main-text-inverted;
         border-radius: 50%;
-        margin-top:-12px;
+        margin-top:-10px;
     }
 }

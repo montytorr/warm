@@ -6,8 +6,11 @@
         line-height: 35px;
         width: 100%;
         &.invalid {
-            background-color: #bd1622;
-            color: white;
+            background-color: $w-color-background-error;
+            color: $w-color-main-text-inverted;
+            &::-webkit-input-placeholder {
+                color: $w-color-main-text-inverted;
+            }
         }
     }
     & > div {
@@ -16,11 +19,12 @@
     & .warm-input-checkbox {
         display: none;
         & + label {
+            font-family: $w-font-main;
             padding-left: 45px;
             line-height: 55px;
             transition: all 0.2s;
-            font-size: 12px;
-            color: $w-color-text-inputs;
+            font-size: 13px;
+            color: $w-color-placeholders;
             &:hover {
                 cursor: pointer;
             }
@@ -47,6 +51,9 @@
         }
     }
     & input {
+        font-family: $w-font-main;
+        color: $w-color-main-text;
+        font-size: 13px;
         border-radius: 5px;
         outline: none;
         border: none;
@@ -56,13 +63,17 @@
         &:focus {
             box-shadow: 0 0 1px 1px $w-color-main;
         }
+        &::-webkit-input-placeholder {
+            color: $w-color-placeholders;
+        }
     }
     & button {
+        font-family: $w-font-main;
         background-color: $w-color-main;
         outline: none;
         border: none;
         border-radius: 5px;
-        color: $w-color-main-text;
+        color: $w-color-main-text-inverted;
         width: 100%;
         height: 45px;
         font-size: 17px;

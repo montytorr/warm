@@ -16,10 +16,11 @@
 
 .modal-trigger {
     margin: auto;
-    color: #fff;
+    color: $w-color-main-text-inverted;
     width: 150px;
     height: 50px;
     background-color: $w-color-main;
+    font-family: $w-font-main;
     line-height: 45px;
     &:hover {
         cursor: pointer;

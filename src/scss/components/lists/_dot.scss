@@ -15,13 +15,13 @@
             width: calc(100% - 50px);
             height: 50px;
             h1 {
-                font-family: $w-font-default;
+                font-family: $w-font-main;
                 font-size: 1em;
                 font-weight: bold;
                 color: $w-color-list-dot-title;
             }
             h2 {
-                font-family: $w-font-default;
+                font-family: $w-font-main;
                 font-size: 1em;
                 font-weight:lighter;
                 color: $w-color-list-dot-sub;
