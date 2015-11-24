@@ -12,6 +12,17 @@
 
 $w-color-error : #CC3333;
 $w-color-input : #8D8D8D;
+$w-color-grey : #555;
+.w-centered-fullscreen-content{
+    display: inline-flex;
+    color: $w-color-main;
+    font-size: 25px;
+    width: 100%
+}
+
+.w-centered-fullscreen-content > *{
+    margin: auto;
+}
 /*----------------------  COMPONENTS  -----------------------------------------*/
 @import "components/blocks/login";
 @import "components/blocks/modal";
