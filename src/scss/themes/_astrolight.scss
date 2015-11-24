@@ -11,7 +11,7 @@ $w-color-background-login : #FDFEFE;
 $w-color-background-inputs : #E5E5E5;
 $w-color-background-error : #881820;
 $w-color-background-success : #80C684;
-
+$w-color-background-error : #CC3333;
 /*-----  TEXT  ------------------------------------------------------*/
 $w-color-text-inputs : #A1A1A1;
 
@@ -29,10 +29,11 @@ $w-color-list-dot-sub : #A1A1A1;
 /****  FONTS
 /*******************************************************************************/
 /*-----  IMPORT  ----------------------------------------------------*/
+/*-----  IMPORT  ----------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200);
 
 /*-----  DEFINE  ----------------------------------------------------*/
-$w-font-default: 'Source Sans Pro', sans-serif;
+$w-font-default: 'Roboto', sans-serif;
 
 
 

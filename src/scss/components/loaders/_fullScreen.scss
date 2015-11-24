@@ -85,13 +85,13 @@
 .warm-loader-title {
     font-size: 45px;
     text-align: center;
-    font-weight: 200;
+    font-weight: 300;
     line-height: 1.3;
-    color: $w-color-main-text;
+    color: $w-color-grey;
 }
 .warm-title i,
 .warm-loader-title i {
-    color: $w-color-main-text-inverted;
+    color: $w-color-main-text;
     font-style: normal;
 }
 .warm-loader-title i {
@@ -111,6 +111,9 @@
 }
 .warm-fade-transition.hide {
     opacity: 0;
+}
+.warm-loader.warm-fade-transition.hide.no-display{
+    pointer-events: none;
 }
 .warm-fade-transition {
     transition: opacity .3s linear;

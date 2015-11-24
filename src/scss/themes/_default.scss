@@ -9,7 +9,7 @@ $w-color-main-border : #A1A1A1;
 /*-----  BACKGROUN  -------------------------------------------------*/
 $w-color-background-login : #FDFEFE;
 $w-color-background-inputs : #E5E5E5;
-$w-color-background-error : #881820;
+$w-color-background-error : #CC3333;
 $w-color-background-success : #80C684;
 
 /*-----  TEXT  ------------------------------------------------------*/
@@ -29,14 +29,13 @@ $w-color-list-dot-sub : #A1A1A1;
 /****  FONTS
 /*******************************************************************************/
 /*-----  IMPORT  ----------------------------------------------------*/
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200);
 
 /*-----  DEFINE  ----------------------------------------------------*/
-$w-font-default: 'Source Sans Pro', sans-serif;
+
 
 
 
 /*******************************************************************************/
 /****  IMG
 /*******************************************************************************/
-$w-img-background-button: url("../img/astrolight-profile.png") no-repeat center center;
+$w-img-background-button: url("../img/hercules-profile.png") no-repeat center center;
