@@ -57,8 +57,10 @@ var FullScreenLoader = React.createClass({
             setTimeout(function() {
                 classie.add(WarmLoader, 'show');
                 classie.remove(WarmLoader, 'hide');
-                NProgress.start();
-                _fireAfterLoadAction(that.props);
+                setTimeout(function() {
+                    NProgress.start();
+                    _fireAfterLoadAction(that.props);
+                }, 200);
             }, 200);
         }
     },
@@ -82,9 +84,7 @@ var FullScreenLoader = React.createClass({
 var _fireAfterLoadAction = function(props){
     if(typeof props.afterLoad.afterLoadAction === 'function'){
         try {
-            console.log('props.afterLoad.afterLoadAction')
             props.afterLoad.afterLoadAction(props.afterLoad.afterLoadData, function(){
-                console.log('props.endSignal')
                 process.nextTick(props.endSignal)
 
             })
