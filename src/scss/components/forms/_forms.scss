@@ -5,9 +5,11 @@
         background-color: $w-color-background-inputs;
         line-height: 35px;
         width: 100%;
+        color: $w-color-input;
         &.invalid {
             background-color: $w-color-background-error;
             color: $w-color-main-text-inverted;
+            box-shadow: 0 0 1px 2px $w-color-error;
             &::-webkit-input-placeholder {
                 color: $w-color-main-text-inverted;
             }
@@ -61,7 +63,8 @@
         margin-bottom: 10px;
         box-shadow: 0 0 1px 1px #A1A1A1;
         &:focus {
-            box-shadow: 0 0 1px 1px $w-color-main;
+            color: $w-color-main;
+            box-shadow: 0 0 1px 2px $w-color-main;
         }
         &::-webkit-input-placeholder {
             color: $w-color-placeholders;
