@@ -110,3 +110,65 @@ var handleClick = function(){
     test="Click Me"
     customClasses="toto foo bar"/>
 ```
+
+!!£search!!
+##Warm.buttons.Search !!$Warm.buttons.Search!!
+
+###Props (optional)
+- onClick: Function
+
+> A function to trigger onClick event.
+> Default value is an Hello Warm function.
+
+- customClasses: String
+
+> A string of classes you want to apply (ex : "toto foo bar")
+> Default value is "".
+
+###Example
+
+```
+var Warm = require('warm');
+
+var handleClick = function(){
+    alert("Hello Warm!")
+};
+
+<Warm.buttons.Search
+    onClick={handleClick}
+    customClasses="toto foo bar"/>
+```
+
+!!£spoiler!!
+##Warm.buttons.Spoiler !!$Warm.buttons.Spoiler!!
+
+###Props (optional)
+- onClick: Function
+
+> A function to trigger onClick event.
+> Default value is an Hello Warm function.
+
+- isActive: Boolean
+
+> A value to define the state of the button.
+> Default value is false.
+
+- customClasses: String
+
+> A string of classes you want to apply (ex : "toto foo bar")
+> Default value is "".
+
+###Example
+
+```
+var Warm = require('warm');
+
+var handleClick = function(){
+    alert("Hello Warm!")
+};
+
+<Warm.buttons.Spoiler
+    onClick={handleClick}
+    isActive=true
+    customClasses="toto foo bar"/>
+```

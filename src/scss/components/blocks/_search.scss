@@ -3,11 +3,13 @@
     position: relative;
     height: 50px;
     margin: 10px;
-    border: 2px solid #DDD;
+    border: 2px solid $w-color-main-border;
+    font-family: $w-font-main;
+    font-size: 15px;
+    font-weight:500;
     box-sizing: border-box;
     .search-content {
         display: inline-flex;
-        background-color: #000;
         width: 50px;
         height: 50px;
     }
@@ -18,20 +20,20 @@
             display: inline-block;
             width: 100%;
             outline: none;
-            font-size: 1.3em;
+            font-size: 17px;
             border: none;
-            color: #444;
+            color: $w-color-main-text;
             &::-webkit-search-cancel-button {
                 &:hover {
                     cursor: pointer;
                 }
             }
             &::-webkit-input-placeholder {
-                color: #444;
+                color: $w-color-main-text;
             }
             &:focus {
                 &::-webkit-input-placeholder {
-                    color: #888;
+                    color: $w-color-main-headings1;
                 }
             }
             &::-webkit-search-cancel-button{
@@ -49,7 +51,7 @@
                 line-height: 26px;
                 border-radius: 30px;
                 &:before {
-                    content: '\2217';
+                    content: '\00D7';
                     margin-left: 7px;
                 }
             }

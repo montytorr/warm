@@ -87,11 +87,11 @@
     text-align: center;
     font-weight: 200;
     line-height: 1.3;
-    color: #333;
+    color: $w-color-main-text;
 }
 .warm-title i,
 .warm-loader-title i {
-    color: $w-color-main-text;
+    color: $w-color-main-text-inverted;
     font-style: normal;
 }
 .warm-loader-title i {

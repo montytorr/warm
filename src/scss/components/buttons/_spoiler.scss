@@ -1,0 +1,40 @@
+.warm-component.w-button.w-spoiler {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    .w-spoiler-button-container {
+        display: inline-flex;
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
+        background-color: rgba(255, 255, 255, 0.5);
+        margin: auto;
+        .w-spoiler-button {
+            width: 20px;
+            height:20px;
+            margin: auto;
+            transition: 0.2s;
+            .w-spoiler-arrow {
+                display: inline-block;
+                margin:4px 0 0 7px;
+                width: 0;
+                height: 0;
+                border-top: 6px solid transparent;
+                border-left: 10px solid #555;
+                border-bottom: 6px solid transparent;
+            }
+        }
+        &:hover {
+            cursor: pointer;
+            width: 29px;
+            height: 29px;
+        }
+    }
+    &.active {
+        .w-spoiler-button-container {
+            .w-spoiler-button {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}

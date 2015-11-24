@@ -2,6 +2,11 @@ var React = global.React || require('react');
 
 var Warm = {};
 
+//arrays
+Warm.blocks = {};
+Warm.blocks.Column = require('./components/arrays/column.js');
+Warm.blocks.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/arrays/readme.md";
+
 //blocks
 Warm.blocks = {};
 Warm.blocks.Login = require('./components/blocks/login.js');
@@ -17,6 +22,7 @@ Warm.buttons.Colored = require('./components/buttons/colored.js');
 Warm.buttons.Dot = require('./components/buttons/dot.js');
 Warm.buttons.Round = require('./components/buttons/round.js');
 Warm.buttons.Search = require('./components/buttons/search.js');
+Warm.buttons.Spoiler = require('./components/buttons/spoiler.js');
 Warm.buttons.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/buttons/readme.md";
 
 //errors
@@ -32,6 +38,7 @@ Warm.forms.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/
 //lists
 Warm.lists = {};
 Warm.lists.Dot = require('./components/lists/dot.js');
+Warm.lists.Spoiler = require('./components/lists/spoiler.js');
 Warm.lists.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/lists/readme.md";
 
 //loaders

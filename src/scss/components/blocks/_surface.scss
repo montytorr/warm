@@ -12,10 +12,11 @@
     box-shadow: 0 0 2px rgba(0,0,0,.2);
     .title
     {
-        font-size: 14px;
-        font-weight: bolder;
-        line-height: 30px;
-        min-height: 30px;
+        font-family: $w-font-main;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 35px;
+        min-height: 35px;
         padding-left: 20px;
         text-align: left;
         color: $w-color-main;
@@ -26,16 +27,4 @@
     {
         min-height: 120px;
     }
-}
-.surface.only-anim
-{
-    margin-top: 0;
-    background-color: transparent;
-    box-shadow: none;
-}
-.surface.in-grid
-{
-    overflow: hidden;
-    height: 100%;
-    margin-top: 0;
 }

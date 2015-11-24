@@ -154,6 +154,40 @@ var myMenu = [
     menu={myMenu}/>
 ```
 
+!!£search!!
+
+##Warm.blocks.Search !!$Warm.blocks.Search!!
+
+###Props (optional)
+- content: ReactClass
+
+  > A react class to be displayed before the placeholder.
+  > Default is an empty div.
+
+- onSubmit: Function
+
+> A function to be triggered when the field is submitted.
+> Default is an empty function.
+
+- placeholder: String
+
+> A string to be displayed as placeholder in the field.
+> Default is "".
+
+- customClasses: String
+
+  > A string of classes you want to apply (ex : "toto foo bar")
+  > Default is "".
+
+####Example
+
+```
+var Warm = require('warm');
+
+<Warm.blocks.Search
+    customClasses="toto foo bar"/>
+```
+
 !!£surface!!
 
 ##Warm.blocks.Surface !!$Warm.blocks.Surface!!

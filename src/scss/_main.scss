@@ -12,6 +12,7 @@
 
 
 /*----------------------  COMPONENTS  -----------------------------------------*/
+@import "components/arrays/column";
 @import "components/blocks/login";
 @import "components/blocks/modal";
 @import "components/blocks/panel";
@@ -21,7 +22,9 @@
 @import "components/buttons/dot";
 @import "components/buttons/round";
 @import "components/buttons/search";
+@import "components/buttons/spoiler";
 @import "components/lists/dot";
+@import "components/lists/spoiler";
 @import "components/errors/errors";
 @import "components/forms/forms";
 @import "components/loaders/fullScreen";
