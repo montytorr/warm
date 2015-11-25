@@ -3,7 +3,7 @@
     height: 40px;
     position: relative;
     overflow: hidden;
-    color: $w-color-main-headings1;
+    color: $w-color-main-headings;
     .background {
         position: absolute;
         width: 150px;
@@ -13,7 +13,7 @@
         transition: 0.2s
     }
     &.active {
-        color: $w-color-main-text-inverted;
+        color: $w-color-main-inverted;
         .background {
             margin-top: 0px;
         }

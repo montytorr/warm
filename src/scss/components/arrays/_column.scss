@@ -3,10 +3,10 @@
     li {
         width: 100%;
         &.w-column-titles {
-            font-family: $w-font-default;
+            font-family: $w-font-main;
             font-size: 15px;
             font-weight: normal;
-            color: #5CA9F0;
+            color: $w-color-main;
             display: inline-flex;
             height: 25px;
             line-height: 25px;
@@ -20,7 +20,7 @@
             }
         }
         &.w-line-container {
-            font-family: $w-font-default;
+            font-family: $w-font-main;
             font-size: 15px;
             font-weight:500;
             color: $w-color-main-text;

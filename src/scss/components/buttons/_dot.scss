@@ -1,17 +1,17 @@
 .warm-component.w-button.w-dot {
     display: inline-flex;
-    background-color: $w-color-button-dot2;
+    background-color: $w-color-main-inverted;
     width: 30px;
     height: 30px;
     border-radius: 30px;
-    border: 2px solid $w-color-button-dot3;
+    border: 2px solid $w-color-main-border;
     transition: 0.1s;
     .main-dot {
         margin: auto;
         width: 22px;
         height: 22px;
         border-radius: 22px;
-        background-color: $w-color-button-dot1;
+        background-color: $w-color-main;
         transition: 0.1s;
     }
     &:hover {
