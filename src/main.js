@@ -3,9 +3,9 @@ var React = global.React || require('react');
 var Warm = {};
 
 //arrays
-Warm.blocks = {};
-Warm.blocks.Column = require('./components/arrays/column.js');
-Warm.blocks.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/arrays/readme.md";
+Warm.arrays = {};
+Warm.arrays.Column = require('./components/arrays/column.js');
+Warm.arrays.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/arrays/readme.md";
 
 //blocks
 Warm.blocks = {};

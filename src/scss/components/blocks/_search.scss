@@ -15,10 +15,12 @@
     }
     .w-search-form {
         display:inline-flex;
+        background-color: $w-color-main-inverted;
         width: 100%;
         .w-search-field {
+            background-color: $w-color-main-inverted;
             display: inline-block;
-            width: 100%;
+            width: calc(100% - 50px);
             outline: none;
             font-size: 17px;
             border: none;
