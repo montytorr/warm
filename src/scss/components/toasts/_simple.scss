@@ -1,0 +1,24 @@
+.warm-component.w-toasts.w-simple{
+    background: $w-color-main;
+    pointer-events: all;
+    box-shadow: 0px 0px 1px rgba(0, 0 ,0, 0.5);
+    margin: 5px 0px;
+    min-height: 50px;
+    line-height: 50px;
+    color: $w-color-main-inverted;
+    font-weight: 300;
+    padding-left: 25px;
+    border-radius: 3px;
+    &.error{
+        background: $w-color-error;
+    }
+    &.success{
+        background: $w-color-success;
+    }
+    &.warning{
+        background: $w-color-warning;
+    }
+    &.info{
+        background: $w-color-info;
+    }
+}

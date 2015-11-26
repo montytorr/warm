@@ -22,6 +22,7 @@ Warm.buttons.Colored = require('./components/buttons/colored.js');
 Warm.buttons.Dot = require('./components/buttons/dot.js');
 Warm.buttons.Round = require('./components/buttons/round.js');
 Warm.buttons.Search = require('./components/buttons/search.js');
+Warm.buttons.Simple = require('./components/buttons/simple.js');
 Warm.buttons.Spoiler = require('./components/buttons/spoiler.js');
 Warm.buttons.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/buttons/readme.md";
 
@@ -45,6 +46,16 @@ Warm.lists.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/
 Warm.loaders = {};
 Warm.loaders.FullScreen = require('./components/loaders/fullScreen.js');
 Warm.loaders.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/loaders/readme.md";
+
+//toasters
+Warm.toasters = {};
+Warm.toasters.Simple = require('./components/toasters/simple.js');
+Warm.toasters.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/toasters/readme.md";
+
+//toasts
+Warm.toasts = {};
+Warm.toasts.Simple = require('./components/toasts/simple.js');
+Warm.toasts.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/toasts/readme.md";
 
 if (!global.exports && !global.module && (!global.define || !global.define.amd)) {
   global.Warm = Warm;
