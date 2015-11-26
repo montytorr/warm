@@ -11,7 +11,7 @@ var Surface = React.createClass({
     },
     getDefaultProps: function() {
         return {
-            title: React.PropTypes.string,
+            title: "Surface",
             titleLoading: false,
             bodyLoading: false,
             details: React.createClass({render: function() {return (<div></div>);}}),

@@ -40,7 +40,6 @@ var handleClick = function(){
 };
 
 <Warm.buttons.Colored
-    key={i++}
     content={elem}
     color="#444"
     onClick={handleClick}
@@ -136,6 +135,40 @@ var handleClick = function(){
 
 <Warm.buttons.Search
     onClick={handleClick}
+    customClasses="toto foo bar"/>
+```
+
+!!£simple!!
+##Warm.buttons.Simple !!$Warm.buttons.Simple!!
+
+###Props (optional)
+- onClick: Function
+
+> A function to trigger onClick event.
+> Default value is an Hello Warm function.
+
+- text: String
+
+> A string to be displayed in the button.
+> Default value is "".
+
+- customClasses: String
+
+> A string of classes you want to apply (ex : "toto foo bar")
+> Default value is "".
+
+###Example
+
+```
+var Warm = require('warm');
+
+var handleClick = function(){
+    alert("Hello Warm!")
+};
+
+<Warm.buttons.Simple
+    onClick={handleClick}
+    text="Click Me"
     customClasses="toto foo bar"/>
 ```
 

@@ -5,16 +5,18 @@
     min-width: 200px;
     margin-top: 5px;
     -webkit-transition: opacity 2.25s ease-in-out;
-       -moz-transition: opacity 2.25s ease-in-out;
-            transition: opacity 2.25s ease-in-out;
+    -moz-transition: opacity 2.25s ease-in-out;
+    transition: opacity 2.25s ease-in-out;
     vertical-align: top;
     background-color: #fff;
     box-shadow: 0 0 2px rgba(0,0,0,.2);
     .title
     {
-        font-family: $w-font-main;
-        font-size: 15px;
-        font-weight: bold;
+        h1 {
+            font-family: $w-font-main;
+            font-size: 15px;
+            font-weight: bold;
+        }
         line-height: 35px;
         min-height: 35px;
         padding-left: 20px;

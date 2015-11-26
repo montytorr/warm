@@ -6,25 +6,10 @@
 ##Warm.arrays.Column !!$Warm.arrays.Column!!
 
 ###Props (optional)
-- loginRequestMethod: Function
+- array: Object
 
-> A method that this component will call if the form returns no errors. see example for details.
-> Default is an empty func.
-
-- boldTitle: String
-
-  > The bold part of the title.
-  > Default is "Warm".
-
-- lightTitle: String
-
-  > The light part of the title.
-  > Default is "Login".
-
-- description: String
-
-  > Adds a little description underneath the photo.
-  > Default is "".
+> An array to be displayed based on the model of the example below.
+> Default is the object of the example.
 
 - customClasses: String
 
@@ -36,24 +21,15 @@
 ```
 var Warm = require('warm');
 
-var loginRequestMethod = function(formData, cb){
-    userAPI.signIn({
-        "emailLogin" : formData.emailLogin.value,
-        "passwordLogin" : formData.passwordLogin.value,
-        "rememberMeLogin" : formData.rememberMeLogin.value
-    }, function(response) {
-        if (response.error === null && response.user !== null) {
-            UserActions.userVerified();
-        } else {
-            cb({error: response.error});
-        }
-    });
-};
+var array = {
+    titles: ["Alpha", "Beta", "Gamma", "Teta"],
+    content:[
+        ["Lorepsum", "Ipsum", "Lorace", "3290"],
+        ["Hypnal", "Yolemu", "Ceinale", "3290"]
+    ]
+}
 
-<Warm.blocks.Login
-    loginRequestMethod={loginRequestMethod}
-    customClasses="centered"
-    boldTitle="Warm"
-    lightTitle="login"
-    description="Here you can put a little description."/>
+<Warm.arrays.Column
+    array={array}
+    customClasses="centered"/>
 ```
