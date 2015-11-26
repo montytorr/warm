@@ -11,7 +11,7 @@ var Colored = React.createClass({
     getDefaultProps: function() {
         return {
             onClick: function(){},
-            content: "",
+            content: "Click Me",
             isActive: false,
             color: "",
             customClasses: ""

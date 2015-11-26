@@ -1,4 +1,5 @@
 .warm-component.w-button.w-colored {
+    display: inline-block;
     width: 150px;
     height: 40px;
     position: relative;
@@ -22,6 +23,7 @@
         width: 150px;
         height: 40px;
         line-height: 40px;
+        font-family: $w-font-main;
         text-align: center;
         position: absolute;
     }
