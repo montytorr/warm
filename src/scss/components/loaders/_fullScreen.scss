@@ -85,16 +85,18 @@
 .warm-loader-title {
     font-size: 45px;
     text-align: center;
-    font-weight: 200;
+    font-weight: 300;
     line-height: 1.3;
     color: $w-color-main-text;
 }
 .warm-title i,
 .warm-loader-title i {
-    color: $w-color-main-text-inverted;
+    font-weight: 200;
+    color: $w-color-main-inverted;
     font-style: normal;
 }
 .warm-loader-title i {
+    font-weight: 200;
     color: $w-color-main;
 }
 .warm-loader-title {
@@ -111,6 +113,9 @@
 }
 .warm-fade-transition.hide {
     opacity: 0;
+}
+.warm-loader.warm-fade-transition.hide.no-display{
+    pointer-events: none;
 }
 .warm-fade-transition {
     transition: opacity .3s linear;
@@ -131,4 +136,17 @@
     to {
         opacity: 1;
     }
+}
+.w-centered-fullscreen-content{
+    display: inline-flex;
+    color: $w-color-main;
+    font-size: 25px;
+    width: 100%;
+}
+
+.w-centered-fullscreen-content > *{
+    margin: auto;
+}
+.w_h-d_i-f{
+    display: inline-flex;
 }

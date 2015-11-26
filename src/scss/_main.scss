@@ -1,30 +1,28 @@
-/*----------------------  THEMES  ----------------------------------------------*/
-// ** UNCOMENT TO APPLY THEME **
-
-
-// @import "themes/default";
-// @import "themes/astrolight";
-// @import "themes/hecules";
-// @import "themes/bluesky";;
-// @import "themes/redneck";
-// @import "themes/yellowbird";
-// @import "themes/greenlantern";
-
-
 /*----------------------  COMPONENTS  -----------------------------------------*/
 @import "components/arrays/column";
+
 @import "components/blocks/login";
 @import "components/blocks/modal";
 @import "components/blocks/panel";
 @import "components/blocks/search";
 @import "components/blocks/surface";
+
 @import "components/buttons/colored";
 @import "components/buttons/dot";
 @import "components/buttons/round";
 @import "components/buttons/search";
+@import "components/buttons/simple";
 @import "components/buttons/spoiler";
+
 @import "components/lists/dot";
 @import "components/lists/spoiler";
+
 @import "components/errors/errors";
+
 @import "components/forms/forms";
+
 @import "components/loaders/fullScreen";
+
+@import "components/toasters/simple";
+
+@import "components/toasts/simple";

@@ -1,0 +1,16 @@
+.warm-component.w-button.w-simple {
+    color:#FFF;
+    font-weight: 300;
+    outline: none;
+    border: none;
+    background-color: $w-color-main;
+    box-shadow: 0px 0px 1px rgba(0,0,0,.5);
+    border-radius: 3px;
+    &:hover{
+        box-shadow: 0px 0px 2px rgba(0,0,0,.8);
+        cursor: pointer;
+    }
+    &:active{
+        box-shadow: inset 0px 0px 2px rgba(0,0,0,.5);
+    }
+}
