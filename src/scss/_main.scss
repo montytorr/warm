@@ -26,3 +26,229 @@
 @import "components/toasters/simple";
 
 @import "components/toasts/simple";
+
+/*----------------------  w-centered-fullscreen-content  -----------------------------------------*/
+.w-centered-fullscreen-content{
+    display: inline-flex;
+    color: $w-color-main;
+    font-size: 25px;
+    width: 100%;
+}
+
+.w-centered-fullscreen-content > *{
+    margin: auto;
+}
+/*----------------------  helpers  -----------------------------------------*/
+.w_h-d_i-f{
+    display: inline-flex;
+}
+.w-full{
+    width: 100%;
+}
+.w_h-d_i-f .w-surface-composant{
+    margin : 5px auto !important;
+}
+/*----------------------  new vars   -----------------------------------------*/
+$w-color-surface-composant-background : #FFF;
+$w-color-surface-composant-border : #D9D9D9;
+
+/*----------------------  surface-composant  -----------------------------------------*/
+.w-surface-composant{
+    background: $w-color-surface-composant-background;
+    border:1px solid $w-color-surface-composant-border;
+    overflow: hidden;
+    box-sizing: border-box;
+    height: auto;
+    margin: 5px;
+    border-radius: 3px;
+    & .w-composant-title{
+        border-bottom:1px solid $w-color-surface-composant-border;
+        font-size: 14px;
+        font-weight: bolder;
+        line-height: 30px;
+        min-height: 30px;
+        padding-left: 20px;
+        text-align: left;
+        color: $w-color-main ;
+        border-left: 5px solid $w-color-main;
+        box-shadow: 0 1px 0 rgba(0,0,0,.1);
+    }
+    & .w-composant-content{
+        min-height: 120px;
+    }
+    & .w-composant-loader
+    {
+        position: relative;
+        -webkit-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+                transform: translateZ(0);
+        -webkit-animation: composant-loader-anim .8s infinite linear;
+                animation: composant-loader-anim .8s infinite linear;
+        text-indent: -9999em;
+        &.medium{
+            font-size: 10px;
+            margin: 6em auto;
+            border-top: 1.1em solid rgba(150, 150, 150, .2);
+            border-right: 1.1em solid rgba(150, 150, 150, .2);
+            border-bottom: 1.1em solid rgba(150, 150, 150, .2);
+            border-left: 1.1em solid $w-color-main;
+        }
+        &.small
+        {
+            font-size: 10px;
+            margin: 7px auto;
+            border-top: 3px solid rgba(150, 150, 150, .2);
+            border-right: 3px solid rgba(150, 150, 150, .2);
+            border-bottom: 3px solid rgba(150, 150, 150, .2);
+            border-left: 3px solid $w-color-main;
+        }
+    }
+    .composant-loader.medium,
+    .composant-loader.medium:after
+    {
+        width: 5em;
+        height: 5em;
+        border-radius: 50%;
+    }
+
+    .composant-loader.small,
+    .composant-loader.small:after
+    {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+    .composant-title-loader-container .composant-loader.small
+    {
+        border-top-color: #fff;
+        border-right-color: #fff;
+        border-bottom-color: #fff;
+        border-left-color: rgba(150, 150, 150, .2);
+    }
+    .composant-title-loader-container
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        width: 30px;
+        height: 30px;
+        background-color: $w-color-main;
+    }
+}
+@-webkit-keyframes composant-loader-anim
+{
+    0%
+    {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    100%
+    {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+@keyframes composant-loader-anim
+{
+    0%
+    {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    100%
+    {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+
+/*----------------------  horizental tab list-----------------------------------------*/
+.w-tab-list.horizental{
+    height: 67px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        width: 0 !important;
+    }
+    &::-webkit-scrollbar-thumb {
+        visibility : hidden;
+    }
+    & > ul{
+        height: 50px;
+        & .w-list-element{
+            box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
+            display: table-cell;
+            height: 50px;
+            white-space: nowrap;
+            overflow-x: auto;
+            color: #A1A1A1;
+            box-sizing: border-box;
+
+            padding: 15px 10px 0px 10px;
+            &.selected{
+                color:$w-color-main;
+                border-bottom: 2px solid $w-color-main;
+            }
+            &:not(.selected):hover{
+                cursor: pointer;
+                border-bottom: 1px solid #A1A1A1
+            }
+        }
+    }
+
+}
+
+/*----------------------  w-inputs -----------------------------------------*/
+.warm-input-text.w-white-pure{
+    border-radius: 0px;
+    background: #FFF;
+    border: none;
+    box-shadow: none;
+    &:focus{
+        color: $w-color-main;
+        box-shadow:  none;
+    }
+}
+
+/*----------------------  w-buttons -----------------------------------------*/
+.w-button-square{
+    font-family: $w-font-main;
+    background-color: $w-color-main;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    width: 100%;
+    height: 45px;
+    font-size: 17px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.w-button-square:hover{
+    cursor:pointer;
+    box-shadow: inset 0 0 0px 1px rgba(0,0,0,0.1);
+}
+/*----------------------  search with filters -----------------------------------------*/
+.w-search-filters{
+    max-width: 1000px;
+    width: 100%;
+    height: 99px;
+    & .w-form {
+        & input{
+            margin-bottom: 0px;
+            width: calc(100% - 50px);
+            height: 45px;
+
+        }
+        & .w-button-square{
+            width: 48px;
+            border-radius: 0px;
+            margin: 0px;
+            vertical-align: top;
+            height: 47px;
+        }
+    }
+}
