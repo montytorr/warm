@@ -29,8 +29,10 @@ var checkConstructors = function(component) {
         "usesOnClick" : Boolean,
         "checked" : Boolean,
         "placeholder" : String,
+        "value" : String,
         "conditions" : Array,
         "onValid" : Function,
+        "isValid" : Boolean,
         "onInvalid" : Function,
         "required" : Boolean,
         "regExp" : RegExp,
@@ -41,6 +43,7 @@ var checkConstructors = function(component) {
     };
     for (var componentProp in component) {
         if (propsList[componentProp] !== component[componentProp].constructor) {
+            console.log(component, componentProp);
             return ({'value' : false, 'results' : handleError("'" + component[componentProp] + "' is not from proper constructor")});
         }
     }
