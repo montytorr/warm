@@ -1,6 +1,6 @@
 var React = global.React || require('react');
 var Toast = require('../toasts/simple.js')
-
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 var Simple = React.createClass({
     propTypes: {
         toasts: React.PropTypes.array,
@@ -53,14 +53,16 @@ var Simple = React.createClass({
         var i = 0;
         return (
             <div className={this.state.className}>
-                {that.props.toasts.map(function(toast) {
-                    return (
-                        <Toast
-                            key={i++}
-                            toast={toast}
-                            dismissAction={that.props.dismissAction}/>
-                    );
-                }, that)}
+                <ReactCSSTransitionGroup transitionName="fader-anim" transitionEnterTimeout={300} transitionLeaveTimeout={300}>
+                    {that.props.toasts.map(function(toast) {
+                        return (
+                            <Toast
+                                key={i++}
+                                toast={toast}
+                                dismissAction={that.props.dismissAction}/>
+                        );
+                    }, that)}
+                </ReactCSSTransitionGroup>
             </div>
         );
     }

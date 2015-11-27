@@ -53,6 +53,10 @@ $w-color-surface-composant-background : #FFF;
 $w-color-surface-composant-border : #D9D9D9;
 
 /*----------------------  surface-composant  -----------------------------------------*/
+.warm-loaded-content > span{
+    width:100%;
+    height:100%;
+}
 .w-surface-composant{
     background: $w-color-surface-composant-background;
     border:1px solid $w-color-surface-composant-border;
@@ -61,6 +65,7 @@ $w-color-surface-composant-border : #D9D9D9;
     height: auto;
     margin: 5px;
     border-radius: 3px;
+
     & .w-composant-title{
         border-bottom:1px solid $w-color-surface-composant-border;
         font-size: 14px;
@@ -78,6 +83,7 @@ $w-color-surface-composant-border : #D9D9D9;
     }
     & .w-composant-loader
     {
+        display: inline-flex;
         position: relative;
         -webkit-transform: translateZ(0);
             -ms-transform: translateZ(0);
@@ -87,53 +93,34 @@ $w-color-surface-composant-border : #D9D9D9;
         text-indent: -9999em;
         &.medium{
             font-size: 10px;
-            margin: 6em auto;
-            border-top: 1.1em solid rgba(150, 150, 150, .2);
-            border-right: 1.1em solid rgba(150, 150, 150, .2);
-            border-bottom: 1.1em solid rgba(150, 150, 150, .2);
-            border-left: 1.1em solid $w-color-main;
+            border-top: 5px solid rgba(150, 150, 150, .2);
+            border-right: 5px solid rgba(150, 150, 150, .2);
+            border-bottom: 5px solid rgba(150, 150, 150, .2);
+            border-left: 5px solid $w-color-surface-composant-background;
         }
         &.small
         {
             font-size: 10px;
-            margin: 7px auto;
             border-top: 3px solid rgba(150, 150, 150, .2);
             border-right: 3px solid rgba(150, 150, 150, .2);
             border-bottom: 3px solid rgba(150, 150, 150, .2);
-            border-left: 3px solid $w-color-main;
+            border-left: 3px solid $w-color-surface-composant-background;
         }
     }
-    .composant-loader.medium,
-    .composant-loader.medium:after
+    .w-composant-loader.medium,
+    .w-composant-loader.medium:after
     {
-        width: 5em;
-        height: 5em;
+        width: 20px;
+        height: 20px;
         border-radius: 50%;
     }
 
-    .composant-loader.small,
-    .composant-loader.small:after
+    .w-composant-loader.small,
+    .w-composant-loader.small:after
     {
         width: 10px;
         height: 10px;
         border-radius: 50%;
-    }
-    .composant-title-loader-container .composant-loader.small
-    {
-        border-top-color: #fff;
-        border-right-color: #fff;
-        border-bottom-color: #fff;
-        border-left-color: rgba(150, 150, 150, .2);
-    }
-    .composant-title-loader-container
-    {
-        position: absolute;
-        top: 0;
-        right: 0;
-        overflow: hidden;
-        width: 30px;
-        height: 30px;
-        background-color: $w-color-main;
     }
 }
 @-webkit-keyframes composant-loader-anim
@@ -229,7 +216,12 @@ $w-color-surface-composant-border : #D9D9D9;
 }
 .w-button-square:hover{
     cursor:pointer;
-    box-shadow: inset 0 0 0px 1px rgba(0,0,0,0.1);
+        box-shadow: inset 0 0 0px 2px rgba(0,0,0,0.1);
+}
+
+.w-loading-button.loading{
+    box-shadow: none;
+    pointer-events: none;
 }
 /*----------------------  search with filters -----------------------------------------*/
 .w-search-filters{
@@ -241,7 +233,7 @@ $w-color-surface-composant-border : #D9D9D9;
             margin-bottom: 0px;
             width: calc(100% - 50px);
             height: 45px;
-
+            font-size: 15px;
         }
         & .w-button-square{
             width: 48px;
@@ -251,4 +243,25 @@ $w-color-surface-composant-border : #D9D9D9;
             height: 47px;
         }
     }
+}
+
+/*----------------------- fader-anim -------------------------------------------------*/
+.fader-anim-enter {
+    opacity: 0.00 !important;
+    transform: scale(0.7);
+    transition: all 0.3s;
+}
+.fader-anim-enter.fader-anim-enter-active {
+    opacity: 1 !important;
+    transform: scale(1);
+}
+
+.fader-anim-leave {
+    opacity: 1 !important;
+    transform: scale(1);
+    transition: all  0.3s;
+}
+.fader-anim-leave.modal-anim-leave-active {
+    opacity: 0.00 !important;
+    transform: scale(0.7);
 }

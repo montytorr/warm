@@ -1,6 +1,7 @@
 var React = global.React || require('react');
 var ReactDOM = require('react-dom');
 
+
 var Simple = React.createClass({
     propTypes: {
         toast : React.PropTypes.object,
