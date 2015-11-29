@@ -9,6 +9,9 @@
     font-weight: 300;
     padding-left: 25px;
     border-radius: 3px;
+    &:hover{
+        cursor: pointer;
+    }
     &.error{
         background: $w-color-error;
     }
