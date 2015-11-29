@@ -47,6 +47,11 @@ var Simple = React.createClass({
             }, that.props.toast.staysFor || 5000)
         }
     },
+    _onClick : function(){
+        that.props.dismissAction({
+            'toastID' : that.props.toast._id
+        });
+    },
     render: function() {
         var that = this;
         var content =
@@ -60,7 +65,7 @@ var Simple = React.createClass({
         var className = that.props.toast.template || 'error '
         className = this.state.className+className
         return (
-            <div className={className}>
+            <div onClick={this._onClick} className={className}>
                 {content}
             </div>
         );
