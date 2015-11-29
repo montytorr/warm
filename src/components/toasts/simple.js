@@ -48,8 +48,8 @@ var Simple = React.createClass({
         }
     },
     _onClick : function(){
-        that.props.dismissAction({
-            'toastID' : that.props.toast._id
+        this.props.dismissAction({
+            'toastID' : this.props.toast._id
         });
     },
     render: function() {
