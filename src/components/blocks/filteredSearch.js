@@ -1,7 +1,7 @@
 var React = global.React || require('react');
 
 var SearchBar = require('./searchBar.js');
-var HorizontalList = require('../lists/Horizontal.js')
+var HorizontalList = require('../lists/horizontal.js')
 
 var FilteredSearch = React.createClass({
     propTypes: {
