@@ -137,3 +137,14 @@
         opacity: 1;
     }
 }
+
+.w-centered-fullscreen-content{
+    display: inline-flex;
+    color: $w-color-main;
+    font-size: 25px;
+    width: 100%;
+}
+
+.w-centered-fullscreen-content > *{
+    margin: auto;
+}

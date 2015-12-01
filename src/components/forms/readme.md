@@ -33,7 +33,7 @@
 ###Example
 
 ```
-var Warm = require('warm');
+var Warm = require('warm-react');
 
 var handleSubmit = function(){
     alert("Hello Warm!")

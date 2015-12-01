@@ -9,10 +9,11 @@ Warm.arrays.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master
 
 //blocks
 Warm.blocks = {};
+Warm.blocks.FilteredSearch = require('./components/blocks/filteredSearch.js');
 Warm.blocks.Login = require('./components/blocks/login.js');
 Warm.blocks.Modal = require('./components/blocks/modal.js');
 Warm.blocks.Panel = require('./components/blocks/panel.js');
-Warm.blocks.Search = require('./components/blocks/search.js');
+Warm.blocks.SearchBar = require('./components/blocks/searchBar.js');
 Warm.blocks.Surface = require('./components/blocks/surface.js');
 Warm.blocks.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/blocks/readme.md";
 
@@ -20,6 +21,7 @@ Warm.blocks.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master
 Warm.buttons = {};
 Warm.buttons.Colored = require('./components/buttons/colored.js');
 Warm.buttons.Dot = require('./components/buttons/dot.js');
+Warm.buttons.LoadingSubmit = require('./components/buttons/loadingSubmit.js');
 Warm.buttons.Round = require('./components/buttons/round.js');
 Warm.buttons.Search = require('./components/buttons/search.js');
 Warm.buttons.Simple = require('./components/buttons/simple.js');
@@ -39,6 +41,7 @@ Warm.forms.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/
 //lists
 Warm.lists = {};
 Warm.lists.Dot = require('./components/lists/dot.js');
+Warm.lists.Horizontal = require('./components/lists/horizontal.js');
 Warm.lists.Spoiler = require('./components/lists/spoiler.js');
 Warm.lists.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/lists/readme.md";
 

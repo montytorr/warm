@@ -23,6 +23,8 @@
 
 ####Example
 ```
+var Warm = require('warm-react');
+
 var toast = {
     'type' : 'api-reconnected',
     'canStack' : true,

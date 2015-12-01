@@ -1,6 +1,26 @@
 # Blocks
 > A block is a complex component that contain other warm components or just simples react classes, and make interactions easier between these components.
 
+!!£filtredsearch!!
+
+##Warm.blocks.FilteredSearch !!$Warm.blocks.FilteredSearch!!
+
+###Props (optional)
+
+- customClasses: String
+
+  > A string of classes you want to apply (ex : "toto foo bar").
+  > Default is "".
+
+###Example
+
+```
+var Warm = require('warm-react');
+
+<Warm.blocks.FilteredSearch />
+```
+
+
 !!£login!!
 
 ##Warm.blocks.Login !!$Warm.blocks.Login!!
@@ -34,7 +54,7 @@
 ###Example
 
 ```
-var Warm = require('warm');
+var Warm = require('warm-react');
 
 var loginRequestMethod = function(formData, cb){
     userAPI.signIn({
@@ -96,7 +116,7 @@ var loginRequestMethod = function(formData, cb){
 ##Example
 
 ```
-var Warm = require('warm');
+var Warm = require('warm-react');
 
 var HelloWorld = React.createClass({
     render: function () {
@@ -135,7 +155,7 @@ var HelloWorld = React.createClass({
 ####Example
 
 ```
-var Warm = require('warm');
+var Warm = require('warm-react');
 
 var myMenu = [
     {
@@ -154,9 +174,9 @@ var myMenu = [
     menu={myMenu}/>
 ```
 
-!!£search!!
+!!£searchbar!!
 
-##Warm.blocks.Search !!$Warm.blocks.Search!!
+##Warm.blocks.SearchBar !!$Warm.blocks.SearchBar!!
 
 ###Props (optional)
 - content: ReactClass
@@ -182,9 +202,9 @@ var myMenu = [
 ####Example
 
 ```
-var Warm = require('warm');
+var Warm = require('warm-react');
 
-<Warm.blocks.Search
+<Warm.blocks.SearchBar
     customClasses="toto foo bar"/>
 ```
 
@@ -203,7 +223,7 @@ var Warm = require('warm');
   > If sat to true, replace the title by a loader.
   > Default is false.
 
-- bodyLoading: Boolean
+- contentLoading: Boolean
 
 > If sat to true, replace the body by a loader.
 > Default is false.
@@ -226,7 +246,7 @@ var Warm = require('warm');
 ####Example
 
 ```
-var Warm = require('warm');
+var Warm = require('warm-react');
 
 <Warm.blocks.Surface
     title="Hello Warm"

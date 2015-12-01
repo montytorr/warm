@@ -1,0 +1,19 @@
+.fader-anim-enter {
+    opacity: 0.00 !important;
+    transform: scale(0.7);
+    transition: all 0.3s;
+}
+.fader-anim-enter.fader-anim-enter-active {
+    opacity: 1 !important;
+    transform: scale(1);
+}
+
+.fader-anim-leave {
+    opacity: 1 !important;
+    transform: scale(1);
+    transition: all  0.3s;
+}
+.fader-anim-leave.modal-anim-leave-active {
+    opacity: 0.00 !important;
+    transform: scale(0.7);
+}
