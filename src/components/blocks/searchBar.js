@@ -61,7 +61,7 @@ var Search = React.createClass({
             <div className={this.state.className}>
                 <form onSubmit={this.search} className="w-search-form">
                     <input className="w-search-field"
-                        type="text"
+                        type="search"
                         placeholder={this.props.placeholder}
                         value={this.props.search.query}
                         ref="searchBarSearchInput"
