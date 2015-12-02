@@ -8,6 +8,7 @@ var FilteredSearch = React.createClass({
         search: React.PropTypes.object,
         filters: React.PropTypes.array,
         onSubmit : React.PropTypes.func,
+        isLoading: React.PropTypes.bool,
         onClickFilter : React.PropTypes.func,
         onUpdateSearch : React.PropTypes.func,
         customClasses : React.PropTypes.string
@@ -23,6 +24,7 @@ var FilteredSearch = React.createClass({
                 "isActive" : true
             }],
             onSubmit: function(){},
+            isLoading: false,
             onClickFilter : function(){},
             onUpdateSearch : function(){},
             customClasses : ""
@@ -37,6 +39,7 @@ var FilteredSearch = React.createClass({
         return (
             <div className={this.state.className}>
                 <SearchBar search={this.props.search}
+                    isLoading={this.props.isLoading}
                     onSubmit={this.props.onSubmit}
                     onUpdate={this.props.onUpdateSearch}
                     withLoader={true}

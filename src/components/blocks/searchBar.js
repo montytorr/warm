@@ -6,6 +6,7 @@ var SearchButtonLoader = require('../buttons/loadingSubmit');
 var Search = React.createClass({
     propTypes: {
         search: React.PropTypes.object,
+        isLoading: React.PropTypes.bool,
         onSubmit: React.PropTypes.func,
         onUpdate: React.PropTypes.func,
         placeholder: React.PropTypes.string,
@@ -17,6 +18,7 @@ var Search = React.createClass({
             search : {
                 "query" : "toto foo bar"
             },
+            isLoading: false,
             onSubmit: function(){},
             onUpdate: function(){},
             withLoader: true,
@@ -37,14 +39,17 @@ var Search = React.createClass({
             }
         }
     },
-    search: function() {
-        this.props.onSubmit();
+    search: function(event) {
+        if (event != undefined) {
+            event.preventDefault();
+        }
+        this.props.onSubmit(this.props.search.query);
     },
     render: function () {
         var i = 0;
         var Submit = (
             <SearchButtonLoader
-                onClick={this.search} text="Go" isLoading={this.props.search.isSearching} />
+                onClick={this.search} text="Go" isLoading={this.props.isLoading} />
         );
         if (this.props.withLoader == false) {
             Submit = (
@@ -54,7 +59,7 @@ var Search = React.createClass({
         }
         return (
             <div className={this.state.className}>
-                <div className="w-search-form">
+                <form onSubmit={this.search} className="w-search-form">
                     <input className="w-search-field"
                         type="text"
                         placeholder={this.props.placeholder}
@@ -63,7 +68,7 @@ var Search = React.createClass({
                         onChange={this.formChange(event)}>
                     </input>
                     {Submit}
-                </div>
+                </form>
             </div>
         );
     }
