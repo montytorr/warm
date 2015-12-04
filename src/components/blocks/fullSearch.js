@@ -43,44 +43,26 @@ var FullSearch = React.createClass({
     },
     render: function() {
         var that = this;
-        var FilteredSearch = React.createClass({
-            render: function () {
-                return(
-                    <FilteredSearch
-                        search={that.props.search}
-                        filters={that.props.filters}
-                        onSubmit={that.props.onSubmit}
-                        isLoading={that.props.isLoading}
-                        onClickFilter={that.props.onClickFilter}
-                        onUpdateSearch={that.props.onUpdateSearch}/>
-                )
-            }
-        });
-        var Accordion = React.createClass({
-            render: function () {
-                return(
-                    <Accordion
-                        data={that.props.search.results}
-                        headers={that.props.filters}
-                        summary={that.props.search.summary}
-                        isLoading={that.props.isLoading}
-                        onClickResult={that.props.onClickResult}
-                        onClickHeader={that.props.onClickFilter}
-                        onClickButton={that.props.onClickButton}
-                        isLoadingMore={that.props.isLoadingMore}
-                        hasLoadedAll={that.props.hasLoadedAll}
-                        buttonText={that.props.buttonText}/>
-                )
-            }
-        });
         return (
             <div className="w-full w_h-d_b">
-                <Surface
-                    content={FilteredSearch}
-                    customClasses="search-surface"/>
-                <Surface
-                    content={Accordion}
-                    customClasses="results-surface"/>
+                <FilteredSearch
+                    search={that.props.search}
+                    filters={that.props.filters}
+                    onSubmit={that.props.onSubmit}
+                    isLoading={that.props.isLoading}
+                    onClickFilter={that.props.onClickFilter}
+                    onUpdateSearch={that.props.onUpdateSearch}/>
+                <Accordion
+                    data={that.props.search.results}
+                    headers={that.props.filters}
+                    summary={that.props.search.summary}
+                    isLoading={that.props.isLoading}
+                    onClickResult={that.props.onClickResult}
+                    onClickHeader={that.props.onClickFilter}
+                    onClickButton={that.props.onClickButton}
+                    isLoadingMore={that.props.isLoadingMore}
+                    hasLoadedAll={that.props.hasLoadedAll}
+                    buttonText={that.props.buttonText}/>
             </div>
         );
     }
