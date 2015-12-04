@@ -5,8 +5,8 @@ var Surface = React.createClass({
         title: React.PropTypes.string,
         titleLoading: React.PropTypes.bool,
         contentLoading: React.PropTypes.bool,
-        details: React.PropTypes.func,
-        content: React.PropTypes.func,
+        details: React.PropTypes.object,
+        content: React.PropTypes.object,
         customClasses: React.PropTypes.string
     },
     getDefaultProps: function() {
@@ -14,48 +14,36 @@ var Surface = React.createClass({
             title: "",
             titleLoading: false,
             contentLoading: false,
-            details: React.createClass({render: function() {return (<div></div>);}}),
-            content: React.createClass({render: function() {return (<div></div>);}}),
+            details: {},
+            content: {},
             customClasses: ""
         }
     },
-    getInitialState: function() {
-        return ({
-            title: this.props.title,
-            titleLoading: this.props.titleLoading,
-            contentLoading: this.props.contentLoading,
-            details: React.createFactory(this.props.details),
-            content: React.createFactory(this.props.content),
-            customClasses: "warm-component w-block w-surface "+this.props.customClasses
-        });
-    },
-    displayTitle : function (Title) {
-        if (this.state.title !== "") {
-            return (Title);
-        }
-    },
     render: function() {
-        var Title = null;
-        var Content = null;
-        if (this.state.titleLoading == true) {
-            Title = (
-                <div className="w-surface-title">
-                    <div className="w-composant-loader small"></div>
-                </div>
-            );
-        } else {
-            Title = (
-                <div className="w-surface-title">
-                    <h1>
-                        {this.state.title}
-                    </h1>
-                    <div className="details">
-                        {this.state.details()}
+        var Title = "";
+        var Content = "";
+        if(this.props.title){
+            if (this.props.titleLoading == true) {
+                Title = (
+                    <div className="w-surface-title">
+                        <div className="w-composant-loader small"></div>
                     </div>
-                </div>
-            );
+                );
+            } else {
+                Title = (
+                    <div className="w-surface-title">
+                        <h1>
+                            {this.props.title}
+                        </h1>
+                        <div className="details">
+                            {this.props.details}
+                        </div>
+                    </div>
+                );
+            }
         }
-        if (this.state.contentLoading == true) {
+
+        if (this.props.contentLoading == true) {
             Content = (
                 <div className="w-surface-content">
                     <div className="w-composant-loader medium">Loading...</div>
@@ -64,13 +52,13 @@ var Surface = React.createClass({
         } else {
             Content = (
                 <div className="w-surface-content">
-                    {this.state.content()}
+                    {this.props.content}
                 </div>
             );
         }
         return (
-            <div className={this.state.customClasses}>
-                {this.displayTitle(Title)}
+            <div className={"warm-component w-block w-surface "+this.props.customClasses}>
+                {Title}
                 {Content}
             </div>
         );

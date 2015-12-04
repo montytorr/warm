@@ -45,24 +45,28 @@ var FullSearch = React.createClass({
         var that = this;
         return (
             <div className="w-full w_h-d_b">
-                <FilteredSearch
-                    search={that.props.search}
-                    filters={that.props.filters}
-                    onSubmit={that.props.onSubmit}
-                    isLoading={that.props.isLoading}
-                    onClickFilter={that.props.onClickFilter}
-                    onUpdateSearch={that.props.onUpdateSearch}/>
-                <Accordion
-                    data={that.props.search.results}
-                    headers={that.props.filters}
-                    summary={that.props.search.summary}
-                    isLoading={that.props.isLoading}
-                    onClickResult={that.props.onClickResult}
-                    onClickHeader={that.props.onClickFilter}
-                    onClickButton={that.props.onClickButton}
-                    isLoadingMore={that.props.isLoadingMore}
-                    hasLoadedAll={that.props.hasLoadedAll}
-                    buttonText={that.props.buttonText}/>
+                <Surface
+                    content={<FilteredSearch
+                        search={that.props.search}
+                        filters={that.props.filters}
+                        onSubmit={that.props.onSubmit}
+                        isLoading={that.props.isLoading}
+                        onClickFilter={that.props.onClickFilter}
+                        onUpdateSearch={that.props.onUpdateSearch}/>}
+                    customClasses="search-surface"/>
+                <Surface
+                    content={<Accordion
+                        data={that.props.search.results}
+                        headers={that.props.filters}
+                        summary={that.props.search.summary}
+                        isLoading={that.props.isLoading}
+                        onClickResult={that.props.onClickResult}
+                        onClickHeader={that.props.onClickFilter}
+                        onClickButton={that.props.onClickButton}
+                        isLoadingMore={that.props.isLoadingMore}
+                        hasLoadedAll={that.props.hasLoadedAll}
+                        buttonText={that.props.buttonText}/>}
+                    customClasses="results-surface"/>                
             </div>
         );
     }
