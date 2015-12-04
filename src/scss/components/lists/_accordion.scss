@@ -1,0 +1,78 @@
+.w-list.w-accordion {
+    font-family: $w-font-main;
+    font-size: 16px;
+    .w-accordion-void {
+        height:50px;
+        line-height: 50px;
+        padding-left: 35px;
+        color: $w-color-main;
+    }
+    .w-accordion-headers-container {
+        .w-accordion-loader {
+            height:50px;
+            line-height: 50px;
+            padding-left: 35px;
+            color: $w-color-main;
+        }
+        .w-accordion-header {
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, .2);
+            & .w-accordion-header-key {
+                width:80%;
+            }
+            & .w-accordion-header-count {
+                color: $w-color-main-headings;
+            }
+            .w-accordion-head {
+                height:50px;
+                background-color: #ffffff;
+                position: relative;
+                .w-accordion-more-button {
+                    height: 50px;
+                    width: 50px;
+                    margin-left: 15px;
+                    border-radius: 0px;
+                    position: absolute;
+                    right: 0px;
+                }
+                & > span{
+                    line-height: 50px;
+                    padding-left: 35px;
+                    text-transform: uppercase
+                }
+                &:hover {
+                    background-color: #f5f5f5;
+                    cursor: pointer;
+                }
+            }
+            &.closed {
+                height:50px;
+                overflow: hidden;
+                margin-bottom: 1px;
+            }
+            &.open {
+                & .w-accordion-content {
+                    .w-accordion-more-loader {
+                        padding: 10px;
+                        display: inline-flex;
+                        width: 100%;
+                        & > .w-composant-loader {
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+        & .accordion-list-element {
+            height:40px;
+            overflow: hidden;
+            line-height: 40px;
+            padding-left: 35px;
+            background-color: #ebebeb;
+            border-bottom: 1px solid $w-color-border-soft;
+            &:hover {
+                cursor: pointer;
+                background-color: #e0e0e0;
+            }
+        }
+    }
+}
