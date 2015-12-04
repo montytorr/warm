@@ -96,7 +96,7 @@ var AccordionListHeader = React.createClass({
         }
         if(this.props.hasLoadedAll)
         {
-            loadingMoreComposant = <div>No more elements to get</div>
+            loadingMoreComposant = <div className="w-accordion-no-more">NO MORE ELEMENT TO GET</div>
         }
         return (
             <li className={"w-accordion-header " + toggleClass + " " + this.props.header.name} key={"w-accordion-header-" + this.props.header.name} onClick={this.toggleOpen}>
