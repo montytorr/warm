@@ -71,12 +71,17 @@ var AccordionListHeader = React.createClass({
     },
     render: function() {
         var toggleClass = "closed"
-        if(this.props.isOpen){
-            toggleClass = "open"
-        }
         var style = {
             color: this.props.header.color
         };
+        if(this.props.isOpen){
+            toggleClass = "open";
+            style = {
+                color: '#FFF',
+                backgroundColor: this.props.header.color
+            };
+        }
+
         var headerButton = ""
         if(this.props.buttonText !== "not_set"){
             headerButton = (
@@ -126,6 +131,7 @@ var AccordionListHeader = React.createClass({
 });
 
 var Accordion = React.createClass({
+    baseClassName : "w-list w-accordion",
     propTypes: {
         data: React.PropTypes.object,
         summary: React.PropTypes.object,
@@ -162,12 +168,6 @@ var Accordion = React.createClass({
             buttonText: "not_set",
             customClasses: ""
         };
-    },
-    getInitialState: function() {
-        return ({
-            list: this.props.list,
-            className : "w-list w-accordion "+this.props.customClasses
-        });
     },
     loadingDisplay: function () {
         var i = 0;
@@ -208,7 +208,7 @@ var Accordion = React.createClass({
     },
     render: function() {
         return (
-            <div className={this.state.className}>
+            <div className={this.baseClassName+" "+this.props.customClasses}>
                 {
                     (this.props.data !== null && Object.keys(this.props.data).length > 0) ? (
                         <ul className="w-accordion-headers-container">
