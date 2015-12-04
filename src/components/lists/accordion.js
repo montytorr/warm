@@ -55,13 +55,7 @@ var AccordionListHeader = React.createClass({
         };
     },
     toggleOpen : function(e){
-        if(e.currentTarget.className.indexOf("open") !== -1){
-            e.currentTarget.className = e.currentTarget.className.replace( /(?:^|\s)open(?!\S)/g , ' closed ' )
-        }
-        else{
-            e.currentTarget.className = e.currentTarget.className.replace( /(?:^|\s)closed(?!\S)/g , ' open ' )
-        }
-
+        this.props.onClickHeader({"name": this.props.header.name})
     },
     onHeaderButtonClick : function(event){
         var that = this;
@@ -74,7 +68,7 @@ var AccordionListHeader = React.createClass({
         var style = {
             color: this.props.header.color
         };
-        if(this.props.isOpen){
+        if(this.props.header.isOpen){
             toggleClass = "open";
             style = {
                 color: '#FFF',
@@ -174,12 +168,7 @@ var Accordion = React.createClass({
         if (!this.props.isLoading) {
             var acccordionListHeaders = []
             this.props.headers.map(function(header, index) {
-                var isActive = false;
                 if (this.props.data[header.name] !== undefined && this.props.data[header.name].length > 0) {
-                    i++;
-                    if (i === 1) {
-                        isActive = true
-                    }
                     acccordionListHeaders.push(
                         <AccordionListHeader
                             key={"accordion-header-" + header.name}
@@ -191,7 +180,6 @@ var Accordion = React.createClass({
                             buttonText={this.props.buttonText}
                             header={header}
                             count={this.props.summary[header.name]}
-                            isOpen={isActive}
                             listData={this.props.data[header.name]} />
                     );
                 }

@@ -10,6 +10,7 @@ var FullSearch = React.createClass({
         filters: React.PropTypes.array,
         onSubmit : React.PropTypes.func,
         isLoading: React.PropTypes.bool,
+        onClickHeader : React.PropTypes.func,
         isLoadingMore :  React.PropTypes.bool,
         hasLoadedAll :  React.PropTypes.bool,
         onClickFilter : React.PropTypes.func,
@@ -33,6 +34,7 @@ var FullSearch = React.createClass({
             }],
             isLoading: false,
             hasLoadedAll: false,
+            onClickHeader : function(){},
             onClickResult : function(){},
             onSubmit: function(){},
             onClickFilter : function(){},
@@ -61,12 +63,12 @@ var FullSearch = React.createClass({
                         summary={that.props.search.summary}
                         isLoading={that.props.isLoading}
                         onClickResult={that.props.onClickResult}
-                        onClickHeader={that.props.onClickFilter}
+                        onClickHeader={that.props.onClickHeader}
                         onClickButton={that.props.onClickButton}
                         isLoadingMore={that.props.isLoadingMore}
                         hasLoadedAll={that.props.hasLoadedAll}
                         buttonText={that.props.buttonText}/>}
-                    customClasses="results-surface"/>                
+                    customClasses="results-surface"/>
             </div>
         );
     }
