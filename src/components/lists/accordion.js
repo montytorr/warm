@@ -13,12 +13,19 @@ var AccordionListElement = React.createClass({
     },
     _onClick : function(event){
         event.stopPropagation();
-        this.props.onClickResult(this.props.element)
+        this.props.onClickResult(this.props.element);
     },
     render: function() {
+        var content = JSON.stringify(this.props.element);
+        var className = "accordion-list-element";
+
+        if(this.props.component){
+            className += " container";
+            content = <this.props.component element={this.props.element}/>;
+        }
         return (
-            <li className="accordion-list-element" onClick={this._onClick}>
-                {JSON.stringify(this.props.element)}
+            <li className={className} onClick={this._onClick}>
+                {content}
             </li>
         );
     }
@@ -111,6 +118,7 @@ var AccordionListHeader = React.createClass({
                                 <AccordionListElement
                                     key={listElement._id}
                                     element={listElement}
+                                    component={this.props.endComponent}
                                     onClickResult={this.props.onClickResult}/>
                             );
                         }.bind(this))
@@ -129,6 +137,7 @@ var Accordion = React.createClass({
     propTypes: {
         data: React.PropTypes.object,
         summary: React.PropTypes.object,
+        endComponents : React.PropTypes.object,
         headers: React.PropTypes.array,
         isLoading: React.PropTypes.bool,
         isLoadingMore :  React.PropTypes.bool,
@@ -142,6 +151,7 @@ var Accordion = React.createClass({
     getDefaultProps: function() {
         return {
             data: {},
+            endComponents: {},
             headers: [
                 {
                     "name": "all",
@@ -169,10 +179,12 @@ var Accordion = React.createClass({
             var acccordionListHeaders = []
             this.props.headers.map(function(header, index) {
                 if (this.props.data[header.name] !== undefined && this.props.data[header.name].length > 0) {
+                    var endComponent = this.props.endComponents[header.name] || undefined;
                     acccordionListHeaders.push(
                         <AccordionListHeader
                             key={"accordion-header-" + header.name}
                             isLoadingMore={this.props.isLoadingMore}
+                            endComponent={endComponent}
                             hasLoadedAll={this.props.hasLoadedAll}
                             onClickHeader={this.props.onClickHeader}
                             onClickResult={this.props.onClickResult}

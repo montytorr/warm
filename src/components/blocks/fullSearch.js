@@ -8,6 +8,7 @@ var FullSearch = React.createClass({
         results :  React.PropTypes.array,
         search: React.PropTypes.object,
         filters: React.PropTypes.array,
+        endComponents: React.PropTypes.object,
         onSubmit : React.PropTypes.func,
         isLoading: React.PropTypes.bool,
         onClickHeader : React.PropTypes.func,
@@ -32,6 +33,9 @@ var FullSearch = React.createClass({
                 "isActive" : true,
                 "color" : "#BD1622"
             }],
+            endComponents : {
+                "all" : {}
+            },
             isLoading: false,
             hasLoadedAll: false,
             onClickHeader : function(){},
@@ -60,6 +64,7 @@ var FullSearch = React.createClass({
                     content={<Accordion
                         data={that.props.search.results}
                         headers={that.props.filters}
+                        endComponents={that.props.endComponents}
                         summary={that.props.search.summary}
                         isLoading={that.props.isLoading}
                         onClickResult={that.props.onClickResult}
