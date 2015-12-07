@@ -19,7 +19,7 @@ var Colored = React.createClass({
     },
     getInitialState: function() {
         return {
-            isActive = false
+            isActive : false
         };
     },
     handleClick: function (data, err) {
