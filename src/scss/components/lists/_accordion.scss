@@ -81,26 +81,8 @@
             }
         }
         & .accordion-list-element.container {
-
             background-color: #FFF;
             border-bottom: 1px solid $w-color-border-soft;
-            & > .w-listElement{
-                display: flex;
-                justify-content: space-around;
-                & .w-dynamic-colomn{
-
-                    & .w-dynamic-row{
-                        line-height: 35px;
-                        & .w-label{
-                            opacity:0.8
-                        }
-                        & .w-data{
-                            color:red;
-                        }
-                    }
-                }
-            }
-
             &:hover {
                 cursor: pointer;
                 background-color: #e0e0e0;
