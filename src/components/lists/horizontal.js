@@ -17,11 +17,6 @@ var Horizontal = React.createClass({
             customClasses : ''
         };
     },
-    getInitialState: function() {
-        return ({
-            className : "warm-component w-list w-horizontal "+this.props.customClasses
-        });
-    },
     onClick: function(listElement) {
         var that = this;
         return function(){
@@ -33,7 +28,7 @@ var Horizontal = React.createClass({
         var label = "all";
         var i = 0;
         return (
-            <div className={this.state.className}>
+            <div className={"w-list w-horizontal "+this.props.customClasses}>
             <ul>
             {
                 this.props.listElements.map(function(listElement) {

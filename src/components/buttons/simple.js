@@ -13,17 +13,12 @@ var Simple = React.createClass({
             customClasses : ''
         }
     },
-    getInitialState: function() {
-        return ({
-            className : "warm-component w-button w-simple "+this.props.customClasses
-        });
-    },
     handleClick: function() {
         this.props.onClick();
     },
     render: function() {
         return (
-            <button onClick={this.handleClick} className={this.state.className}>
+            <button onClick={this.handleClick} className={"w-button w-simple "+this.props.customClasses}>
               {this.props.text}
             </button>
         );

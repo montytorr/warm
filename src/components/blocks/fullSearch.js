@@ -18,9 +18,11 @@ var FullSearch = React.createClass({
         onUpdateSearch : React.PropTypes.func,
         onClickResult : React.PropTypes.func,
         onClickButton : React.PropTypes.func,
-        buttonText : React.PropTypes.string
+        buttonText : React.PropTypes.string,
+        customClasses : React.PropTypes.string
     },
     getDefaultProps: function() {
+        console.log("CLASS", this.props);
         return {
             search: {
                 "query" : "toto foo bar"
@@ -45,12 +47,13 @@ var FullSearch = React.createClass({
             onUpdateSearch : function(){},
             onClickButton : function(){},
             buttonText : "not_set",
+            customClasses : ""
         };
     },
     render: function() {
         var that = this;
         return (
-            <div className="w-full w_h-d_b">
+            <div className={"w-block w-full " + this.props.customClasses}>
                 <Surface
                     content={<FilteredSearch
                         search={that.props.search}

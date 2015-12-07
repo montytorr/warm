@@ -16,7 +16,7 @@ var SimpleErrorTile = React.createClass({
         };
     },
     render: function() {
-        var classNameString = "warm-component w-error w-simple "+(this.props.isVisible ? "visible " : "hidden ")+(this.props.isSuccess ? "isSuccess " : "")+this.props.customClasses
+        var classNameString = "w-error w-simple "+(this.props.isVisible ? "visible " : "hidden ")+(this.props.isSuccess ? "isSuccess " : "")+this.props.customClasses
         return (
             <p className={classNameString}>
               {this.props.message}

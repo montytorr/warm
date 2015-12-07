@@ -57,7 +57,7 @@ var Surface = React.createClass({
             );
         }
         return (
-            <div className={"warm-component w-block w-surface "+this.props.customClasses}>
+            <div className={"w-block w-surface "+this.props.customClasses}>
                 {Title}
                 {Content}
             </div>

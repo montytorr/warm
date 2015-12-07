@@ -26,11 +26,6 @@ var Search = React.createClass({
             customClasses : ""
         };
     },
-    getInitialState: function() {
-        return {
-            className : "warm-component w-block w-searchBar "+this.props.customClasses
-        };
-    },
     formChange : function(){
         var that = this;
         return function(event){
@@ -58,7 +53,7 @@ var Search = React.createClass({
             )
         }
         return (
-            <div className={this.state.className}>
+            <div className={"w-block w-searchBar "+this.props.customClasses}>
                 <form onSubmit={this.search} className="w-search-form">
                     <input className="w-search-field"
                         type="search"

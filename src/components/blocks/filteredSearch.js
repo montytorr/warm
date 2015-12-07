@@ -30,14 +30,9 @@ var FilteredSearch = React.createClass({
             customClasses : ""
         };
     },
-    getInitialState: function() {
-        return {
-            className : "warm-component w-block w-filteredSearch "+this.props.customClasses
-        };
-    },
     render: function () {
         return (
-            <div className={this.state.className}>
+            <div className={"w-block w-filteredSearch "+this.props.customClasses}>
                 <SearchBar search={this.props.search}
                     isLoading={this.props.isLoading}
                     onSubmit={this.props.onSubmit}

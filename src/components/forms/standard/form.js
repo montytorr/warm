@@ -114,8 +114,7 @@ var Form = React.createClass({
                 message: this.props.error.message,
                 isSuccess : this.props.error.isSuccess
             },
-            autocomplete : this.props.error.autocomplete,
-            className : "warm-component w-form w-standard "+this.props.customClasses
+            autocomplete : this.props.error.autocomplete
         };
     },
     componentWillReceiveProps: function(nextProps) {
@@ -173,7 +172,7 @@ var Form = React.createClass({
                             <div key={i}>
                                 <formComponent.kind
                                     key={i}
-                                    className={(formComponent.isValid) ? ("warm-input-"+formComponent.type + " valid") :((!formComponent.isValid) ? ("warm-input-"+formComponent.type+ " invalid") :("warm-input-"+formComponent.type))}
+                                    className={"w-form w-standard "+this.props.customClasses+" "+(formComponent.isValid) ? ("warm-input-"+formComponent.type + " valid") :((!formComponent.isValid) ? ("warm-input-"+formComponent.type+ " invalid") :("warm-input-"+formComponent.type))}
                                     type={formComponent.type || 'text'}
                                     name={formComponent.name || 'warmInput'}
                                     placeholder={formComponent.placeholder || ''}

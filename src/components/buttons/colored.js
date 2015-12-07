@@ -19,30 +19,24 @@ var Colored = React.createClass({
     },
     getInitialState: function() {
         return {
-            color: {
-                "backgroundColor":this.props.color
-            },
-            className : "warm-component w-button w-colored "+(this.props.isActive ? "active " : "")+this.props.customClasses
+            isActive = false
         };
     },
     handleClick: function (data, err) {
         this.props.onClick();
-        if (this.state.isActive == true) {
-            this.setState({
-                isActive: false,
-                className : "warm-component w-button w-colored "+this.props.customClasses
-            })
-        } else {
-            this.setState({
-                isActive: true,
-                className : "warm-component w-button w-colored active "+this.props.customClasses
-            })
-        }
+        this.setState({
+            isActive: !this.state.isActive
+        })
     },
     render: function () {
+        var color = {
+            "backgroundColor":this.props.color
+        };
         return (
-            <div className={this.state.className} onClick={this.handleClick}>
-                <div className="background" style={this.state.color}></div>
+            <div
+                className={this.state.className}
+                onClick={"w-button w-colored "+(this.state.isActive ? "active " : "")+this.props.customClasses}>
+                <div className="background" style={color}></div>
                 <div className="head">
                     {this.props.content}
                 </div>

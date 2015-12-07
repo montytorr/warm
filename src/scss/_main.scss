@@ -12,8 +12,6 @@
 
 @import "components/blocks/filteredSearch";
 @import "components/blocks/login";
-@import "components/blocks/modal";
-@import "components/blocks/panel";
 @import "components/blocks/searchBar";
 @import "components/blocks/surface";
 
@@ -39,15 +37,3 @@
 @import "components/toasters/simple";
 
 @import "components/toasts/simple";
-
-/*----------------------  surface-composant  -----------------------------------------*/
-.warm-loaded-content > span{
-    width:100%;
-    height:100%;
-}
-
-/*----------------------  search with filters -----------------------------------------*/
-.w-search-results{
-    max-width: 1000px;
-    width: 100%;
-}

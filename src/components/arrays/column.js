@@ -17,28 +17,22 @@ var Column = React.createClass({
             customClasses : ''
         };
     },
-    getInitialState: function() {
-        return ({
-            array: this.props.array,
-            className : "warm-component w-array w-column "+this.props.customClasses
-        });
-    },
     render: function() {
         var that = this;
         var i = 0;
         var j = 0;
-        if (document.getElementById("warm-component_w-array_w-column") != null) {
-            var w = document.getElementById("warm-component_w-array_w-column").offsetWidth;
+        if (document.getElementById("w-array_w-column") != null) {
+            var w = document.getElementById("w-array_w-column").offsetWidth;
             var width = {
-                width: (w / this.state.array.titles.length) + "px"
+                width: (w / this.props.array.titles.length) + "px"
             }
         }
         return (
-            <div id="warm-component_w-array_w-column" className={this.state.className}>
+            <div id="w-array_w-column" className={"w-array w-column "+this.props.customClasses}>
                 <ul>
                     <li key={i++} className="w-column-titles">
                         {
-                            that.state.array.titles.map(function (title) {
+                            that.props.array.titles.map(function (title) {
                                 return (
                                     <span key={j++} className="w-column-title" style={width}>{title}</span>
                                 );
@@ -46,7 +40,7 @@ var Column = React.createClass({
                         }
                     </li>
                     {
-                        that.state.array.content.map(function (sub) {
+                        that.props.array.content.map(function (sub) {
                             return (
                                 <li key={i++} className="w-line-container">
                                     {

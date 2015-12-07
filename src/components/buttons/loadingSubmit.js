@@ -15,36 +15,14 @@ var LoadingSubmit = React.createClass({
             customClasses : ""
         };
     },
-    getInitialState: function() {
-        return ({
-            className : "warm-component w-button w-loadingSubmit "+this.props.customClasses,
-            loaderClassName : "",
-            text : this.props.text
-        });
-    },
     handleClick: function() {
         this.props.onClick();
     },
-    componentWillReceiveProps: function(nextProps) {
-        if (nextProps.isLoading) {
-            this.setState({
-                className : "warm-component w-button w-loadingSubmit loading "+nextProps.customClasses,
-                loaderClassName : "w-composant-loader medium",
-                text : ""
-            })
-        } else {
-            this.setState({
-                className : "warm-component w-button w-loadingSubmit "+nextProps.customClasses,
-                loaderClassName : "",
-                text : nextProps.text
-            })
-        }
-    },
     render: function() {
         return (
-            <div className={this.state.className} onClick={this.handleClick}>
-                <span className={this.state.loaderClassName}></span>
-                <span className="w-button-loadingSubmit-title">{this.state.text}</span>
+            <div className={"w-button w-loadingSubmit "+(this.props.isLoading ? "loading " : "")+this.props.customClasses} onClick={this.handleClick}>
+                <span className={(this.props.isLoading ? "w-composant-loader medium" : "")}></span>
+                <span className="w-button-loadingSubmit-title">{(this.props.isLoading ? "" : this.props.text)}</span>
             </div>
         );
     }

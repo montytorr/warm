@@ -43,16 +43,11 @@ var Simple = React.createClass({
             customClasses : ''
         };
     },
-    getInitialState: function() {
-        return ({
-            className : "warm-component w-toasters w-simple "+this.props.customClasses
-        });
-    },
     render: function() {
         var that = this;
         var i = 0;
         return (
-            <div className={this.state.className}>
+            <div className={"w-toasters w-simple "+this.props.customClasses}>
                 <ReactCSSTransitionGroup transitionName="fader-anim" transitionEnterTimeout={300} transitionLeaveTimeout={300}>
                     {that.props.toasts.map(function(toast) {
                         return (

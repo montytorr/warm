@@ -21,11 +21,6 @@ var Simple = React.createClass({
             customClasses : ''
         };
     },
-    getInitialState: function() {
-        return ({
-            className : "warm-component w-toasts w-simple "+this.props.customClasses
-        });
-    },
     timerInterval : null,
     dismissTimeout : null,
     componentDidMount: function() {
@@ -63,7 +58,7 @@ var Simple = React.createClass({
             <p>{this.props.toast.message} <span ref="timer">{this.props.toast.time}</span>s</p>
         }
         var className = that.props.toast.template || 'error '
-        className = this.state.className+className
+        className = "w-toasts w-simple "+this.props.customClasses+" "+className
         return (
             <div onClick={this._onClick} className={className}>
                 {content}
