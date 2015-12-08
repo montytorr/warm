@@ -75,7 +75,6 @@ var AccordionListHeader = React.createClass({
         var style = {
             color: this.props.header.color
         };
-        console.log('this.props.header.color', this.props.header.color)
         if(this.props.header.isOpen){
             toggleClass = "open";
             style = {
