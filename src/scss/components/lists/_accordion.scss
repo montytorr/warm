@@ -66,6 +66,9 @@
                         }
                     }
                 }
+                & .w-accordion-header-count {
+                    color: $w-color-main-inverted;
+                }
             }
         }
         & .accordion-list-element:not(.container) {

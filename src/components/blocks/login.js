@@ -112,7 +112,7 @@ var Login = React.createClass({
         ];
         return (
             <div className={"w-block w-login "+this.props.customClasses}>
-                <div className={(this.state.isTileActive == false) ? "login-face active":"login-face"}>
+                <div className={((this.state.isTileActive == false) ? "login-face active":"login-face")}>
                     <h2 className="warm-title">{this.props.boldTitle}<i>{this.props.lightTitle}</i></h2>
                     <RoundButton onClick={this.toggleFormVisible} customClasses="astrologo-bg"/>
                     <p>{this.props.description}</p>

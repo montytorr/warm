@@ -29,7 +29,7 @@ var RoundButton = React.createClass({
             <button
                 onClick={this.handleClick}
                 ref="roundButton"
-                className={"w-button w-round "+(this.state.active)?"":"condensed "+this.props.customClasses}>
+                className={"w-button w-round "+((this.state.active)?"condensed ":"")+this.props.customClasses}>
                 {this.props.text}
             </button>
         );

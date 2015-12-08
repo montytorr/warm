@@ -163,7 +163,7 @@ var Form = React.createClass({
     },
     render: function() {
         return (
-            <form className={this.state.className} autocomplete={this.state.autocomplete} onSubmit={this.submitWarmForm}>
+            <form className={"w-form " + this.props.customClasses} autocomplete={this.state.autocomplete} onSubmit={this.submitWarmForm}>
                 {this
                     .state
                     .formComponents
