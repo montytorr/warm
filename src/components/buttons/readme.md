@@ -76,7 +76,7 @@ var handleClick = function(){
 ```
 
 !!£loginsubmit!!
-##Warm.buttons.LoginSubmit !!$Warm.buttons.LoginSubmit!!
+##Warm.buttons.LoadingSubmit !!$Warm.buttons.LoadingSubmit!!
 
 ###Props (optional)
 - onClick: Function

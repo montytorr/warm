@@ -10,7 +10,7 @@ var LoadingSubmit = React.createClass({
     getDefaultProps: function() {
         return {
             isLoading : false,
-            onClickMethod: function(){},
+            onClick: function(){},
             text : "",
             customClasses : ""
         };

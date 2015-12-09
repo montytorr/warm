@@ -18,11 +18,23 @@ var FilteredSearch = React.createClass({
             search : {
                 "query" : "toto foo bar"
             },
-            filters: [{
-                "name" : "all",
-                "label" : "all",
-                "isActive" : true
-            }],
+            filters: [
+                {
+                    "name" : "All",
+                    "label" : "All",
+                    "isActive" : true
+                },
+                {
+                    "name" : "Alpha",
+                    "label" : "Alpha",
+                    "isActive" : false
+                },
+                {
+                    "name" : "Beta",
+                    "label" : "Beta",
+                    "isActive" : false
+                }
+            ],
             onSubmit: function(){},
             isLoading: false,
             onClickFilter : function(){},

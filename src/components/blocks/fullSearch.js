@@ -29,12 +29,23 @@ var FullSearch = React.createClass({
             },
             isLoadingMore : false,
             results: [],
-            filters: [{
-                "name" : "all",
-                "label" : "all",
-                "isActive" : true,
-                "color" : "#BD1622"
-            }],
+            filters: [
+                {
+                    "name" : "All",
+                    "label" : "All",
+                    "isActive" : true
+                },
+                {
+                    "name" : "Alpha",
+                    "label" : "Alpha",
+                    "isActive" : false
+                },
+                {
+                    "name" : "Beta",
+                    "label" : "Beta",
+                    "isActive" : false
+                }
+            ],
             endComponents : {
                 "all" : {}
             },
@@ -52,19 +63,23 @@ var FullSearch = React.createClass({
     },
     render: function() {
         var that = this;
-        return (
-            <div className={"w-block w-full " + this.props.customClasses}>
-                <Surface
-                    content={<FilteredSearch
+        var SearchSurface = React.createClass({
+            render: function (){
+                return (
+                    <FilteredSearch
                         search={that.props.search}
                         filters={that.props.filters}
                         onSubmit={that.props.onSubmit}
                         isLoading={that.props.isLoading}
                         onClickFilter={that.props.onClickFilter}
-                        onUpdateSearch={that.props.onUpdateSearch}/>}
-                    customClasses="search-surface"/>
-                <Surface
-                    content={<Accordion
+                        onUpdateSearch={that.props.onUpdateSearch}/>
+                );
+            }
+        })
+        var AccordionSurface = React.createClass({
+            render: function (){
+                return (
+                    <Accordion
                         data={that.props.search.results}
                         headers={that.props.filters}
                         endComponents={that.props.endComponents}
@@ -75,7 +90,17 @@ var FullSearch = React.createClass({
                         onClickButton={that.props.onClickButton}
                         isLoadingMore={that.props.isLoadingMore}
                         hasLoadedAll={that.props.hasLoadedAll}
-                        buttonText={that.props.buttonText}/>}
+                        buttonText={that.props.buttonText}/>
+                );
+            }
+        })
+        return (
+            <div className={"w-block w-full " + this.props.customClasses}>
+                <Surface
+                    content={React.createFactory(SearchSurface)}
+                    customClasses="search-surface"/>
+                <Surface
+                    content={React.createFactory(AccordionSurface)}
                     customClasses="results-surface"/>
             </div>
         );

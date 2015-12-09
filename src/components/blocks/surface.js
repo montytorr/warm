@@ -5,8 +5,8 @@ var Surface = React.createClass({
         title: React.PropTypes.string,
         titleLoading: React.PropTypes.bool,
         contentLoading: React.PropTypes.bool,
-        details: React.PropTypes.object,
-        content: React.PropTypes.object,
+        details: React.PropTypes.func,
+        content: React.PropTypes.func,
         customClasses: React.PropTypes.string
     },
     getDefaultProps: function() {
@@ -14,8 +14,8 @@ var Surface = React.createClass({
             title: "",
             titleLoading: false,
             contentLoading: false,
-            details: {},
-            content: {},
+            details: function(){},
+            content: function(){},
             customClasses: ""
         }
     },
@@ -52,7 +52,7 @@ var Surface = React.createClass({
         } else {
             Content = (
                 <div className="w-surface-content">
-                    {this.props.content}
+                    {this.props.content()}
                 </div>
             );
         }
