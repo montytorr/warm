@@ -34,8 +34,8 @@ var Colored = React.createClass({
         };
         return (
             <div
-                className={this.state.className}
-                onClick={"w-button w-colored "+(this.state.isActive ? "active " : "")+this.props.customClasses}>
+                className={"w-button w-colored "+(this.state.isActive ? "active " : "")+this.props.customClasses}
+                onClick={this.handleClick}>
                 <div className="background" style={color}></div>
                 <div className="head">
                     {this.props.content}

@@ -20,6 +20,25 @@ var Warm = require('warm-react');
 <Warm.blocks.FilteredSearch />
 ```
 
+!!£fullsearch!!
+
+##Warm.blocks.FullSearch !!$Warm.blocks.FullSearch!!
+
+###Props (optional)
+
+- customClasses: String
+
+  > A string of classes you want to apply (ex : "toto foo bar").
+  > Default is "".
+
+###Example
+
+```
+var Warm = require('warm-react');
+
+<Warm.blocks.FullSearch />
+```
+
 
 !!£login!!
 
@@ -76,102 +95,6 @@ var loginRequestMethod = function(formData, cb){
     boldTitle="Warm"
     lightTitle="login"
     description="Here you can put a little description."/>
-```
-
-!!£modal!!
-
-##Warm.blocks.Modal !!$Warm.blocks.Modal!!
-
-###Props (optional)
-- isActive: Boolean
-
-> A value to change when trigger or not the Modal (true: shown, false: hidden).
-> Default is false.
-
-- showTrigger: Boolean
-
-  > When you have a button or whatever to trigger the Modal, you can set the value to false (default is true and set a default clickable trigger module)
-  > Default is true.
-
-- width: String
-
-  > Set the modal container width.
-  > Default is "".
-
-- height: String
-
-  > Set the modal container height.
-  > Default is "".
-
-- content: ReactClass
-
-  > The react class witch is contained in the modal.
-  > Default is an empty div returned by a ReactClass.
-
-- customClasses: String
-
-  > A string of classes you want to apply (ex : "toto foo bar")
-  > Default is "".
-
-##Example
-
-```
-var Warm = require('warm-react');
-
-var HelloWorld = React.createClass({
-    render: function () {
-        return (
-            <div>
-                <h1>Hello Warm!</h1>
-            </div>
-        );
-    }
-});
-
-<Warm.blocks.Login
-    isActive=true
-    showTrigger=false
-    width="800px"
-    height="100px"
-    content={HelloWorld}/>
-```
-
-
-!!£panel!!
-
-##Warm.blocks.Panel !!$Warm.blocks.Panel!!
-
-###Props (optional)
-- menu: Array
-
-> The array containing your menu elements (see below the construction of a menu element).
-> Default is a simple array like in the example below "myMenu".
-
-- customClasses: String
-
-> A string of classes you want to apply (ex : "toto foo bar")
-> Default is "".
-
-####Example
-
-```
-var Warm = require('warm-react');
-
-var myMenu = [
-    {
-        name: 'Infos',
-        target: mockInfo,
-        img: "/img/myExample.png"
-    },
-    {
-        name: 'Params',
-        target: mockParams,
-        img:""
-    }
-];
-
-<Warm.blocks.Login
-    menu={myMenu}/>
 ```
 
 !!£searchbar!!
