@@ -27,6 +27,8 @@
 
 ####Example
 ```
+var Warm = require('warm-react');
+
 <Warm.errors.Simple
 	isVisible="true"
 	message="true"

@@ -1,6 +1,45 @@
 # Blocks
 > A block is a complex component that contain other warm components or just simples react classes, and make interactions easier between these components.
 
+!!£filtredsearch!!
+
+##Warm.blocks.FilteredSearch !!$Warm.blocks.FilteredSearch!!
+
+###Props (optional)
+
+- customClasses: String
+
+  > A string of classes you want to apply (ex : "toto foo bar").
+  > Default is "".
+
+###Example
+
+```
+var Warm = require('warm-react');
+
+<Warm.blocks.FilteredSearch />
+```
+
+!!£fullsearch!!
+
+##Warm.blocks.FullSearch !!$Warm.blocks.FullSearch!!
+
+###Props (optional)
+
+- customClasses: String
+
+  > A string of classes you want to apply (ex : "toto foo bar").
+  > Default is "".
+
+###Example
+
+```
+var Warm = require('warm-react');
+
+<Warm.blocks.FullSearch />
+```
+
+
 !!£login!!
 
 ##Warm.blocks.Login !!$Warm.blocks.Login!!
@@ -34,7 +73,7 @@
 ###Example
 
 ```
-var Warm = require('warm');
+var Warm = require('warm-react');
 
 var loginRequestMethod = function(formData, cb){
     userAPI.signIn({
@@ -58,105 +97,9 @@ var loginRequestMethod = function(formData, cb){
     description="Here you can put a little description."/>
 ```
 
-!!£modal!!
+!!£searchbar!!
 
-##Warm.blocks.Modal !!$Warm.blocks.Modal!!
-
-###Props (optional)
-- isActive: Boolean
-
-> A value to change when trigger or not the Modal (true: shown, false: hidden).
-> Default is false.
-
-- showTrigger: Boolean
-
-  > When you have a button or whatever to trigger the Modal, you can set the value to false (default is true and set a default clickable trigger module)
-  > Default is true.
-
-- width: String
-
-  > Set the modal container width.
-  > Default is "".
-
-- height: String
-
-  > Set the modal container height.
-  > Default is "".
-
-- content: ReactClass
-
-  > The react class witch is contained in the modal.
-  > Default is an empty div returned by a ReactClass.
-
-- customClasses: String
-
-  > A string of classes you want to apply (ex : "toto foo bar")
-  > Default is "".
-
-##Example
-
-```
-var Warm = require('warm');
-
-var HelloWorld = React.createClass({
-    render: function () {
-        return (
-            <div>
-                <h1>Hello Warm!</h1>
-            </div>
-        );
-    }
-});
-
-<Warm.blocks.Login
-    isActive=true
-    showTrigger=false
-    width="800px"
-    height="100px"
-    content={HelloWorld}/>
-```
-
-
-!!£panel!!
-
-##Warm.blocks.Panel !!$Warm.blocks.Panel!!
-
-###Props (optional)
-- menu: Array
-
-> The array containing your menu elements (see below the construction of a menu element).
-> Default is a simple array like in the example below "myMenu".
-
-- customClasses: String
-
-> A string of classes you want to apply (ex : "toto foo bar")
-> Default is "".
-
-####Example
-
-```
-var Warm = require('warm');
-
-var myMenu = [
-    {
-        name: 'Infos',
-        target: mockInfo,
-        img: "/img/myExample.png"
-    },
-    {
-        name: 'Params',
-        target: mockParams,
-        img:""
-    }
-];
-
-<Warm.blocks.Login
-    menu={myMenu}/>
-```
-
-!!£search!!
-
-##Warm.blocks.Search !!$Warm.blocks.Search!!
+##Warm.blocks.SearchBar !!$Warm.blocks.SearchBar!!
 
 ###Props (optional)
 - content: ReactClass
@@ -182,9 +125,9 @@ var myMenu = [
 ####Example
 
 ```
-var Warm = require('warm');
+var Warm = require('warm-react');
 
-<Warm.blocks.Search
+<Warm.blocks.SearchBar
     customClasses="toto foo bar"/>
 ```
 
@@ -203,7 +146,7 @@ var Warm = require('warm');
   > If sat to true, replace the title by a loader.
   > Default is false.
 
-- bodyLoading: Boolean
+- contentLoading: Boolean
 
 > If sat to true, replace the body by a loader.
 > Default is false.
@@ -226,7 +169,7 @@ var Warm = require('warm');
 ####Example
 
 ```
-var Warm = require('warm');
+var Warm = require('warm-react');
 
 <Warm.blocks.Surface
     title="Hello Warm"

@@ -7,21 +7,16 @@ var Dot = React.createClass({
     },
     getDefaultProps: function() {
         return {
-            onClick: function() {alert("Dot button clicked!");},
+            onClick: function() {},
             customClasses : ''
         }
-    },
-    getInitialState: function() {
-        return ({
-            className : "warm-component w-button w-dot "+this.props.customClasses
-        });
     },
     handleClick: function() {
         this.props.onClick();
     },
     render: function() {
         return (
-            <div onClick={this.handleClick} className={this.state.className}>
+            <div onClick={this.handleClick} className={"w-button w-dot "+this.props.customClasses}>
                 <div className="main-dot">
                     <div className="small-dot"></div>
                 </div>

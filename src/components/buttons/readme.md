@@ -33,7 +33,7 @@
 ###Example
 
 ```
-var Warm = require('warm');
+var Warm = require('warm-react');
 
 var handleClick = function(){
     alert("Hello Warm!")
@@ -64,13 +64,53 @@ var handleClick = function(){
 ###Example
 
 ```
-var Warm = require('warm');
+var Warm = require('warm-react');
 
 var handleClick = function(){
     alert("Hello Warm!")
 };
 
 <Warm.buttons.Dot
+    onClick={handleClick}
+    customClasses="toto foo bar"/>
+```
+
+!!£loginsubmit!!
+##Warm.buttons.LoginSubmit !!$Warm.buttons.LoginSubmit!!
+
+###Props (optional)
+- onClick: Function
+
+> A function to trigger onClick event.
+> Default value is an Hello Warm function.
+
+- text: String
+
+> A simple text to be displayed in the button.
+> Default value is "".
+
+- isLoading: Boolean
+
+> If set to true : text is replaced by a loader.
+> Default value is false.
+
+- customClasses: String
+
+> A string of classes you want to apply (ex : "toto foo bar")
+> Default value is "".
+
+###Example
+
+```
+var Warm = require('warm-react');
+
+var handleClick = function(){
+    alert("Hello Warm!")
+};
+
+<Warm.buttons.LoginSubmit
+    text="Go"
+    isLoading={true}
     onClick={handleClick}
     customClasses="toto foo bar"/>
 ```
@@ -98,7 +138,7 @@ var handleClick = function(){
 ###Example
 
 ```
-var Warm = require('warm');
+var Warm = require('warm-react');
 
 var handleClick = function(){
     alert("Hello Warm!")
@@ -127,7 +167,7 @@ var handleClick = function(){
 ###Example
 
 ```
-var Warm = require('warm');
+var Warm = require('warm-react');
 
 var handleClick = function(){
     alert("Hello Warm!")
@@ -160,7 +200,7 @@ var handleClick = function(){
 ###Example
 
 ```
-var Warm = require('warm');
+var Warm = require('warm-react');
 
 var handleClick = function(){
     alert("Hello Warm!")
@@ -194,7 +234,7 @@ var handleClick = function(){
 ###Example
 
 ```
-var Warm = require('warm');
+var Warm = require('warm-react');
 
 var handleClick = function(){
     alert("Hello Warm!")

@@ -1,4 +1,4 @@
-.warm-component.w-list.w-spoiler {
+.w-list.w-spoiler {
     width: 100%;
     li {
         width: 100%;
@@ -8,10 +8,11 @@
             height: 45px;
             background-color: $w-color-main;
             .w-spoiler-title {
+                font-family: $w-font-main;
                 width: calc(100% - 50px);
                 color: $w-color-main-inverted;
                 line-height: 45px;
-                font-size: 1.4em;
+                font-size: 18px;
                 padding-left: 10px;
                 box-sizing: border-box;
             }

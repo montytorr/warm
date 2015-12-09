@@ -22,6 +22,8 @@
 
 ####Example
 ```
+var Warm = require('warm-react');
+
 toasts = [
     {
         'type' : 'api-deconnection',

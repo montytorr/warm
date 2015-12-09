@@ -34,8 +34,7 @@ var Spoiler = React.createClass({
     },
     getInitialState: function() {
         return ({
-            list: this.props.list,
-            className : "warm-component w-list w-spoiler "+this.props.customClasses
+            list: this.props.list
         });
     },
     spoil: function (index) {
@@ -58,7 +57,7 @@ var Spoiler = React.createClass({
         var i = 0;
         var j = 0;
         return (
-            <div className={this.state.className}>
+            <div className={"w-list w-spoiler "+this.props.customClasses}>
                 <ul>
                     {
                         that.state.list.map(function (elem) {

@@ -32,8 +32,7 @@ var Login = React.createClass({
                 isVisible: false,
                 message: null,
                 isSuccess: false
-            },
-            className : "warm-component w-block w-login "+this.props.customClasses
+            }
         };
     },
     onValidField: function (ret) {
@@ -112,8 +111,8 @@ var Login = React.createClass({
             }
         ];
         return (
-            <div className={this.state.className}>
-                <div className={(this.state.isTileActive == false) ? "login-face active":"login-face"}>
+            <div className={"w-block w-login "+this.props.customClasses}>
+                <div className={((this.state.isTileActive == false) ? "login-face active":"login-face")}>
                     <h2 className="warm-title">{this.props.boldTitle}<i>{this.props.lightTitle}</i></h2>
                     <RoundButton onClick={this.toggleFormVisible} customClasses="astrologo-bg"/>
                     <p>{this.props.description}</p>

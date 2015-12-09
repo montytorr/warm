@@ -1,6 +1,7 @@
 var React = global.React || require('react');
 var ReactDOM = require('react-dom');
 
+
 var Simple = React.createClass({
     propTypes: {
         toast : React.PropTypes.object,
@@ -19,11 +20,6 @@ var Simple = React.createClass({
             dismissAction: function(){},
             customClasses : ''
         };
-    },
-    getInitialState: function() {
-        return ({
-            className : "warm-component w-toasts w-simple "+this.props.customClasses
-        });
     },
     timerInterval : null,
     dismissTimeout : null,
@@ -46,6 +42,11 @@ var Simple = React.createClass({
             }, that.props.toast.staysFor || 5000)
         }
     },
+    _onClick : function(){
+        this.props.dismissAction({
+            'toastID' : this.props.toast._id
+        });
+    },
     render: function() {
         var that = this;
         var content =
@@ -57,9 +58,9 @@ var Simple = React.createClass({
             <p>{this.props.toast.message} <span ref="timer">{this.props.toast.time}</span>s</p>
         }
         var className = that.props.toast.template || 'error '
-        className = this.state.className+className
+        className = "w-toasts w-simple "+this.props.customClasses+" "+className
         return (
-            <div className={className}>
+            <div onClick={this._onClick} className={className}>
                 {content}
             </div>
         );

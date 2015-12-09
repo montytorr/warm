@@ -1,0 +1,38 @@
+.w-list.w-horizontal {
+    height: 67px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        width: 0 !important;
+    }
+    &::-webkit-scrollbar-thumb {
+        visibility : hidden;
+    }
+    & > ul{
+        height: 50px;
+        & .w-list-horizontal-element {
+            font-family: $w-font-main;
+            font-size: 15px;
+            display: table-cell;
+            height: 50px;
+            white-space: nowrap;
+            overflow-x: auto;
+            color: $w-color-main-border;
+            box-sizing: border-box;
+            padding: 15px 10px 0px 10px;
+            &.selected{
+                color:$w-color-main;
+                border-bottom: 2px solid $w-color-main;
+            }
+            &:not(.selected):hover{
+                border-bottom: 1px solid $w-color-main-border;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+}

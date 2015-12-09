@@ -1,5 +1,4 @@
 var React = global.React || require('react');
-var classie = require('classie');
 
 var RoundButton = React.createClass({
     propTypes: {
@@ -16,27 +15,21 @@ var RoundButton = React.createClass({
     },
     getInitialState: function() {
         return ({
-            active: false,
-            className : "warm-component w-button w-round "+this.props.customClasses
+            active: false
         });
     },
     handleClick: function() {
-        if (this.state.active === true) {
-            classie.remove(this.refs.roundButton, 'condensed');
-            this.setState({
-                active: false
-            });
-        } else {
-            classie.add(this.refs.roundButton, 'condensed');
-            this.setState({
-                active: true
-            });
-        }
+        this.setState({
+            active: !this.state.active
+        });
         this.props.onClick();
     },
     render: function() {
         return (
-            <button onClick={this.handleClick} ref="roundButton" className={this.state.className}>
+            <button
+                onClick={this.handleClick}
+                ref="roundButton"
+                className={"w-button w-round "+((this.state.active)?"condensed ":"")+this.props.customClasses}>
                 {this.props.text}
             </button>
         );

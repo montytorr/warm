@@ -1,12 +1,11 @@
-.warm-component.w-block.w-search {
+.w-block.w-searchBar {
     display: inline-flex;
     position: relative;
     height: 50px;
-    margin: 10px;
-    border: 2px solid $w-color-main-border;
     font-family: $w-font-main;
     font-size: 15px;
     font-weight:500;
+    border-bottom: 1px solid $w-color-border-soft;
     box-sizing: border-box;
     .search-content {
         display: inline-flex;
@@ -17,26 +16,23 @@
         display:inline-flex;
         background-color: $w-color-main-inverted;
         width: 100%;
+        padding-left: 10px;
         .w-search-field {
+            -webkit-appearance: textfield;
             background-color: $w-color-main-inverted;
             display: inline-block;
             width: calc(100% - 50px);
             outline: none;
-            font-size: 17px;
+            font-size: 15px;
             border: none;
-            color: $w-color-main-text;
+            color: $w-color-main;
             &::-webkit-search-cancel-button {
                 &:hover {
                     cursor: pointer;
                 }
             }
             &::-webkit-input-placeholder {
-                color: $w-color-main-text;
-            }
-            &:focus {
-                &::-webkit-input-placeholder {
-                    color: $w-color-main-headings;
-                }
+                color: $w-color-main-headings;
             }
             &::-webkit-search-cancel-button{
                 position:relative;

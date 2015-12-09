@@ -1,0 +1,12 @@
+.w_h-d_i-f {
+    display: inline-flex;
+}
+.w_h-d_b {
+    display: block;
+}
+.w-full {
+    width: 100%;
+}
+.w_h-d_i-f .w-surface-composant, .w_h-d_b .w-surface-composant {
+    margin : 5px auto !important;
+}

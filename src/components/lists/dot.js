@@ -25,19 +25,13 @@ var DotList = React.createClass({
             customClasses : ''
         };
     },
-    getInitialState: function() {
-        return ({
-            list: this.props.list,
-            className : "warm-component w-list w-dot "+this.props.customClasses
-        });
-    },
     render: function() {
         var that = this;
         var i = 0;
         return (
-            <div className={this.state.className}>
+            <div className={"w-list w-dot "+this.props.customClasses}>
                 {
-                    that.state.list.map(function (elem) {
+                    that.props.list.map(function (elem) {
                         return (
                             <li key={i++}>
                                 <div className="details-container">

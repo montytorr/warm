@@ -11,17 +11,12 @@ var Search = React.createClass({
             customClasses : ''
         }
     },
-    getInitialState: function() {
-        return ({
-            className : "warm-component w-button w-search "+this.props.customClasses
-        });
-    },
     handleClick: function() {
         this.props.onClick();
     },
     render: function() {
         return (
-            <div onClick={this.handleClick} className={this.state.className}>
+            <div onClick={this.handleClick} className={"w-button w-search "+this.props.customClasses}>
                 <span className="w-search-icon" onClick={this.handleClick}></span>
             </div>
         );

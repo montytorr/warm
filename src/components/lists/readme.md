@@ -17,6 +17,8 @@
 
 ####Example
 ```
+var Warm = require('warm-react');
+
 <Warm.lists.Dot
 	list=
     [
@@ -52,6 +54,7 @@
 
 ####Example
 ```
+var Warm = require('warm-react');
 
 <Warm.lists.Spoiler
 	list =

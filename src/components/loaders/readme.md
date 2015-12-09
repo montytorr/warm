@@ -11,6 +11,8 @@
 
 ####Example
 ```
+var Warm = require('warm-react');
+
 <Warm.loaders.FullScreen
 
 />
