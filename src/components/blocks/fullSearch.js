@@ -22,7 +22,6 @@ var FullSearch = React.createClass({
         customClasses : React.PropTypes.string
     },
     getDefaultProps: function() {
-        console.log("CLASS", this.props);
         return {
             search: {
                 "query" : "toto foo bar"
