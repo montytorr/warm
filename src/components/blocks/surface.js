@@ -14,8 +14,8 @@ var Surface = React.createClass({
             title: "",
             titleLoading: false,
             contentLoading: false,
-            details: function(){},
-            content: function(){},
+            details: function () {},
+            content: function () {},
             customClasses: ""
         }
     },
@@ -36,7 +36,7 @@ var Surface = React.createClass({
                             {this.props.title}
                         </h1>
                         <div className="details">
-                            {this.props.details}
+                            {this.props.details()}
                         </div>
                     </div>
                 );

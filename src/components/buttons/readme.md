@@ -75,7 +75,7 @@ var handleClick = function(){
     customClasses="toto foo bar"/>
 ```
 
-!!£loginsubmit!!
+!!£loadingsubmit!!
 ##Warm.buttons.LoadingSubmit !!$Warm.buttons.LoadingSubmit!!
 
 ###Props (optional)
