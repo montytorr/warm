@@ -1,4 +1,4 @@
-var React = require('react');
+var React = global.React || require('react');
 
 var LoadingSubmit = React.createClass({
     propTypes: {
