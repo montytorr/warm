@@ -1,8 +1,10 @@
 var React = global.React || require('react');
 var ReactDOM = require('react-dom');
+var TimerMixin = require('react-timer-mixin');
 
 
 var Simple = React.createClass({
+    mixins: [TimerMixin],
     propTypes: {
         toast : React.PropTypes.object,
         dismissAction: React.PropTypes.func,
@@ -38,7 +40,7 @@ var Simple = React.createClass({
         var that = this;
         if(that.props.toast.staysFor){
             clearTimeout(that.dismissTimeout)
-            that.dismissTimeout = setTimeout(function(){
+            that.dismissTimeout = this.setTimeout(function(){
                 that.props.dismissAction({
                     'toastID' : that.props.toast._id
                 });
