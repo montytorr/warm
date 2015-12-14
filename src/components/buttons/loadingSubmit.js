@@ -26,14 +26,16 @@ var LoadingSubmit = React.createClass({
     },
     handleClick: function() {
         this.props.onClick();
-        this.setState({
-            loader: !this.state.loader
-        });
-        this.setTimeout(function () {
+        if (this.props.demo) {
             this.setState({
                 loader: !this.state.loader
             });
-        }, 700)
+            this.setTimeout(function () {
+                this.setState({
+                    loader: !this.state.loader
+                });
+            }, 700)
+        }
     },
     render: function() {
         return (

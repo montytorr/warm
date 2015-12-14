@@ -27,7 +27,9 @@ var FullScreenLoader = React.createClass({
     * @return {object}
     */
     componentDidMount: function() {
-        NProgress.start();
+        if (!this.props.demo) {
+            NProgress.start();
+        }
     },
     componentDidUpdate: function(prevProps, prevState) {
         var that = this;
@@ -66,7 +68,7 @@ var FullScreenLoader = React.createClass({
     },
     render: function() {
         return (
-            <div className="warm-loader warm-fade-transition show">
+            <div className={"warm-loader "+ (this.props.demo ? "w-demo " : " ") +"warm-fade-transition show"}>
                 <h1 className="warm-loader-title">
                     {this.props.boldText}
                     <i>

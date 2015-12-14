@@ -80,6 +80,9 @@
     position: absolute;
     background-color: white;
     display: inline-flex;
+    &.w-demo {
+        position: relative;
+    }
 }
 .warm-title,
 .warm-loader-title {
