@@ -1,8 +1,10 @@
 var React = global.React || require('react');
 var ReactDOM = require('react-dom');
+var TimerMixin = require('react-timer-mixin');
 
 
 var Simple = React.createClass({
+    mixins: [TimerMixin],
     propTypes: {
         toast : React.PropTypes.object,
         dismissAction: React.PropTypes.func,
@@ -33,9 +35,12 @@ var Simple = React.createClass({
                 timerNode.textContent = parseInt(timerNode.textContent, 10) - 1;
             }, 1000)
         }
+    },
+    _launchtimeout : function(){
+        var that = this;
         if(that.props.toast.staysFor){
             clearTimeout(that.dismissTimeout)
-            that.dismissTimeout = setTimeout(function(){
+            that.dismissTimeout = this.setTimeout(function(){
                 that.props.dismissAction({
                     'toastID' : that.props.toast._id
                 });
@@ -43,9 +48,12 @@ var Simple = React.createClass({
         }
     },
     _onClick : function(){
-        this.props.dismissAction({
-            'toastID' : this.props.toast._id
-        });
+        var that = this;
+        if(that.props.toast.canDismiss){
+            this.props.dismissAction({
+                'toastID' : this.props.toast._id
+            });
+        }
     },
     render: function() {
         var that = this;
@@ -57,6 +65,7 @@ var Simple = React.createClass({
             content =
             <p>{this.props.toast.message} <span ref="timer">{this.props.toast.time}</span>s</p>
         }
+        this._launchtimeout();
         var className = that.props.toast.template || 'error '
         className = "w-toasts w-simple "+this.props.customClasses+" "+className
         return (

@@ -9,6 +9,7 @@
     font-weight: 300;
     padding-left: 25px;
     border-radius: 3px;
+    position: relative;
     &:hover{
         cursor: pointer;
     }
@@ -24,4 +25,24 @@
     &.info{
         background: $w-color-info;
     }
+}
+
+.toast-anim-enter {
+    opacity: 0.00 !important;
+    left:150px;
+    transition: all 0.3s;
+}
+.toast-anim-enter.toast-anim-enter-active {
+    opacity: 1 !important;
+    left:0px;
+}
+
+.toast-anim-leave {
+    opacity: 1 !important;
+    left:0px;
+    transition: all  0.3s;
+}
+.toast-anim-leave.toast-anim-leave-active {
+    opacity: 0.00 !important;
+    left:150px;
 }

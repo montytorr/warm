@@ -1,6 +1,9 @@
 # Lists
 > A list is used to orderly display elements: here are different ways to do this.
 
+!!£accordion!!
+##Warm.lists.Accordion !!$Warm.lists.Accordion!!
+
 !!£dot!!
 ##Warm.lists.Dot !!$Warm.lists.Dot!!
 
@@ -37,6 +40,9 @@ var Warm = require('warm-react');
     ]
 	customClasses="toto foo bar"/>
 ```
+
+!!£horizontal!!
+##Warm.lists.Horizontal !!$Warm.lists.Horizontal!!
 
 !!£spoiler!!
 ##Warm.lists.Spoiler !!$Warm.lists.Spoiler!!
