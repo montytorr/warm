@@ -1,22 +1,19 @@
 # Arrays
-> An array is a component used to display ordered data in different ways.
 
-!!£column!!
 
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 ##Warm.arrays.Column !!$Warm.arrays.Column!!
 
-###Props (optional)
-- array: Object
+###*Props (optional)*
+####-> **array** : *Object*
+> Set a title to your surface.
+#####Default = *{titles: ["Alpha", "Beta", "Gamma", "Teta"], content:[["Lorepsum", "Ipsum", "Lorace", "3290"],["Hypnal", "Yolemu", "Ceinale", "3290"]]}*
 
-> An array to be displayed based on the model of the example below.
-> Default is the object of the example.
+####-> **titleLoading** : *Boolean*
+> If sat to true, replace the title by a loader.
+#####Default = *false*
 
-- customClasses: String
-
-  > A string of classes you want to apply (ex : "toto foo bar").
-  > Default is "".
-
-###Example
+###*Example*
 
 ```
 var Warm = require('warm');
