@@ -1,37 +1,31 @@
 # Blocks
-> A block is a complex component that contain other warm components or just simples react classes, and make interactions easier between these components.
 
-!!£filtredsearch!!
 
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 ##Warm.blocks.FilteredSearch !!$Warm.blocks.FilteredSearch!!
 
-###Props (optional)
+###*Props (optionals)*
+####-> **customClasses** : *String*
+> A string containing classes you want to apply (ex : "toto foo bar").
+#####Default = *""*
 
-- customClasses: String
-
-  > A string of classes you want to apply (ex : "toto foo bar").
-  > Default is "".
-
-###Example
-
+###**Example**
 ```
 var Warm = require('warm-react');
 
 <Warm.blocks.FilteredSearch />
 ```
 
-!!£fullsearch!!
 
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 ##Warm.blocks.FullSearch !!$Warm.blocks.FullSearch!!
 
-###Props (optional)
+###*Props (optionals)*
+####-> **customClasses** : *String*
+> A string containing classes you want to apply (ex : "toto foo bar").
+#####Default = *""*
 
-- customClasses: String
-
-  > A string of classes you want to apply (ex : "toto foo bar").
-  > Default is "".
-
-###Example
+###*Example*
 
 ```
 var Warm = require('warm-react');
@@ -40,35 +34,25 @@ var Warm = require('warm-react');
 ```
 
 
-!!£login!!
-
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 ##Warm.blocks.Login !!$Warm.blocks.Login!!
 
-###Props (optional)
-- loginRequestMethod: Function
-
+###*Props (optionals)*
+####-> **loginRequestMethod** : *Function*
 > A method that this component will call if the form returns no errors. see example for details.
-> Default is an empty func.
-
-- boldTitle: String
-
-  > The bold part of the title.
-  > Default is "Warm".
-
-- lightTitle: String
-
-  > The light part of the title.
-  > Default is "Login".
-
-- description: String
-
-  > Adds a little description underneath the photo.
-  > Default is "".
-
-- customClasses: String
-
-  > A string of classes you want to apply (ex : "toto foo bar").
-  > Default is "".
+#####Default = *function(){}*
+####-> **boldTitle** : *String*
+> The bold part of the title.
+#####Default = *"Warm"*
+####-> **lightTitle** : *String*
+> The light part of the title.
+#####Default = *"Login"*
+####-> **description** : *String*
+> Adds a little description underneath the photo.
+#####Default = *""*
+####-> **customClasses** : *String*
+> A string containing classes you want to apply (ex : "toto foo bar").
+#####Default = *""*
 
 ###Example
 
@@ -97,33 +81,25 @@ var loginRequestMethod = function(formData, cb){
     description="Here you can put a little description."/>
 ```
 
-!!£searchbar!!
 
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 ##Warm.blocks.SearchBar !!$Warm.blocks.SearchBar!!
 
-###Props (optional)
-- content: ReactClass
-
-  > A react class to be displayed before the placeholder.
-  > Default is an empty div.
-
-- onSubmit: Function
-
+###*Props (optionals)*
+####-> **content** : *ReactClass*
+> A react class to be displayed before the placeholder.
+#####Default = *<div></div>*
+####-> **onSubmit** : *Function*
 > A function to be triggered when the field is submitted.
-> Default is an empty function.
-
-- placeholder: String
-
+#####Default = *function(){}*
+####-> **placeholder** : *String*
 > A string to be displayed as placeholder in the field.
-> Default is "".
+#####Default = *""*
+####-> **customClasses** : *String*
+> A string containing classes you want to apply (ex : "toto foo bar").
+#####Default = *""*
 
-- customClasses: String
-
-  > A string of classes you want to apply (ex : "toto foo bar")
-  > Default is "".
-
-####Example
-
+###*Example*
 ```
 var Warm = require('warm-react');
 
@@ -131,43 +107,31 @@ var Warm = require('warm-react');
     customClasses="toto foo bar"/>
 ```
 
-!!£surface!!
 
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 ##Warm.blocks.Surface !!$Warm.blocks.Surface!!
 
-###Props (optional)
-- title: String
-
+###*Props (optionals)*
+####-> **title** : *String*
 > Set a title to your surface.
-> Default is "".
-
-- titleLoading: Boolean
-
-  > If sat to true, replace the title by a loader.
-  > Default is false.
-
-- contentLoading: Boolean
-
-> If sat to true, replace the body by a loader.
-> Default is false.
-
-- details: ReactClass
-
+#####Default = *""*
+####-> **titleLoading** : *Boolean*
+> If sat to true, replace the title by a loader.
+#####Default = *false*
+####-> **contentLoading** : *Boolean*
 > The react class to be displayed on top right of the surface.
-> Default is an empty div returned by a ReactClass.
-
-- content: ReactClass
-
+#####Default = *false*
+####-> **details** : *ReactClass*
+> The react class to be displayed on top right of the surface.
+#####Default = *<div></div>*
+####-> **content** : *ReactClass*
 > The react class to be displayed in the surface's body.
-> Default is an empty div returned by a ReactClass.
+#####Default = *<div></div>*
+####-> **customClasses** : *String*
+> A string of classes you want to apply (ex : "toto foo bar")
+#####Default = *""*
 
-- customClasses: String
-
-  > A string of classes you want to apply (ex : "toto foo bar")
-  > Default is "".
-
-####Example
-
+###*Example*
 ```
 var Warm = require('warm-react');
 

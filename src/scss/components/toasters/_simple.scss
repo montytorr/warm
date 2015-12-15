@@ -5,4 +5,7 @@
     right: 10px;
     pointer-events: none;
     top: 0px;
+    &.w-demo {
+        position: relative;        
+    }
 }

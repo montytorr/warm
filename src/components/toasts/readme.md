@@ -1,10 +1,10 @@
 # Toasts
-> A toast is a notification block displayed on a certain event.
 
-!!£simple!!
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 ##Warm.toasters.Simple !!$Warm.toasters.Simple!!
 
-###Props (optional)
+###*Props (optional)*
 
 - toast: Object
 
@@ -21,7 +21,7 @@
 > A string of classes you want to apply (ex : "toto foo bar")
 > Default value is "".
 
-####Example
+####*Example*
 ```
 var Warm = require('warm-react');
 

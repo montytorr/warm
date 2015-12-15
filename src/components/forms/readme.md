@@ -1,10 +1,10 @@
 # Forms
-> A form is a group of inputs or buttons used to collect data from the user.
 
-!!£forms!!
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 ##Warm.forms.Form !!$Warm.forms.Form!!
 
-###Props (optional)
+###*Props (optionals)*
 - onFormSubmit: Function
 
 > A function trigged when Form is submitted.
@@ -30,8 +30,7 @@
 > A string of classes you want to apply (ex : "toto foo bar")
 > Default value is "".
 
-###Example
-
+###*Example*
 ```
 var Warm = require('warm-react');
 

@@ -5,6 +5,7 @@ var Simple = React.createClass({
     propTypes: {
         toasts: React.PropTypes.array,
         dismissAction : React.PropTypes.func,
+        demo : React.PropTypes.bool,
         customClasses : React.PropTypes.string
     },
     getDefaultProps: function() {
@@ -40,6 +41,7 @@ var Simple = React.createClass({
                 }
             ],
             dismissAction: function(){},
+            demo : false,
             customClasses : ''
         };
     },
@@ -47,7 +49,7 @@ var Simple = React.createClass({
         var that = this;
         var i = 0;
         return (
-            <div className={"w-toasters w-simple "+this.props.customClasses}>
+            <div className={"w-toasters w-simple "+(this.props.demo ? "w-demo " : "")+this.props.customClasses}>
                 <ReactCSSTransitionGroup transitionName="toast-anim" transitionEnterTimeout={300} transitionLeaveTimeout={300}>
                     {that.props.toasts.map(function(toast) {
                         return (

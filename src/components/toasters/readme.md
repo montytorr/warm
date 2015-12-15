@@ -1,10 +1,10 @@
 # Toasters
-> A toaster is a container for displaying toasts.
 
-!!£simple!!
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 ##Warm.toasters.Simple !!$Warm.toasters.Simple!!
 
-###Props (optional)
+###*Props (optional)*
 - toasts: Array
 
 > A array of the toasts to be displayed.
@@ -20,7 +20,7 @@
 > A string of classes you want to apply (ex : "toto foo bar")
 > Default value is "".
 
-####Example
+####*Example*
 ```
 var Warm = require('warm-react');
 
