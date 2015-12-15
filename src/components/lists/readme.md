@@ -1,10 +1,9 @@
 # Lists
-> A list is used to orderly display elements: here are different ways to do this.
 
-!!£dot!!
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 ##Warm.lists.Dot !!$Warm.lists.Dot!!
 
-###Props (optional)
+###*Props (optionals)*
 - list: Array
 
 > An array that contain the list main informations and also the informations to be displayed when the dot is clicked.
@@ -15,7 +14,7 @@
 > A string of classes you want to apply (ex : "toto foo bar")
 > Default value is "".
 
-####Example
+####*Example*
 ```
 var Warm = require('warm-react');
 
@@ -38,10 +37,11 @@ var Warm = require('warm-react');
 	customClasses="toto foo bar"/>
 ```
 
-!!£spoiler!!
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 ##Warm.lists.Spoiler !!$Warm.lists.Spoiler!!
 
-###Props (optional)
+###*Props (optionals)*
 - list: Array
 
 > An array that contain the list and it's containing.
@@ -52,7 +52,7 @@ var Warm = require('warm-react');
 > A string of classes you want to apply (ex : "toto foo bar")
 > Default value is "".
 
-####Example
+####*Example*
 ```
 var Warm = require('warm-react');
 

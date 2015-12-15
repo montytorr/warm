@@ -1,10 +1,10 @@
 # Errors
-> The error components can be triggered to display errors messages in different ways.
 
-!!£simple!!
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 ##Warm.errors.Simple !!$Warm.errors.Simple!!
 
-###Props (optional)
+###*Props (optionals)*
 - isVisible: Boolean
 
 > Trigger the visible or hidden classes.
@@ -25,7 +25,7 @@
 > A string of classes you want to apply (ex : "toto foo bar")
 > Default value is "".
 
-####Example
+####*Example*
 ```
 var Warm = require('warm-react');
 

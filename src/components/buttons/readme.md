@@ -1,36 +1,27 @@
 # Buttons
-> A button is just... a button... here is our gallery of avaliables models.
 
-!!£colored!!
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 ##Warm.buttons.Colored !!$Warm.buttons.Colored!!
 
-###Props (optional)
-- onClick: Function
-
+###*Props (optionals)*
+####-> **onClick** : *Function*
 > A function to trigger onClick event.
-> Default value is an empty function.
-
-- content: String
-
+#####Default = *function(){alert("Hello Warm!")}*
+####-> **content** : *String*
 > A string containing the title of your button.
-> Default value is "".
-
-- isActive: Boolean
-
+#####Default = *""*
+####-> **isActive** : *Boolean*
 > Defines the state of the button : true is active.
-> Default value is false.
-
-- color: String
-
+#####Default = *false*
+####-> **color** : *String*
 > A string containing the color of the button in HEX (ex : #444).
-> Default value is the default warm theme color.
+#####Default = *""*
+####-> **customClasses** : *String*
+> A string of classes you want to apply (ex : "toto foo bar")
+#####Default = *""*
 
-- customClasses: String
-
-> A string of classes you want to apply (ex : "toto foo bar").
-> Default value is "".
-
-###Example
+###*Example*
 
 ```
 var Warm = require('warm-react');
@@ -47,21 +38,18 @@ var handleClick = function(){
 ```
 
 
-!!£dot!!
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 ##Warm.buttons.Dot !!$Warm.buttons.Dot!!
 
-###Props (optional)
-- onClick: Function
-
+###*Props (optionals)*
+####-> **onClick** : *Function*
 > A function to trigger onClick event.
-> Default value is an Hello Warm function.
-
-- customClasses: String
-
+#####Default = *function(){alert("Hello Warm!")}*
+####-> **customClasses** : *String*
 > A string of classes you want to apply (ex : "toto foo bar")
-> Default value is "".
+#####Default = *""*
 
-###Example
+###*Example*
 
 ```
 var Warm = require('warm-react');
@@ -75,31 +63,25 @@ var handleClick = function(){
     customClasses="toto foo bar"/>
 ```
 
-!!£loadingsubmit!!
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 ##Warm.buttons.LoadingSubmit !!$Warm.buttons.LoadingSubmit!!
 
-###Props (optional)
-- onClick: Function
-
+###*Props (optionals)*
+####-> **onClick** : *Function*
 > A function to trigger onClick event.
-> Default value is an Hello Warm function.
-
-- text: String
-
+#####Default = *function(){alert("Hello Warm!")}*
+####-> **text** : *String*
 > A simple text to be displayed in the button.
-> Default value is "".
-
-- isLoading: Boolean
-
+#####Default = *""*
+####-> **isLoading** : *Boolean*
 > If set to true : text is replaced by a loader.
-> Default value is false.
-
-- customClasses: String
-
+#####Default = *false*
+####-> **customClasses** : *String*
 > A string of classes you want to apply (ex : "toto foo bar")
-> Default value is "".
+#####Default = *""*
 
-###Example
+###*Example*
 
 ```
 var Warm = require('warm-react');
@@ -116,26 +98,21 @@ var handleClick = function(){
 ```
 
 
-!!£round!!
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 ##Warm.buttons.Round !!$Warm.buttons.Round!!
 
-###Props (optional)
-- onClick: Function
-
+###*Props (optionals)*
+####-> **onClick** : *Function*
 > A function to trigger onClick event.
-> Default value is an Hello Warm function.
-
-- text: String
-
+#####Default = *function(){alert("Hello Warm!")}*
+####-> **text** : *String*
 > A simple text to be displayed in the button.
-> Default value is "".
-
-- customClasses: String
-
+#####Default = *""*
+####-> **customClasses** : *String*
 > A string of classes you want to apply (ex : "toto foo bar")
-> Default value is "".
+#####Default = *""*
 
-###Example
+###*Example*
 
 ```
 var Warm = require('warm-react');
@@ -150,21 +127,20 @@ var handleClick = function(){
     customClasses="toto foo bar"/>
 ```
 
-!!£search!!
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 ##Warm.buttons.Search !!$Warm.buttons.Search!!
 
-###Props (optional)
-- onClick: Function
-
+###*Props (optionals)*
+####-> **onClick** : *Function*
 > A function to trigger onClick event.
-> Default value is an Hello Warm function.
-
-- customClasses: String
-
+#####Default = *function(){alert("Hello Warm!")}*
+####-> **customClasses** : *String*
 > A string of classes you want to apply (ex : "toto foo bar")
-> Default value is "".
+#####Default = *""*
 
-###Example
+###*Example*
+
 
 ```
 var Warm = require('warm-react');
@@ -178,26 +154,22 @@ var handleClick = function(){
     customClasses="toto foo bar"/>
 ```
 
-!!£simple!!
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 ##Warm.buttons.Simple !!$Warm.buttons.Simple!!
 
-###Props (optional)
-- onClick: Function
-
+###*Props (optionals)*
+####-> **onClick** : *Function*
 > A function to trigger onClick event.
-> Default value is an Hello Warm function.
-
-- text: String
-
-> A string to be displayed in the button.
-> Default value is "".
-
-- customClasses: String
-
+#####Default = *function(){alert("Hello Warm!")}*
+####-> **text** : *String*
+> A simple text to be displayed in the button.
+#####Default = *""*
+####-> **customClasses** : *String*
 > A string of classes you want to apply (ex : "toto foo bar")
-> Default value is "".
+#####Default = *""*
 
-###Example
+###*Example*
 
 ```
 var Warm = require('warm-react');
@@ -212,26 +184,22 @@ var handleClick = function(){
     customClasses="toto foo bar"/>
 ```
 
-!!£spoiler!!
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 ##Warm.buttons.Spoiler !!$Warm.buttons.Spoiler!!
 
-###Props (optional)
-- onClick: Function
-
+###*Props (optionals)*
+####-> **onClick** : *Function*
 > A function to trigger onClick event.
-> Default value is an Hello Warm function.
-
-- isActive: Boolean
-
-> A value to define the state of the button.
-> Default value is false.
-
-- customClasses: String
-
+#####Default = *function(){alert("Hello Warm!")}*
+####-> **isActive** : *Boolean*
+> Defines the state of the button : true is active.
+#####Default = *false*
+####-> **customClasses** : *String*
 > A string of classes you want to apply (ex : "toto foo bar")
-> Default value is "".
+#####Default = *""*
 
-###Example
+###*Example*
 
 ```
 var Warm = require('warm-react');
