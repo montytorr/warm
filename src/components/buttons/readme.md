@@ -8,15 +8,19 @@
 ####-> **onClick** : *Function*
 > A function to trigger onClick event.
 #####Default = *function(){alert("Hello Warm!")}*
+
 ####-> **content** : *String*
 > A string containing the title of your button.
 #####Default = *""*
+
 ####-> **isActive** : *Boolean*
 > Defines the state of the button : true is active.
 #####Default = *false*
+
 ####-> **color** : *String*
 > A string containing the color of the button in HEX (ex : #444).
 #####Default = *""*
+
 ####-> **customClasses** : *String*
 > A string of classes you want to apply (ex : "toto foo bar")
 #####Default = *""*
@@ -45,6 +49,7 @@ var handleClick = function(){
 ####-> **onClick** : *Function*
 > A function to trigger onClick event.
 #####Default = *function(){alert("Hello Warm!")}*
+
 ####-> **customClasses** : *String*
 > A string of classes you want to apply (ex : "toto foo bar")
 #####Default = *""*
@@ -71,12 +76,15 @@ var handleClick = function(){
 ####-> **onClick** : *Function*
 > A function to trigger onClick event.
 #####Default = *function(){alert("Hello Warm!")}*
+
 ####-> **text** : *String*
 > A simple text to be displayed in the button.
 #####Default = *""*
+
 ####-> **isLoading** : *Boolean*
 > If set to true : text is replaced by a loader.
 #####Default = *false*
+
 ####-> **customClasses** : *String*
 > A string of classes you want to apply (ex : "toto foo bar")
 #####Default = *""*
@@ -105,9 +113,11 @@ var handleClick = function(){
 ####-> **onClick** : *Function*
 > A function to trigger onClick event.
 #####Default = *function(){alert("Hello Warm!")}*
+
 ####-> **text** : *String*
 > A simple text to be displayed in the button.
 #####Default = *""*
+
 ####-> **customClasses** : *String*
 > A string of classes you want to apply (ex : "toto foo bar")
 #####Default = *""*
@@ -135,6 +145,7 @@ var handleClick = function(){
 ####-> **onClick** : *Function*
 > A function to trigger onClick event.
 #####Default = *function(){alert("Hello Warm!")}*
+
 ####-> **customClasses** : *String*
 > A string of classes you want to apply (ex : "toto foo bar")
 #####Default = *""*
@@ -162,9 +173,11 @@ var handleClick = function(){
 ####-> **onClick** : *Function*
 > A function to trigger onClick event.
 #####Default = *function(){alert("Hello Warm!")}*
+
 ####-> **text** : *String*
 > A simple text to be displayed in the button.
 #####Default = *""*
+
 ####-> **customClasses** : *String*
 > A string of classes you want to apply (ex : "toto foo bar")
 #####Default = *""*
@@ -192,9 +205,11 @@ var handleClick = function(){
 ####-> **onClick** : *Function*
 > A function to trigger onClick event.
 #####Default = *function(){alert("Hello Warm!")}*
+
 ####-> **isActive** : *Boolean*
 > Defines the state of the button : true is active.
 #####Default = *false*
+
 ####-> **customClasses** : *String*
 > A string of classes you want to apply (ex : "toto foo bar")
 #####Default = *""*
