@@ -62,45 +62,31 @@ var FullSearch = React.createClass({
     },
     render: function() {
         var that = this;
-        var SearchSurface = React.createClass({
-            render: function (){
-                return (
-                    <FilteredSearch
-                        search={that.props.search}
-                        filters={that.props.filters}
-                        onSubmit={that.props.onSubmit}
-                        isLoading={that.props.isLoading}
-                        onClickFilter={that.props.onClickFilter}
-                        onUpdateSearch={that.props.onUpdateSearch}/>
-                );
-            }
-        })
-        var AccordionSurface = React.createClass({
-            render: function (){
-                return (
-                    <Accordion
-                        data={that.props.search.results}
-                        headers={that.props.filters}
-                        endComponents={that.props.endComponents}
-                        summary={that.props.search.summary}
-                        isLoading={that.props.isLoading}
-                        onClickResult={that.props.onClickResult}
-                        onClickHeader={that.props.onClickHeader}
-                        onClickButton={that.props.onClickButton}
-                        isLoadingMore={that.props.isLoadingMore}
-                        hasLoadedAll={that.props.hasLoadedAll}
-                        buttonText={that.props.buttonText}/>
-                );
-            }
-        })
         return (
             <div className={"w-block w-full " + this.props.customClasses}>
                 <Surface
-                    content={React.createFactory(SearchSurface)}
-                    customClasses="search-surface"/>
+                    content={FilteredSearch}
+                    customClasses="search-surface"
+                    search={that.props.search}
+                    filters={that.props.filters}
+                    onSubmit={that.props.onSubmit}
+                    isLoading={that.props.isLoading}
+                    onClickFilter={that.props.onClickFilter}
+                    onUpdateSearch={that.props.onUpdateSearch}/>
                 <Surface
-                    content={React.createFactory(AccordionSurface)}
-                    customClasses="results-surface"/>
+                    content={Accordion}
+                    customClasses="results-surface"
+                    data={that.props.search.results}
+                    headers={that.props.filters}
+                    endComponents={that.props.endComponents}
+                    summary={that.props.search.summary}
+                    isLoading={that.props.isLoading}
+                    onClickResult={that.props.onClickResult}
+                    onClickHeader={that.props.onClickHeader}
+                    onClickButton={that.props.onClickButton}
+                    isLoadingMore={that.props.isLoadingMore}
+                    hasLoadedAll={that.props.hasLoadedAll}
+                    buttonText={that.props.buttonText}/>
             </div>
         );
     }
