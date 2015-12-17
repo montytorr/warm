@@ -61,7 +61,7 @@ Warm.toasts.Simple = require('./components/toasts/simple.js');
 Warm.toasts.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/toasts/readme.md";
 
 if (!global.exports && !global.module && (!global.define || !global.define.amd)) {
-  global.Warm = Warm;
+    global.Warm = Warm;
 }
 
 module.exports = Warm;
