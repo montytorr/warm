@@ -51,31 +51,3 @@ var Warm = require('warm-react');
 
 > A string of classes you want to apply (ex : "toto foo bar")
 > Default value is "".
-
-####*Example*
-```
-var Warm = require('warm-react');
-
-<Warm.lists.Spoiler
-	list =
-	[
-		{
-			title : "Alpha",
-			content: Warm.array.Column,
-			isActive: true,
-			color: "#63AFFF"
-		},
-		{
-			title : "Beta",
-			content: Warm.array.Column,
-			isActive: false
-		},
-		{
-			title : "Gamma",
-			content: Warm.array.Column,
-			isActive: false,
-			color: "#50D86E"
-		}
-	]
-	customClasses="toto foo bar"/>
-```
