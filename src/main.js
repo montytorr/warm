@@ -2,11 +2,6 @@ var React = global.React || require('react');
 
 var Warm = {};
 
-//arrays
-Warm.arrays = {};
-Warm.arrays.Column = require('./components/arrays/column.js');
-Warm.arrays.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/arrays/readme.md";
-
 //blocks
 Warm.blocks = {};
 Warm.blocks.FilteredSearch = require('./components/blocks/filteredSearch.js');

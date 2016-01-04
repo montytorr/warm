@@ -14,7 +14,7 @@ var Surface = React.createClass({
             title: "",
             titleLoading: false,
             contentLoading: false,
-            details: function () {},
+            details: function(){},
             content: function(){},
             customClasses: ""
         }
@@ -50,11 +50,13 @@ var Surface = React.createClass({
                 </div>
             );
         } else {
-            Content = (
-                <div className="w-surface-content">
-                    <this.props.content {...this.props}/>
-                </div>
-            );
+            if (this.props.content.displayName) {
+                Content = (
+                    <div className="w-surface-content">
+                        <this.props.content.displayName {...this.props}/>
+                    </div>
+                );
+            }
         }
         return (
             <div className={"w-block w-surface "+this.props.customClasses}>
