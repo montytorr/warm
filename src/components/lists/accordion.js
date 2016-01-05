@@ -176,11 +176,11 @@ var Accordion = React.createClass({
     loadingDisplay: function () {
         var i = 0;
         if (!this.props.isLoading) {
-            var acccordionListHeaders = []
+            var accordionListHeaders = []
             this.props.headers.map(function(header, index) {
                 if (this.props.data[header.name] !== undefined && this.props.data[header.name].length > 0) {
                     var endComponent = this.props.endComponents[header.name] || undefined;
-                    acccordionListHeaders.push(
+                    accordionListHeaders.push(
                         <AccordionListHeader
                             key={"accordion-header-" + header.name}
                             isLoadingMore={this.props.isLoadingMore}
@@ -196,7 +196,7 @@ var Accordion = React.createClass({
                     );
                 }
             }.bind(this))
-            return (acccordionListHeaders);
+            return (accordionListHeaders);
         } else {
             return (
                 <div className="w-accordion-loader">

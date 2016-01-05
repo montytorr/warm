@@ -36,18 +36,3 @@ var Warm = require('warm-react');
     ]
 	customClasses="toto foo bar"/>
 ```
-
-
-<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
-##Warm.lists.Spoiler !!$Warm.lists.Spoiler!!
-
-###*Props (optionals)*
-- list: Array
-
-> An array that contain the list and it's containing.
-> Default value is an array like the "list" array below.
-
-- customClasses: String
-
-> A string of classes you want to apply (ex : "toto foo bar")
-> Default value is "".
