@@ -8,7 +8,7 @@ var RoundButton = React.createClass({
     },
     getDefaultProps: function() {
         return {
-            onClick: function(){},
+            onClick: function(){alert("I'm WARM!")},
             text : '',
             customClasses : ''
         };

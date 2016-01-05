@@ -7,7 +7,7 @@ var Dot = React.createClass({
     },
     getDefaultProps: function() {
         return {
-            onClick: function() {alert("I'm WARM!")},
+            onClick: function(){alert("I'm WARM!")},
             customClasses : ''
         }
     },
