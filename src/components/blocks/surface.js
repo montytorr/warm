@@ -22,7 +22,6 @@ var Surface = React.createClass({
     render: function() {
         var Title = "";
         var Content = "";
-        console.log('surface props', this.props)
         if(this.props.title){
             if (this.props.titleLoading == true) {
                 Title = (
