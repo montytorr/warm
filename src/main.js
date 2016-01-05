@@ -2,11 +2,6 @@ var React = global.React || require('react');
 
 var Warm = {};
 
-//arrays
-Warm.arrays = {};
-Warm.arrays.Column = require('./components/arrays/column.js');
-Warm.arrays.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/arrays/readme.md";
-
 //blocks
 Warm.blocks = {};
 Warm.blocks.FilteredSearch = require('./components/blocks/filteredSearch.js');
@@ -42,7 +37,6 @@ Warm.lists = {};
 Warm.lists.Accordion = require('./components/lists/accordion.js');
 Warm.lists.Dot = require('./components/lists/dot.js');
 Warm.lists.Horizontal = require('./components/lists/horizontal.js');
-Warm.lists.Spoiler = require('./components/lists/spoiler.js');
 Warm.lists.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/lists/readme.md";
 
 //loaders
@@ -61,7 +55,7 @@ Warm.toasts.Simple = require('./components/toasts/simple.js');
 Warm.toasts.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/toasts/readme.md";
 
 if (!global.exports && !global.module && (!global.define || !global.define.amd)) {
-  global.Warm = Warm;
+    global.Warm = Warm;
 }
 
 module.exports = Warm;
