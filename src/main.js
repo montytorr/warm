@@ -37,7 +37,6 @@ Warm.lists = {};
 Warm.lists.Accordion = require('./components/lists/accordion.js');
 Warm.lists.Dot = require('./components/lists/dot.js');
 Warm.lists.Horizontal = require('./components/lists/horizontal.js');
-Warm.lists.Spoiler = require('./components/lists/spoiler.js');
 Warm.lists.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/lists/readme.md";
 
 //loaders

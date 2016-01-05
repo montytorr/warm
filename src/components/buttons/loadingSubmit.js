@@ -29,7 +29,7 @@ var LoadingSubmit = React.createClass({
     getDefaultProps: function() {
         return {
             isLoading : false,
-            onClick: function(){},
+            onClick: function(){alert("I'm WARM!")},
             text : "Go!",
             demo : false,
             customClasses : ""
