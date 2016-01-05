@@ -2,7 +2,7 @@
 
 
 <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
-##Warm.toasters.Simple !!$Warm.toasters.Simple!!
+##Warm.toasts.Simple !!$Warm.toasts.Simple!!
 
 ###*Props (optional)*
 
@@ -30,8 +30,8 @@ var toast = {
     'canStack' : true,
     'template' : 'info',
     'canDismiss' : false,
-    'message' : "Toaster info"
+    'message' : "Toast info"
 }
-<Warm.toasters.Simple
+<Warm.toasts.Simple
     toast={toast}/>
 ```

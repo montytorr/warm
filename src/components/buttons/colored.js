@@ -10,7 +10,7 @@ var Colored = React.createClass({
     },
     getDefaultProps: function() {
         return {
-            onClick: function(){},
+            onClick: function(){alert("I'm WARM!")},
             content: "Click Me",
             isActive: false,
             color: "",
