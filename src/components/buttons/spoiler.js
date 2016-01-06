@@ -8,7 +8,7 @@ var Spoiler = React.createClass({
     },
     getDefaultProps: function() {
         return {
-            onClick: function(){alert("I'm WARM!")},
+            onClick: function(){},
             isActive: false,
             customClasses: ""
         };

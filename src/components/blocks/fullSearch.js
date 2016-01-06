@@ -62,6 +62,7 @@ var FullSearch = React.createClass({
     },
     render: function() {
         var that = this;
+        
         return (
             <div className={"w-block w-full " + this.props.customClasses}>
                 <Surface
