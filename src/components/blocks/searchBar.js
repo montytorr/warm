@@ -28,6 +28,7 @@ var Search = React.createClass({
     },
     formChange : function(){
         var that = this;
+        
         return function(event){
             if(that.refs.searchBarSearchInput){
                 that.props.onUpdate({"query": that.refs.searchBarSearchInput.value});
@@ -35,6 +36,10 @@ var Search = React.createClass({
         }
     },
     search: function(event) {
+
+        if (this.props.demo) {
+            alert("Query : " + this.props.search.query);
+        }
         if (event != undefined) {
             event.preventDefault();
         }

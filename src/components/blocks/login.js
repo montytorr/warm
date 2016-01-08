@@ -54,6 +54,11 @@ var Login = React.createClass({
     },
     onFormSubmit: function (formData) {
         var that = this;
+
+        if (that.props.demo) {
+            alert("Email : " + formData.emailLogin.value + "\nPassword : " + formData.passwordLogin.value + "\nRememberMe : " + formData.rememberMeLogin.checked);
+        }
+
         that.props.loginRequestMethod(formData, function (response) {
             if (response.error !== null) {
                 that.setState({
