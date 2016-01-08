@@ -14,7 +14,7 @@ var Colored = React.createClass({
             content: "Click Me",
             isActive: false,
             color: "",
-            customClasses: ""
+            customClasses: "list-button"
         };
     },
     getInitialState: function() {
