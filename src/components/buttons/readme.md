@@ -7,7 +7,7 @@
 ###*Props (optionals)*
 ####-> **onClick** : *Function*
 > A function to trigger onClick event.
-#####Default = *function(){alert("Hello Warm!")}*
+#####Default = *function(){}*
 
 ####-> **content** : *String*
 > A string containing the title of your button.
@@ -29,10 +29,6 @@
 
 ```
 var Warm = require('warm-react');
-
-var handleClick = function(){
-    alert("Hello Warm!")
-};
 
 <Warm.buttons.Colored
     content={elem}
@@ -112,7 +108,7 @@ var handleClick = function(){
 ###*Props (optionals)*
 ####-> **onClick** : *Function*
 > A function to trigger onClick event.
-#####Default = *function(){alert("Hello Warm!")}*
+#####Default = *function(){}*
 
 ####-> **text** : *String*
 > A simple text to be displayed in the button.
@@ -126,10 +122,6 @@ var handleClick = function(){
 
 ```
 var Warm = require('warm-react');
-
-var handleClick = function(){
-    alert("Hello Warm!")
-};
 
 <Warm.buttons.Round
     onClick={handleClick}
@@ -218,10 +210,6 @@ var handleClick = function(){
 
 ```
 var Warm = require('warm-react');
-
-var handleClick = function(){
-    alert("Hello Warm!")
-};
 
 <Warm.buttons.Spoiler
     onClick={handleClick}

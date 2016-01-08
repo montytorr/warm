@@ -50,6 +50,7 @@ var FilteredSearch = React.createClass({
                     onSubmit={this.props.onSubmit}
                     onUpdate={this.props.onUpdateSearch}
                     withLoader={true}
+                    demo={this.props.demo}
                     customClasses="w-search-bar-in-filteredSearch"/>
                 <HorizontalList listElements={this.props.filters} onClick={this.props.onClickFilter}/>
             </div>

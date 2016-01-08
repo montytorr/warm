@@ -31,6 +31,7 @@ var Horizontal = React.createClass({
     },
     onClick: function(listElement) {
         var that = this;
+
         return function(){
             that.props.onClick(listElement)
         }

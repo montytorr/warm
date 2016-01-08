@@ -8,7 +8,7 @@ var Spoiler = React.createClass({
     },
     getDefaultProps: function() {
         return {
-            onClick: function(toto){},
+            onClick: function(){},
             isActive: false,
             customClasses: ""
         };

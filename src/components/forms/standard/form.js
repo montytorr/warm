@@ -150,6 +150,15 @@ var Form = React.createClass({
         var that = this;
 		var i = 1;
         var formComponents={};
+
+        if (that.props.demo) {
+            var textValue = that.props.formComponents[0].value;
+            var mailValue = that.props.formComponents[1].value;
+            var passwordValue = that.props.formComponents[2].value;
+
+            alert("Text : " + textValue + "\nMail : " + mailValue + "\nPassword : " + passwordValue);
+        }
+        
         this.state.formComponents.map(function (formComponent, i) {
             formComponents[formComponent.name] = {
                 "className" : formComponent.className  || "default",
