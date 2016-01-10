@@ -34,8 +34,8 @@ Warm.forms.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/
 
 //lists
 Warm.lists = {};
-Warm.lists.Accordion = require('./components/lists/accordion.js');
 Warm.lists.Dot = require('./components/lists/dot.js');
+Warm.lists.Accordion = require('./components/lists/accordion.js');
 Warm.lists.Horizontal = require('./components/lists/horizontal.js');
 Warm.lists.readme = "https://raw.githubusercontent.com/maestro-tech/warm/master/src/components/lists/readme.md";
 

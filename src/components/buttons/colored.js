@@ -10,11 +10,11 @@ var Colored = React.createClass({
     },
     getDefaultProps: function() {
         return {
-            onClick: function(){alert("I'm WARM!")},
+            onClick: function(){},
             content: "Click Me",
             isActive: false,
             color: "",
-            customClasses: ""
+            customClasses: "list-button"
         };
     },
     getInitialState: function() {

@@ -22,6 +22,7 @@ var Surface = React.createClass({
     render: function() {
         var Title = "";
         var Content = "";
+
         if(this.props.title){
             if (this.props.titleLoading == true) {
                 Title = (
@@ -53,7 +54,7 @@ var Surface = React.createClass({
             if (this.props.content.displayName) {
                 Content = (
                     <div className="w-surface-content">
-                        <this.props.content.displayName {...this.props}/>
+                        <this.props.content {...this.props}/>
                     </div>
                 );
             }

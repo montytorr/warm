@@ -62,6 +62,7 @@ var FullSearch = React.createClass({
     },
     render: function() {
         var that = this;
+        
         return (
             <div className={"w-block w-full " + this.props.customClasses}>
                 <Surface
@@ -71,6 +72,7 @@ var FullSearch = React.createClass({
                     filters={that.props.filters}
                     onSubmit={that.props.onSubmit}
                     isLoading={that.props.isLoading}
+                    demo={that.props.demo}
                     onClickFilter={that.props.onClickFilter}
                     onUpdateSearch={that.props.onUpdateSearch}/>
                 <Surface
@@ -86,6 +88,7 @@ var FullSearch = React.createClass({
                     onClickButton={that.props.onClickButton}
                     isLoadingMore={that.props.isLoadingMore}
                     hasLoadedAll={that.props.hasLoadedAll}
+                    demo={that.props.demo}
                     buttonText={that.props.buttonText}/>
             </div>
         );
