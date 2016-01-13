@@ -45,6 +45,13 @@ var Horizontal = React.createClass({
                 <ul>
                     {
                         this.props.listElements.map(function(listElement) {
+                            var style;
+                            if(listElement.color){
+                                style={
+                                    borderColor:listElement.color,
+                                    backgroundColor:(listElement.isActive ? listElement.color : 'transparent')
+                                }
+                            }
                             liClassName = "w-list-horizontal-element";
                             if(listElement.isActive){
                                 liClassName = "w-list-horizontal-element selected"
@@ -53,7 +60,8 @@ var Horizontal = React.createClass({
                                 <li
                                     className={liClassName}
                                     key={"w-list-horizontal-element "+(i++)}
-                                    onClick={this.onClick(listElement)}>
+                                    onClick={this.onClick(listElement)}
+                                    style={style}>
                                     {listElement.label || listElement.name}
                                 </li>
                             );

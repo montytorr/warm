@@ -1,4 +1,6 @@
 var React = global.React || require('react');
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+
 
 var AccordionListElement = React.createClass({
     propTypes: {
@@ -73,7 +75,7 @@ var AccordionListHeader = React.createClass({
     render: function() {
         var toggleClass = "closed"
         var style = {
-            color: this.props.header.color
+            backgroundColor: this.props.header.color
         };
         if(this.props.header.isOpen){
             toggleClass = "open";
@@ -102,13 +104,13 @@ var AccordionListHeader = React.createClass({
         }
         if(this.props.hasLoadedAll)
         {
-            loadingMoreComposant = <div className="w-accordion-no-more">NO MORE ELEMENT TO GET</div>
+            loadingMoreComposant = <div className="w-accordion-no-more">NO MORE ELEMENTS TO GET</div>
         }
         return (
             <li className={"w-accordion-header " + toggleClass + " " + this.props.header.name} key={"w-accordion-header-" + this.props.header.name} onClick={this.toggleOpen}>
                 <div className="w-accordion-head" style={style}>
                     <span className="w-accordion-header-key">{this.props.header.label}</span>
-                    <span className="w-accordion-header-count">{this.props.count}</span>
+                    <span className="w-accordion-header-count">({this.props.count})</span>
                     {headerButton}
                 </div>
                 <ul className="w-accordion-content">
@@ -141,6 +143,7 @@ var Accordion = React.createClass({
         headers: React.PropTypes.array,
         isLoading: React.PropTypes.bool,
         isLoadingMore :  React.PropTypes.bool,
+        openAll : React.PropTypes.bool,
         hasLoadedAll :  React.PropTypes.bool,
         onClickHeader: React.PropTypes.func,
         onClickResult: React.PropTypes.func,
@@ -180,6 +183,7 @@ var Accordion = React.createClass({
             this.props.headers.map(function(header, index) {
                 if (this.props.data[header.name] !== undefined && this.props.data[header.name].length > 0) {
                     var endComponent = this.props.endComponents[header.name] || undefined;
+
                     accordionListHeaders.push(
                         <AccordionListHeader
                             key={"accordion-header-" + header.name}
