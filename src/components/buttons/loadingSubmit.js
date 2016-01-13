@@ -1,19 +1,3 @@
-    //OLD CODE FOR DEMO
-    // getDefaultProps: function() {
-    //     return {
-    //         isLoading : false,
-    //         onClick: function(){},
-    //         text : "Go!",
-    //         demo : false,
-    //         customClasses : ""
-    //     };
-    // },
-    // getInitialState: function () {
-    //     return({
-    //         loader: this.props.isLoading
-    //     });
-    // }
-
 var React = global.React || require('react');
 var TimerMixin = require('react-timer-mixin');
 
@@ -23,7 +7,6 @@ var LoadingSubmit = React.createClass({
         isLoading: React.PropTypes.bool,
         onClick : React.PropTypes.func,
         text : React.PropTypes.string,
-        demo : React.PropTypes.bool,
         customClasses : React.PropTypes.string
     },
     getDefaultProps: function() {
@@ -31,7 +14,6 @@ var LoadingSubmit = React.createClass({
             isLoading : false,
             onClick: function(){alert("I'm WARM!")},
             text : "Go!",
-            demo : false,
             customClasses : ""
         };
     },
