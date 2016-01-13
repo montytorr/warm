@@ -21,6 +21,7 @@ $w-color-background-inputs : #E5E5E5;
 /*-----  TEXT  ------------------------------------------------------*/
 $w-color-text-inputs : #8D8D8D;
 $w-color-headings-light: #BBBBBB;
+$w-color-black-translucent : rgba(0,0,0,.4);
 
 /*-----  BUTTONS  ---------------------------------------------------*/
 $w-color-button-round : #fff;
@@ -39,10 +40,10 @@ $w-color-border-soft: #e0e0e0;
 /*******************************************************************************/
 /*-----  IMPORT  ----------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
-
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
 /*-----  DEFINE  ----------------------------------------------------*/
 $w-font-main: 'Roboto', sans-serif;
-
+$w-font-secondary: 'Quicksand', sans-serif;
 /*******************************************************************************/
 /****  IMG
 /*******************************************************************************/

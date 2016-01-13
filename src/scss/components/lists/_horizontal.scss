@@ -14,7 +14,7 @@
         height: 50px;
         background-color: #fff;
         & .w-list-horizontal-element {
-            font-family: $w-font-main;
+            font-family: $w-font-secondary;
             font-size: 15px;
             display: table-cell;
             height: 50px;
@@ -23,12 +23,15 @@
             color: $w-color-main-border;
             box-sizing: border-box;
             padding: 15px 10px 0px 10px;
+            border-bottom: 0px solid $w-color-main-border;
+            transition: border .2s, background .2s;
             &.selected{
-                color:$w-color-main;
-                border-bottom: 2px solid $w-color-main;
+                color: $w-color-black-translucent;
+                border-bottom: 5px solid #A1A1A1;
+                font-weight: bolder;
             }
             &:not(.selected):hover{
-                border-bottom: 1px solid $w-color-main-border;
+                border-bottom: 5px solid $w-color-main-border;
             }
             &:hover {
                 cursor: pointer;
