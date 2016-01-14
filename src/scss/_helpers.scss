@@ -1,6 +1,9 @@
 .w_h-d_i-f {
     display: inline-flex;
 }
+.w-h_f-r {
+    float: right;
+}
 .w_h-d_b {
     display: block;
 }
@@ -9,4 +12,13 @@
 }
 .w_h-d_i-f .w-surface-composant, .w_h-d_b .w-surface-composant {
     margin : 5px auto !important;
+}
+.w-h_h-c100-50{
+    height: calc(100% - 50px)
+}
+.w-h_h-50{
+    height: 50px;
+}
+.w-h_capitalize{
+    text-transform: capitalize;
 }
