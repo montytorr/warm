@@ -104,7 +104,7 @@ var AccordionListHeader = React.createClass({
         }
         if(this.props.hasLoadedAll)
         {
-            loadingMoreComposant = <div className="w-accordion-no-more">NO MORE ELEMENTS TO GET</div>
+            loadingMoreComposant = <div className="w-accordion-no-more">Toutes les elements sont chargé</div>
         }
         return (
             <li className={"w-accordion-header " + toggleClass + " " + this.props.header.name} key={"w-accordion-header-" + this.props.header.name} onClick={this.toggleOpen}>
@@ -204,7 +204,7 @@ var Accordion = React.createClass({
         } else {
             return (
                 <div className="w-accordion-loader">
-                    <span className="w-accordion-loader-text">LIST LOADING...</span>
+                    <span className="w-accordion-loader-text">Chargement...</span>
                     <span className="w-composant-loader medium"></span>
                 </div>
             );
@@ -219,7 +219,7 @@ var Accordion = React.createClass({
                             {this.loadingDisplay()}
                         </ul>
                     ) : (
-                        <span className="w-accordion-void">NO RESULTS</span>
+                        <span className="w-accordion-void">Aucun resultats</span>
                     )
                 }
             </div>
