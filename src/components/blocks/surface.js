@@ -24,29 +24,25 @@ var Surface = React.createClass({
     render: function() {
         var Title = "";
         var Content = "";
+        var customStyle;
 
         if(this.props.color){
-            titleColor = {
-                borderLeft : "5px solid " + this.props.color,
+            customStyle = {
+                borderColor: this.props.color,
                 color : this.props.color
             }
-        } else {
-            titleColor = {
-                borderLeft : "5px solid $w-color-main",
-                color : "$w-color-main"
-            }
         }
-
+        console.log(this.props.color, customStyle)
         if(this.props.title){
             if (this.props.titleLoading == true) {
                 Title = (
-                    <div className="w-surface-title" style={titleColor}>
+                    <div className="w-surface-title" style={customStyle}>
                         <div className="w-composant-loader small"></div>
                     </div>
                 );
             } else {
                 Title = (
-                    <div className="w-surface-title" style={titleColor}>
+                    <div className="w-surface-title" style={customStyle}>
                         <h1>
                             {this.props.title}
                         </h1>

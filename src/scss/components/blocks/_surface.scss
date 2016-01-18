@@ -7,17 +7,19 @@
     margin: 5px auto;
     background-color: #fff;
     border-radius: 3px;
+    font-family:$w-font-secondary;
     .w-surface-title
     {
         line-height: 35px;
         min-height: 35px;
-        padding-left: 20px;
+        padding-left: 10px;
         text-align: left;
         border-bottom: 1px solid $w-color-border-soft;
+        border-left: 5px solid;
+        padding-right: 10px;
         h1 {
-            font-family: $w-font-main;
             font-size: 15px;
-            font-weight: bold;
+            font-weight: 400px;
         }
     }
     .w-surface-content

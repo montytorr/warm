@@ -8,6 +8,13 @@
     -webkit-animation: composant-loader-anim .8s infinite linear;
     animation: composant-loader-anim .8s infinite linear;
     text-indent: -9999em;
+    &.large{
+        font-size: 15px;
+        border-top: 10px solid rgba(0,0,0,.2);
+        border-right: 10px solid rgba(0,0,0,.2);
+        border-bottom: 10px solid rgba(0,0,0,.2);
+        border-left: 10px solid rgba(255,255,255,0.9);
+    }
     &.medium{
         font-size: 10px;
         border-top: 5px solid rgba(150, 150, 150, .2);
@@ -29,6 +36,14 @@
 {
     width: 15px;
     height: 15px;
+    border-radius: 50%;
+}
+
+.w-composant-loader.large,
+.w-composant-loader.large:after
+{
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
 }
 
