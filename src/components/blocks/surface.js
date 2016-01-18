@@ -7,6 +7,7 @@ var Surface = React.createClass({
         contentLoading: React.PropTypes.bool,
         details: React.PropTypes.func,
         content: React.PropTypes.func,
+        color: React.PropTypes.string,
         customClasses: React.PropTypes.string
     },
     getDefaultProps: function() {
@@ -16,6 +17,7 @@ var Surface = React.createClass({
             contentLoading: false,
             details: function(){},
             content: function(){},
+            color: "",
             customClasses: ""
         }
     },
@@ -23,16 +25,28 @@ var Surface = React.createClass({
         var Title = "";
         var Content = "";
 
+        if(this.props.color){
+            titleColor = {
+                borderLeft : "5px solid " + this.props.color,
+                color : this.props.color
+            }
+        } else {
+            titleColor = {
+                borderLeft : "5px solid $w-color-main",
+                color : "$w-color-main"
+            }
+        }
+
         if(this.props.title){
             if (this.props.titleLoading == true) {
                 Title = (
-                    <div className="w-surface-title">
+                    <div className="w-surface-title" style={titleColor}>
                         <div className="w-composant-loader small"></div>
                     </div>
                 );
             } else {
                 Title = (
-                    <div className="w-surface-title">
+                    <div className="w-surface-title" style={titleColor}>
                         <h1>
                             {this.props.title}
                         </h1>
