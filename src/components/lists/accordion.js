@@ -98,7 +98,7 @@ var AccordionListHeader = React.createClass({
         if(this.props.isLoadingMore && !this.props.hasLoadedAll){
             loadingMoreComposant = (
                 <div className="w-accordion-more-loader">
-                    <span className="w-composant-loader medium"></span>
+                    <span className="w-composant-loader large"></span>
                 </div>
             );
         }
@@ -204,8 +204,7 @@ var Accordion = React.createClass({
         } else {
             return (
                 <div className="w-accordion-loader">
-                    <span className="w-accordion-loader-text">Chargement...</span>
-                    <span className="w-composant-loader medium"></span>
+                    <span className="w-composant-loader large"></span>
                 </div>
             );
         }

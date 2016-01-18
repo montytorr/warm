@@ -32,7 +32,6 @@ var Surface = React.createClass({
                 color : this.props.color
             }
         }
-        console.log(this.props.color, customStyle)
         if(this.props.title){
             if (this.props.titleLoading == true) {
                 Title = (
