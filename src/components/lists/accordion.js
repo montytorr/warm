@@ -5,16 +5,19 @@ var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 var AccordionListElement = React.createClass({
     propTypes: {
         element : React.PropTypes.object,
+        type : React.PropTypes.string,
         onClickResult : React.PropTypes.func
     },
     getDefaultProps: function() {
         return {
             element : {},
+            type : "unkwown",
             onClickResult : function(){}
         };
     },
     _onClick : function(event){
         event.stopPropagation();
+        this.props.element._type = this.props.type;
         this.props.onClickResult(this.props.element);
     },
     render: function() {
@@ -120,6 +123,7 @@ var AccordionListHeader = React.createClass({
                                 <AccordionListElement
                                     key={listElement._id}
                                     element={listElement}
+                                    type={this.props.header.name}
                                     component={this.props.endComponent}
                                     onClickResult={this.props.onClickResult}/>
                             );
