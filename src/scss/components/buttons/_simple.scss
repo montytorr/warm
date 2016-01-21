@@ -8,6 +8,7 @@
     box-shadow: 0px 0px 1px rgba(0,0,0,.5);
     border-radius: 3px;
     font-size: 15px;
+    font-family: $w-font-light;
     &:hover{
         box-shadow: inset 0px 0px 1px rgba(0,0,0,.8);
         cursor: pointer;
@@ -22,5 +23,7 @@
         margin: auto;
         margin-right: 15px;
         width: 180px;
+        box-sizing: border-box;
+        line-height: 34px;
     }
 }

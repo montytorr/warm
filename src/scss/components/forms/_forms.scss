@@ -22,7 +22,7 @@
         & + label {
             font-family: $w-font-main;
             padding-left: 45px;
-            line-height: 55px;
+            line-height: 60px;
             transition: all 0.2s;
             font-size: 13px;
             color: $w-color-main;
@@ -44,7 +44,7 @@
         &:checked + label:after {
             content: '\2713';
             position: absolute;
-            top: 18px;
+            top: 22px;
             left: 13px;
             font-size: 25px;
             line-height: 0.8;
