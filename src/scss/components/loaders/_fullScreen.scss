@@ -110,6 +110,7 @@
     padding-top: 110px;
     -webkit-animation: animLoadedLogo 0.3s linear forwards;
     animation: animLoadedLogo 0.3s linear forwards;
+    font-family: $w-font-secondary;
 }
 .warm-fade-transition.show {
     opacity: 1;
