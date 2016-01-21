@@ -19,8 +19,8 @@
         box-shadow: inset 5px 0px 0px #E5E5E5;
         padding-right: 10px;
         & h1 {
+            font-family:$w-font-main;
             font-size: 16px;
-            font-weight: 600;
         }
     }
     & .w-surface-content{

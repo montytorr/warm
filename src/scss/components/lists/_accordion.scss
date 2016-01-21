@@ -5,7 +5,6 @@
         height: 50px;
         line-height: 50px;
         color: rgba(0,0,0,.3);
-        font-weight: 700;
         width: 100%;
         text-align: center;
         display: inline-block;
@@ -47,7 +46,6 @@
                     box-shadow: inset 0px 0px 1px rgba(0,0,0,0.6);
                     background-color: rgba(255,255,255,0.4);
                     color: rgba(0,0,0,.4);
-                    font-weight: 600;
                     line-height: 34px;
                     &:hover{
                         box-shadow: inset 0px 0px 2px rgba(0,0,0,0.6);
@@ -57,7 +55,6 @@
                     line-height: 50px;
                     padding-left: 35px;
                     color: $w-color-black-translucent;
-                    font-weight: 600;
                 }
                 // &:hover {
                 //     background-color: #f5f5f5;
@@ -67,7 +64,6 @@
                     color: $w-color-black-translucent;
                     padding-left: 5px;
                     padding-right: 5px;
-                    font-weight: 200;
                 }
             }
             &.closed {
