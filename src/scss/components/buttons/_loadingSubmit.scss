@@ -1,6 +1,6 @@
 .w-button.w-loadingSubmit {
     display: inline-block;
-    font-family: $w-font-main;
+    font-family: $w-font-secondary;
     background-color: $w-color-main;
     color: $w-color-black-translucent;
     width: 50px;
@@ -9,6 +9,10 @@
     font-size: 17px;
     box-shadow: none;
     text-align: center;
+    &.loading{
+        opacity: 0.5;
+        pointer-events: none;
+    }
     &:hover {
         cursor:pointer;
         box-shadow: inset 0 0 0px 2px rgba(0,0,0,0.1);
