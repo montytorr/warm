@@ -20,7 +20,7 @@
         opacity: 0;
     }
     &:before {
-        content: '';
+        content: '!';
         position: absolute;
         left: 10px;
         top: 50%;
@@ -29,5 +29,9 @@
         background-color: $w-color-background-inputs;
         border-radius: 50%;
         margin-top:-12px;
+        text-align: center;
+        color: $w-color-background-inputs;
+        line-height: 26px;
+        font-size: 17px;
     }
 }
