@@ -12,6 +12,8 @@
     &.loading{
         opacity: 0.5;
         pointer-events: none;
+        padding-top: 4px;
+        box-sizing: border-box;
     }
     &:hover {
         cursor:pointer;
