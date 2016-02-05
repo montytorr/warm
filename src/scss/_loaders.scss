@@ -9,6 +9,7 @@
     animation: composant-loader-anim .8s infinite linear;
     text-indent: -9999em;
     box-sizing: border-box;
+    vertical-align: middle;
     &.large{
         font-size: 15px;
         border-top: 10px solid rgba(0,0,0,.2);
