@@ -1,7 +1,6 @@
 var React = global.React || require('react');
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
-
 var AccordionListElement = React.createClass({
     propTypes: {
         element : React.PropTypes.object,
@@ -71,9 +70,10 @@ var AccordionListHeader = React.createClass({
     },
     onHeaderButtonClick : function(event){
         var that = this;
+
         var headerElement = document.querySelector(".w-accordion-header."+that.props.header.name)
         headerElement.className = headerElement.className.replace( /(?:^|\s)closed(?!\S)/g , ' open ' )
-        that.props.onClickButton(this.props.header);
+        that.props.onClickButton(event, this.props.header);
     },
     render: function() {
         var toggleClass = "closed"
