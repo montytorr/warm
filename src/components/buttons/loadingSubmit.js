@@ -7,7 +7,8 @@ var LoadingSubmit = React.createClass({
         isLoading: React.PropTypes.bool,
         onClick : React.PropTypes.func,
         text : React.PropTypes.string,
-        customClasses : React.PropTypes.string
+        customClasses : React.PropTypes.string,
+        color : React.PropTypes.string
     },
     getDefaultProps: function() {
         return {
@@ -23,8 +24,16 @@ var LoadingSubmit = React.createClass({
 
     },
     render: function() {
+        var style = {}
+
+        if (this.props.color) {
+            style = {
+                backgroundColor: this.props.color
+            }
+        }
+
         return (
-            <div className={"w-button w-loadingSubmit "+(this.props.isLoading? "loading " : "")+this.props.customClasses} onClick={this.handleClick}>
+            <div className={"w-button w-loadingSubmit "+(this.props.isLoading? "loading " : "")+this.props.customClasses} onClick={this.handleClick} style={style}>
                 <span className={(this.props.isLoading? "w-composant-loader medium" : "")}></span>
                 <span className="w-button-loadingSubmit-title">{(this.props.isLoading? "" : this.props.text)}</span>
             </div>

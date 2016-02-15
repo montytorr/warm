@@ -4,7 +4,8 @@ var Simple = React.createClass({
     propTypes: {
         onClick: React.PropTypes.func,
         text: React.PropTypes.string,
-        customClasses : React.PropTypes.string
+        customClasses : React.PropTypes.string,
+        color: React.PropTypes.string
     },
     getDefaultProps: function() {
         return {
@@ -17,8 +18,16 @@ var Simple = React.createClass({
         this.props.onClick();
     },
     render: function() {
+        var style = {}
+
+        if (this.props.color) {
+            style = {
+                backgroundColor: this.props.color
+            }
+        }
+
         return (
-            <button onClick={this.handleClick} className={"w-button w-simple "+this.props.customClasses}>
+            <button onClick={this.handleClick} className={"w-button w-simple "+this.props.customClasses} style={style}>
               {this.props.text}
             </button>
         );

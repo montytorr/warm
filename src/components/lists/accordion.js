@@ -1,7 +1,6 @@
 var React = global.React || require('react');
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
-
 var AccordionListElement = React.createClass({
     propTypes: {
         element : React.PropTypes.object,
