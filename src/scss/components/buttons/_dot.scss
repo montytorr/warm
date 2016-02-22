@@ -1,26 +1,26 @@
 .w-button.w-dot {
     display: inline-flex;
     background-color: $w-color-main-inverted;
-    width: 30px;
-    height: 30px;
-    border-radius: 30px;
-    border: 2px solid $w-color-main-border;
-    .main-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid $w-color-main;
+    vertical-align: middle;
+    &.checked .main-dot {
         margin: auto;
-        width: 22px;
-        height: 22px;
-        border-radius: 22px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
         background-color: $w-color-main;
     }
     &:hover {
         cursor: pointer;
-        width: 28px;
-        height: 28px;
-        border-radius: 25px;
-        .main-dot {
+        & .main-dot {
+            background-color: $w-color-main-border;
             width: 20px;
             height: 20px;
             border-radius: 17px;
+            opacity: 0.5;
         }
     }
 }

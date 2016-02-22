@@ -18,7 +18,7 @@ var Dot = React.createClass({
         var style = {}
 
         if (this.props.isChecked) {
-            dotClass = "main-dot"
+            dotClass = "checked"
         }
 
         if (this.props.color) {
@@ -28,9 +28,8 @@ var Dot = React.createClass({
         }
 
         return (
-            <div onClick={this.props.onClick} className={"w-button w-dot "+this.props.customClasses}>
-                <div className={dotClass} style={style}>
-                    <div className="small-dot"></div>
+            <div onClick={this.props.onClick} className={dotClass+" w-button w-dot "+this.props.customClasses}>
+                <div className={"main-dot"} style={style}>
                 </div>
             </div>
         );
